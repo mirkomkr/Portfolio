@@ -1,0 +1,21 @@
+{
+  "name": "mirko-portfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.4.2",
+    "@fontsource-variable/open-sans": "^5.2.7",
+    "@fontsource-variable/playfair-display": "^5.2.8",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.16.11",
+    "astro-seo": "^1.1.0",
+    "react-icons": "^5.5.0",
+    "tailwindcss": "^4.1.18"
+  }
+}

@@ -1,0 +1,12 @@
+@import "tailwindcss";
+/* Applica lo scroll fluido a tutta la pagina */
+html {
+  scroll-behavior: smooth;
+}
+@theme {
+    --font-sans: 'Open Sans Variable', system-ui, -apple-system, sans-serif;
+    --font-title: 'Playfair Display Variable', system-ui, -apple-system, sans-serif;
+    --color-master: #F5F5DC;
+    --color-primary: #333333;
+    --color-accent: #4A6274;
+}

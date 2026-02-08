@@ -1,0 +1,12 @@
+---
+const {title, description, image, altimage, link} = Astro.props;
+---
+
+<article class="bg-white border border-primary/10 rounded-2xl shadow-lg flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+    <img src={image} class="group aspect-video overflow-hidden object-cover rounded-t-2xl" alt={altimage} />
+    <div class="text-primary p-6 ">
+    <h3 class="group-hover:text-accent transition-colors duration-300 text-2xl font-bold mb-2 ">{title}</h3>
+    <p class="leading-relaxed">{description}</p>
+</div>
+    <a href={link} class="bg-accent rounded-xl px-4 py-2 mt-auto text-white" target="_blank" rel="noopener noreferrer" aria-label="Consulta la repository GitHub del progetto">Scopri di più</a>
+</article>
