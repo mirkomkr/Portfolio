@@ -55,9 +55,9 @@ export default function Hero() {
             </nav>
 
 <div className="flex flex-col gap-3 max-w-none text-lg md:text-xl text-primary">
-        <p className="md:whitespace-nowrap font-medium">Sono <strong>Mirko Passeri</strong>, Sviluppatore & Web Designer con base ad Anzio, IT.</p>
-        <p className="md:whitespace-nowrap font-medium">Progetto e sviluppo soluzioni digitali su misura per aiutare le persone a crescere online.</p>
-        <p className="md:whitespace-nowrap font-medium italic border-r-4 border-accent pr-4 md:border-r-0 md:border-r-accent">
+        <p className="font-medium">Sono <strong>Mirko Passeri</strong>, Sviluppatore & Web Designer con base ad Anzio, IT.</p>
+        <p className="font-medium">Progetto e sviluppo soluzioni digitali su misura per aiutare le persone a crescere online.</p>
+        <p className="font-medium italic border-r-4 border-accent pr-4 md:border-r-0 md:border-r-accent">
             Soluzioni moderne, veloci e accessibili a tutti.
         </p>
     </div>
