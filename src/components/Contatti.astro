@@ -1,0 +1,55 @@
+---
+const KEY = import.meta.env.WEB3FORMS_ACCESS_KEY;
+---
+
+<section id="contatti" aria-labelledby="titolo-contatti" class="flex flex-col justify-center items-center md:items-end w-full min-h-screen max-w-7xl mx-auto px-8 md:px-24 py-20">
+    
+    <h2 id="titolo-contatti" class="font-title text-center md:text-right w-full text-4xl md:text-6xl mb-16 md:mb-24 text-primary">
+      Contatti
+    </h2>
+<div class="flex flex-col justify-center text-center items-center md:grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 w-full">
+<div class="space-y-6">
+       <h3 class="font-title text-2xl">Parliamo del tuo progetto</h3>
+       <p class="text-primary/80">Se preferisci un contatto diretto, puoi scrivermi qui:</p>
+       
+<div class="flex items-center gap-4 bg-primary/5 p-4 rounded-xl w-fit mx-auto md:mx-0">
+    <span id="email-text" class="font-mono font-medium">mirkopasseri@gmail.com</span>
+    <button id="copy-btn" class="text-accent hover:underline text-sm font-bold uppercase tracking-tighter" aria-label="Copia l'indirizzo email">Copia</button>
+</div>
+   </div>
+   <div class="col-2">
+        <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-4">
+        <input type="hidden" name="access_key" value={KEY}>
+            <label for="name">Nome</label>
+            <input required type="text" id="name" name="name" class="ring-1 ring-gray-500 border border-gray-500 rounded-md p-2">
+            <label for="email">Email</label>
+            <input required type="email" id="email" name="email" aria-describedby="email-error" class="ring-1 ring-gray-500 border border-gray-500 rounded-md p-2">
+            <span id="email-error" class="sr-only">Inserisci un indirizzo email valido (es. nome@dominio.com)</span>
+            <label for="message">Messaggio</label>
+            <textarea required id="message" name="message" class="ring-1 ring-gray-500 border border-gray-500 rounded-md p-2"></textarea>
+            <button type="submit" class="border border-gray-500 rounded-md p-2 bg-primary text-master md:w-fit md:self-end">Invia</button>
+        </form>
+    </div>
+</section>  
+<script>
+  // 1. Cerchiamo gli elementi nel DOM
+  const copyBtn = document.getElementById('copy-btn');
+  const emailText = document.getElementById('email-text');
+
+  // 2. Aggiungiamo l' "ascoltatore" di eventi
+  copyBtn?.addEventListener('click', () => {
+    if (emailText) {
+      // 3. Copiamo il testo negli appunti
+      navigator.clipboard.writeText(emailText.innerText);
+
+      // 4. Feedback visivo (UX)
+      const originalText = copyBtn.innerText;
+      copyBtn.innerText = 'Copiato!';
+      
+      // 5. Ripristiniamo il testo dopo 2 secondi
+      setTimeout(() => {
+        copyBtn.innerText = originalText;
+      }, 2000);
+    }
+  });
+</script>

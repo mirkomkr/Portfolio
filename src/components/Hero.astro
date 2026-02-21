@@ -1,0 +1,61 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+ <section aria-label="Introduzione" class="bg-master text-primary flex flex-col text-center justify-center items-center md:items-end md:text-right gap-4 w-full min-h-screen max-w-7xl mx-auto px-8 md:px-24">
+            
+    {/* Titolo in Playfair Display */}
+    <h1 class="text-6xl md:text-8xl font-bold mb-2 font-title leading-tight">
+      Mirko Passeri
+    </h1>
+    
+    {/* Sottotitolo con il tuo colore accent */}
+    <h2 class="text-2xl md:text-3xl font-medium mb-8 text-accent/90 tracking-tight">
+      Sviluppatore & Web Designer
+    </h2>
+            
+            <nav>
+                <ul class="grid grid-cols-2 md:grid-cols-4 justify-items-center items-center md:justify-end gap-6 md:gap-8 w-fit mx-auto md:mx-0 md:ml-auto mb-10">
+                    <li>
+                        <a href="#progetti" aria-label="Esplora i miei progetti" class="flex flex-col items-center gap-2 group transition-all">
+                            <Icon name="progetti" aria-hidden="true" class="w-8 h-8 md:w-10 md:h-10 group-hover:text-accent transition-colors" />
+                            <span class="text-xs md:text-sm font-semibold uppercase tracking-widest">Progetti</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/mirko-passeri/" rel="noopener noreferrer" target="_blank" aria-label="Vai al mio profilo LinkedIn" class="flex flex-col items-center gap-2 group transition-all">
+                            <Icon name="linkedin" aria-hidden="true" class="w-8 h-8 md:w-10 md:h-10 group-hover:text-accent transition-colors" />
+                            <span class="text-xs md:text-sm font-semibold uppercase tracking-widest">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/mirkomkr" rel="noopener noreferrer" target="_blank" aria-label="Vai al mio profilo GitHub" class="flex flex-col items-center gap-2 group transition-all">
+                            <Icon name="github" aria-hidden="true" class="w-8 h-8 md:w-10 md:h-10 group-hover:text-accent transition-colors" />
+                            <span class="text-xs md:text-sm font-semibold uppercase tracking-widest">GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.figma.com/design/..." rel="noopener noreferrer" target="_blank" aria-label="Vai al mio progetto Figma" class="flex flex-col items-center gap-2 group transition-all">
+                            <Icon name="figma" aria-hidden="true" class="size-8 md:size-10 group-hover:text-accent transition-colors" />
+                            <span class="text-xs md:text-sm font-semibold uppercase tracking-widest">Figma</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+<div class="flex flex-col gap-3 max-w-none text-lg md:text-xl text-primary">
+        <p class="font-medium">Sono <strong>Mirko Passeri</strong>, Sviluppatore & Web Designer con base ad Anzio, IT.</p>
+        <p class="font-medium">Progetto e sviluppo soluzioni digitali su misura per aiutare le persone a crescere online.</p>
+        <p class="font-medium italic pr-4 md:border-r-4 md:border-accent">
+            Soluzioni moderne, veloci e accessibili a tutti.
+        </p>
+    </div>
+
+            <div class="mt-8">
+                <a href="#contatti" aria-label="Contattami"
+                   class="inline-flex items-center gap-3 px-8 py-4 rounded-md bg-black text-white font-bold transition-all hover:bg-neutral-800 hover:-translate-y-1 shadow-xl">
+                    <Icon name="messaggio" aria-hidden="true" class="size-5" />
+                    Contattami
+                </a>
+            </div>
+        </section>
