@@ -7,7 +7,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.mirkopasseri.it",
-  integrations: [icon()],
+  integrations: [icon(), sitemap()],
 
   vite: {
     plugins: [tailwindcss()],

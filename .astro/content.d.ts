@@ -168,7 +168,7 @@ declare module 'astro:content' {
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
 	type ExtractLoaderTypes<T> = T extends import('astro/loaders').LiveLoader<
-		infer TData extends Record<string, any>,
+		infer TData,
 		infer TEntryFilter,
 		infer TCollectionFilter,
 		infer TError
