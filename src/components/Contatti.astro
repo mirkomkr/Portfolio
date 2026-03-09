@@ -13,7 +13,7 @@ const KEY = import.meta.env.WEB3FORMS_ACCESS_KEY;
        <p class="text-primary/80">Se preferisci un contatto diretto, puoi scrivermi qui:</p>
        
 <div class="flex items-center gap-4 bg-primary/5 p-4 rounded-xl w-fit mx-auto md:mx-0">
-    <span id="email-text" class="font-mono font-medium">[EMAIL_ADDRESS]</span>
+    <span id="email-text" data-user="contatti" data-domain="mirkopasseri.it" class="font-mono font-medium">Mostra Email</span>
     <button id="copy-btn" class="text-accent hover:underline text-sm font-bold uppercase tracking-tighter" aria-label="Copia l'indirizzo email">Copia</button>
 </div>
    </div>
@@ -30,23 +30,29 @@ const KEY = import.meta.env.WEB3FORMS_ACCESS_KEY;
             <button type="submit" class="border border-gray-500 rounded-md p-2 bg-primary text-master md:w-fit md:self-end">Invia</button>
         </form>
     </div>
+</div>
 </section>  
 <script>
-  // 1. Cerchiamo gli elementi nel DOM
+  // 1. Cerchiamo gli elementi nel DOM UNA SOLA VOLTA
   const copyBtn = document.getElementById('copy-btn');
   const emailText = document.getElementById('email-text');
 
-  // 2. Aggiungiamo l' "ascoltatore" di eventi
+  // 2. Protezione Anti-Spam: Costruiamo l'email dinamicamente
+  if (emailText) {
+    const user = emailText.getAttribute('data-user');
+    const domain = emailText.getAttribute('data-domain');
+    const email = `${user}@${domain}`;
+    emailText.innerText = email;
+  }
+
+  // 3. Funzione di Copia
   copyBtn?.addEventListener('click', () => {
     if (emailText) {
-      // 3. Copiamo il testo negli appunti
       navigator.clipboard.writeText(emailText.innerText);
-
-      // 4. Feedback visivo (UX)
+      
       const originalText = copyBtn.innerText;
       copyBtn.innerText = 'Copiato!';
       
-      // 5. Ripristiniamo il testo dopo 2 secondi
       setTimeout(() => {
         copyBtn.innerText = originalText;
       }, 2000);

@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer class="w-full border-t border-primary/10 py-8 text-center bg-master">
+  <div class="flex items-center justify-center gap-2 text-sm text-primary/70">
+    <p>Sviluppato con passione utilizzando</p>
+    <a 
+      href="https://astro.build" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      aria-label="Coded with Astro"
+      class="hover:text-accent transition-colors duration-300"
+    >
+      <Icon name="astro" aria-hidden="true" class="w-6 h-6" />
+    </a>
+  </div>
+  <p class="text-xs text-primary/50 mt-4">
+    &copy; {new Date().getFullYear()} Mirko Passeri. Tutti i diritti riservati.
+  </p>
+</footer>

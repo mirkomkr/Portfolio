@@ -5,6 +5,8 @@ import '@fontsource-variable/open-sans'
 import '@fontsource-variable/playfair-display'
 import Progetti from "../components/Progetti.astro";
 import Contatti from "../components/Contatti.astro";
+import Timeline from "../components/Timeline.astro";
+import Footer from "../components/Footer.astro";
 import { SEO } from "astro-seo";
 const title = "Sviluppo Web Ottimizzato e Design Accessibil | Mirko Passeri"
 const description = "Benvenuti nel portfolio di Mirko Passeri: sviluppo siti web performanti, accessibili e ottimizzati SEO ad Anzio e Nettuno. Scopri i miei progetti scalabili e moderni."
@@ -23,6 +25,24 @@ charset={charset}
 title={title}
 description={description}
 canonical={canonical}
+openGraph={{
+  basic: {
+    title: title,
+    description: description,
+    type: "website",
+    locale: "it-IT",
+    url: canonical,
+    image: "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
+    imageAlt: "Immagine del portfolio di Mirko Passeri",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: title,
+    description: description,
+    image: "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
+    imageAlt: "Immagine del portfolio di Mirko Passeri",
+  }
+}}
 />
 
 <meta name="keywords" content="sviluppo web Anzio, creazione siti web ad Anzio e Nettuno, accessibilità web, SEO on-page, siti web veloci, siti web ottimizzati, web developer Anzio, web developer Nettuno, web developer Latina, web developer Aprilia, web developer Pomezia." />
@@ -50,7 +70,7 @@ canonical={canonical}
       "@id": "https://www.mirkopasseri.it/#progetti",
       "name": "Sviluppo Siti Web e Design Accessibile, ad Anzio e Nettuno | Mirko Passeri",
       "url": "https://www.mirkopasseri.it",
-      "image": "https://www.mirkopasseri.it/tua-foto-o-logo.jpg",
+      "image": "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
       "description": "Benvenuti nel portfolio di Mirko Passeri, sviluppatore web focalizzato su performance, accessibilità e SEO on-page. Cerchi chi può creare un sito per la tua attività ad Anzio o Nettuno? Realizzo siti vetrina e soluzioni web per negozi e piccole imprese locali. Visibilità reale e codice curato per far crescere il tuo business sul territorio.",
       "address": {
         "@type": "PostalAddress",
@@ -98,12 +118,10 @@ canonical={canonical}
 			</section>
 			<section aria-label="Progetti" class="progetti">
 				<Progetti />
+        <Timeline />
         <Contatti />
 			</section>
 		</main>
-			<footer>
-				<section aria-label="Contatti">
-				</section>
-			</footer>
+    <Footer />
 	</body>
 </html>
