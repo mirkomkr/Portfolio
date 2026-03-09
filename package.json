@@ -19,5 +19,8 @@
     "astro-seo": "^1.1.0",
     "react-icons": "^5.5.0",
     "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "astro-robots-txt": "^1.0.0"
   }
 }
