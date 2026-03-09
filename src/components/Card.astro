@@ -3,24 +3,25 @@ import { Image } from 'astro:assets';
 const {title, description, image, altimage, link} = Astro.props;
 ---
 
-<li class="focus-within:ring-2 focus-within:ring-accent relative group rounded-2xl flex flex-col transition-all duration-500 overflow-hidden hover:bg-primary/[0.03] hover:-translate-y-1">
+<li itemscope itemtype="https://schema.org/CreativeWork" class="focus-within:ring-2 focus-within:ring-accent relative group rounded-2xl flex flex-col transition-all duration-500 overflow-hidden hover:bg-primary/[0.03] hover:-translate-y-1">
     
     <Image
+    itemprop="image"
       src={image} 
       class="transition-transform duration-700 group-hover:scale-105 aspect-video object-cover" 
       alt={altimage} 
     />
     
     <div class="text-primary p-6">
-      <h3 class="group-hover:text-accent transition-colors duration-300 text-2xl font-bold mb-2 font-title">
+      <h3 itemprop="name" class="group-hover:text-accent transition-colors duration-300 text-2xl font-bold mb-2 font-title">
         {title}
       </h3>
-      <p class="leading-relaxed text-sm opacity-70">
+      <p itemprop="description" id={`desc-${title.split(" ").join("-").toLowerCase()}`} class="leading-relaxed text-sm opacity-70">
         {description}
       </p>
     </div>
 
-    <a href={link} 
+    <a aria-describedby={`desc-${title.split(" ").join("-").toLowerCase()}`} itemprop="url" href={link} 
        class="after:content-[''] after:absolute after:inset-0 focus:outline-none" 
        target="_blank" 
        rel="noopener noreferrer" 
