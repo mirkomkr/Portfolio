@@ -9,7 +9,7 @@ export const projects = [
   {
     title: "DTF Italia",
     description:
-      "E-commerce headless ad alte prestazioni per servizi di stampa professionale. Sviluppato con Next.js e Tailwind CSS, integrato con WooCommerce per una gestione fluida degli ordini e un'eccezionale accessibilità e ottimizzazione SEO locale (Roma).",
+      "E-commerce headless ad alte prestazioni per servizi di stampa professionale. Sviluppato con Next.js e Tailwind CSS, integrato con WooCommerce e AWS S3 per una gestione affidabile degli ordini. Focus su accessibilità e ottimizzazione SEO locale (Roma).",
     image: DtfItalia,
     altimage:
       "Screenshot del sito DTF Italia, e-commerce per la stampa professionale.",
