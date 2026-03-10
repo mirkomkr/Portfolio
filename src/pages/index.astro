@@ -28,20 +28,24 @@ canonical={canonical}
 openGraph={{
   basic: {
     title: title,
-    description: description,
     type: "website",
-    locale: "it-IT",
-    url: canonical,
     image: "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
-    imageAlt: "Immagine del portfolio di Mirko Passeri",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: title,
+  optional: {
     description: description,
-    image: "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
-    imageAlt: "Immagine del portfolio di Mirko Passeri",
+    locale: "it_IT",
+    siteName: "Mirko Passeri"
+  },
+  image: {
+    alt: "Immagine del portfolio di Mirko Passeri"
   }
+}}
+twitter={{
+  card: "summary_large_image",
+  title: title,
+  description: description,
+  image: "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
+  imageAlt: "Immagine del portfolio di Mirko Passeri",
 }}
 />
 
