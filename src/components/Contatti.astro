@@ -14,20 +14,20 @@ const KEY = import.meta.env.WEB3FORMS_ACCESS_KEY;
        
 <div class="flex items-center gap-4 bg-primary/5 p-4 rounded-xl w-fit mx-auto md:mx-0">
     <span id="email-text" data-user="contatti" data-domain="mirkopasseri.it" class="font-mono font-medium">contatti[at]mirkopasseri.it</span>
-    <button id="copy-btn" class="text-accent hover:underline text-sm font-bold uppercase tracking-tighter" aria-label="Copia l'indirizzo email" aria-live="polite">Copia</button>
+    <button id="copy-btn" class="text-accent hover:underline text-sm font-bold uppercase tracking-tighter focus:outline-none focus:ring-2 focus:ring-accent focus:rounded" aria-label="Copia l'indirizzo email" aria-live="polite">Copia</button>
 </div>
    </div>
    <div class="col-2">
         <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-4">
         <input type="hidden" name="access_key" value={KEY}>
             <label for="name">Nome</label>
-            <input required type="text" id="name" name="name" class="ring-1 ring-gray-500 border border-gray-500 rounded-md p-2">
+            <input required type="text" id="name" name="name" class="ring-1 ring-gray-500 border border-gray-500 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent">
             <label for="email">Email</label>
-            <input required type="email" id="email" name="email" aria-describedby="email-error" class="ring-1 ring-gray-500 border border-gray-500 rounded-md p-2">
+            <input required type="email" id="email" name="email" aria-describedby="email-error" class="ring-1 ring-gray-500 border border-gray-500 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent">
             <span id="email-error" class="sr-only">Inserisci un indirizzo email valido (es. nome@dominio.com)</span>
             <label for="message">Messaggio</label>
-            <textarea required id="message" name="message" class="ring-1 ring-gray-500 border border-gray-500 rounded-md p-2"></textarea>
-            <button type="submit" class="border border-gray-500 rounded-md p-2 bg-primary text-master md:w-fit md:self-end">Invia</button>
+            <textarea required id="message" name="message" class="ring-1 ring-gray-500 border border-gray-500 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent"></textarea>
+            <button type="submit" class="border border-gray-500 rounded-md p-2 bg-primary text-master transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 md:w-fit md:self-end">Invia</button>
         </form>
     </div>
 </div>
