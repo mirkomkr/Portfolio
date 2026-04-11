@@ -99,5 +99,29 @@ const baseSchema = {
       <slot />
     </div>
     <Footer />
+
+    <button
+      id="torna-su"
+      aria-label="Torna in cima alla pagina"
+      class="fixed bottom-8 right-8 z-50 flex items-center justify-center w-11 h-11 rounded-full bg-primary text-master shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:bg-primary/80 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 8.586l-6.293 6.293-1.414-1.414L12 5.757l7.707 7.708-1.414 1.414z"/>
+      </svg>
+    </button>
+
+    <script is:inline>
+      const btn = document.getElementById('torna-su');
+      if (btn) {
+        window.addEventListener('scroll', () => {
+          const visible = window.scrollY > 400;
+          btn.style.opacity = visible ? '1' : '0';
+          btn.style.pointerEvents = visible ? 'auto' : 'none';
+        }, { passive: true });
+        btn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    </script>
   </body>
 </html>
