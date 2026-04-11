@@ -22,7 +22,7 @@ const {title, description, image, altimage, link} = Astro.props;
     </div>
 
     <a aria-describedby={`desc-${title.split(" ").join("-").toLowerCase()}`} itemprop="url" href={link} 
-       class="after:content-[''] after:absolute after:inset-0 focus:outline-none" 
+       class="after:content-[''] after:absolute after:inset-0 focus:rounded-2xl" 
        target="_blank" 
        rel="noopener noreferrer" 
        aria-label={`Scopri di più su ${title}`}>

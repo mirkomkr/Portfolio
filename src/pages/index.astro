@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import Progetti from '../components/Progetti.astro';
+import ChiSonoPreview from '../components/ChiSonoPreview.astro';
+import BlogPreview from '../components/BlogPreview.astro';
 import Timeline from '../components/Timeline.astro';
 import Contatti from '../components/Contatti.astro';
 ---
@@ -15,8 +17,10 @@ import Contatti from '../components/Contatti.astro';
     <section aria-label="Introduzione" class="hero">
       <Hero />
     </section>
-    <section aria-label="Contenuti" class="progetti">
+    <section aria-label="Contenuti principali">
       <Progetti />
+      <ChiSonoPreview />
+      <BlogPreview />
       <Timeline />
       <Contatti />
     </section>

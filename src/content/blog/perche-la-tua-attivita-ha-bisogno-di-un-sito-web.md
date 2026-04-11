@@ -103,15 +103,15 @@ Ma al di là dell'aspetto normativo, c'è una ragione più immediata per tenerci
 
 Pensa a queste situazioni comuni, che probabilmente riconosci:
 
-**Visiva**
+### Visiva
 - Il cliente anziano cerca il tuo numero di telefono, ma il testo è piccolo e i colori si confondono — fa fatica a leggere
 - Chi ti cerca dallo smartphone sotto il sole non riesce a leggere nulla perché lo schermo è troppo chiaro rispetto alla luce — stesso problema, nessuna disabilità
 
-**Motoria**
+### Motoria
 - Chi ha un tremore alle mani o una limitazione motoria non usa il mouse e naviga solo con la tastiera: se il sito non è costruito per farlo, si blocca alla prima pagina
 - Chi tiene il telefono con una mano sola mentre porta la spesa non riesce a cliccare su pulsanti piccoli e vicini — stesso problema, nessuna disabilità
 
-**Cognitiva**
+### Cognitiva
 - Chi ha difficoltà di lettura o di concentrazione — dislessia, ADHD — abbandona immediatamente una pagina con muri di testo senza titoli, senza spazi, senza struttura
 - Chi legge in fretta tra una pausa e l'altra, sul telefono, in piedi — senza paragrafi brevi e gerarchia chiara, si perde e va via — stesso problema, nessuna disabilità
 

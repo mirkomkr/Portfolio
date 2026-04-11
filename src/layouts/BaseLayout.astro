@@ -65,6 +65,7 @@ const baseSchema = {
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Mirko Passeri" />
+    <meta name="google-site-verification" content="JTVN5TjnWgrOKZasixKrMiB0Vut79SXjvAUbB67eu-Y" />
     <SEO
       title={title}
       description={description}
@@ -88,7 +89,15 @@ const baseSchema = {
     <slot name="schema" />
   </head>
   <body class="bg-master text-primary antialiased scroll-smooth">
-    <slot />
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:top-4 focus:left-4 focus:px-5 focus:py-3 focus:bg-primary focus:text-master focus:rounded-md focus:font-semibold focus:text-sm focus:shadow-lg"
+    >
+      Vai al contenuto principale
+    </a>
+    <div id="main-content" tabindex="-1">
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>

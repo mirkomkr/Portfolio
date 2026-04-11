@@ -15,22 +15,14 @@ const { Content } = await render(post);
 
 const canonicalUrl = `https://www.mirkopasseri.it/blog/${post.id}/`;
 
-function formatDate(date: Date): string {
-  return date.toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' });
-}
-
 const blogPostingSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": post.data.title,
   "description": post.data.description,
   "datePublished": post.data.pubDate.toISOString(),
-  "author": {
-    "@id": "https://www.mirkopasseri.it/#persona"
-  },
-  "publisher": {
-    "@id": "https://www.mirkopasseri.it/#persona"
-  },
+  "author": { "@id": "https://www.mirkopasseri.it/#persona" },
+  "publisher": { "@id": "https://www.mirkopasseri.it/#persona" },
   "mainEntityOfPage": canonicalUrl,
   "inLanguage": "it"
 };
@@ -46,7 +38,6 @@ const blogPostingSchema = {
   </Fragment>
 
   <main class="min-h-screen">
-
     <div class="max-w-2xl mx-auto px-8 md:px-0 py-20">
 
       <a href="/blog/" class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline mb-12">
@@ -54,16 +45,14 @@ const blogPostingSchema = {
       </a>
 
       <header class="mb-12">
-        <time
-          datetime={post.data.pubDate.toISOString().split('T')[0]}
-          class="text-xs font-semibold uppercase tracking-widest text-accent"
-        >
-          {formatDate(post.data.pubDate)}
+        <!-- datetime nascosto per SEO schema, data non mostrata visivamente -->
+        <time datetime={post.data.pubDate.toISOString().split('T')[0]} class="sr-only">
+          Pubblicato il {post.data.pubDate.toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' })}
         </time>
         <h1 class="font-title text-4xl md:text-5xl text-primary leading-tight mt-3 mb-6">
           {post.data.title}
         </h1>
-        <p class="text-lg text-primary/70 leading-relaxed border-l-4 border-accent pl-4">
+        <p class="text-lg text-primary/75 leading-relaxed border-l-4 border-accent pl-4">
           {post.data.description}
         </p>
       </header>
@@ -73,14 +62,13 @@ const blogPostingSchema = {
       </article>
 
       <footer class="mt-16 pt-8 border-t border-primary/10">
-        <p class="text-sm text-primary/60">
+        <p class="text-sm text-primary/75">
           Scritto da <strong class="text-primary">Mirko Passeri</strong> —
           <a href="/contatti/" class="text-accent hover:underline">Scrivimi</a> se hai domande o vuoi parlarne.
         </p>
       </footer>
 
     </div>
-
   </main>
 </BaseLayout>
 
@@ -97,53 +85,22 @@ const blogPostingSchema = {
   }
   .prose :global(h3) {
     font-family: 'Playfair Display Variable', serif;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: #333333;
-    margin-top: 1.75rem;
-    margin-bottom: 0.6rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02em;
   }
-  .prose :global(p) {
-    margin-bottom: 1.3rem;
-    font-size: 1.0625rem;
-  }
-  .prose :global(strong) {
-    font-weight: 700;
-    color: #333333;
-  }
-  .prose :global(em) {
-    font-style: italic;
-    opacity: 0.8;
-  }
-  .prose :global(a) {
-    color: #4A6274;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
+  .prose :global(p) { margin-bottom: 1.3rem; font-size: 1.0625rem; }
+  .prose :global(strong) { font-weight: 700; color: #333333; }
+  .prose :global(em) { font-style: italic; opacity: 0.8; }
+  .prose :global(a) { color: #4A6274; text-decoration: underline; text-underline-offset: 3px; }
   .prose :global(a:hover) { opacity: 0.75; }
-  .prose :global(hr) {
-    border: none;
-    border-top: 1px solid rgba(51,51,51,0.12);
-    margin: 2.5rem 0;
-  }
-  .prose :global(ul) {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 1.3rem;
-  }
-  .prose :global(ul li) {
-    position: relative;
-    padding-left: 1.4rem;
-    margin-bottom: 0.7rem;
-    line-height: 1.75;
-  }
-  .prose :global(ul li::before) {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: #4A6274;
-    font-weight: 700;
-  }
+  .prose :global(hr) { border: none; border-top: 1px solid rgba(51,51,51,0.12); margin: 2.5rem 0; }
+  .prose :global(ul) { list-style: none; padding-left: 0; margin-bottom: 1.3rem; }
+  .prose :global(ul li) { position: relative; padding-left: 1.4rem; margin-bottom: 0.7rem; line-height: 1.75; }
+  .prose :global(ul li::before) { content: '—'; position: absolute; left: 0; color: #4A6274; font-weight: 700; }
   .prose :global(blockquote) {
     border-left: 3px solid #4A6274;
     padding: 0.75rem 1.25rem;

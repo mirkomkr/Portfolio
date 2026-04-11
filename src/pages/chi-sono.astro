@@ -19,34 +19,24 @@ import Timeline from '../components/Timeline.astro';
       </h1>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 mb-24">
-      <div class="space-y-6 text-lg text-primary/80 leading-relaxed">
-        <p>
-          Sono <strong class="text-primary font-semibold">Mirko Passeri</strong>, Frontend Developer con base ad Anzio, nel Lazio.
-          Mi occupo di costruire siti web e interfacce digitali che funzionano bene — per gli utenti, per i motori di ricerca, e per chi non ha mai aperto un browser con occhi da developer.
-        </p>
-        <p>
-          Il mio approccio parte sempre da tre domande: il sito è veloce? È accessibile? Si trova su Google? Se la risposta a una di queste è "non lo so", c'è lavoro da fare.
-        </p>
-        <p>
-          Lavoro principalmente con <strong class="text-primary">Astro</strong>, <strong class="text-primary">React</strong> e <strong class="text-primary">Next.js</strong>, con attenzione particolare all'accessibilità web — campo in cui ho una certificazione formale rilasciata da W3C e edX.
-        </p>
-        <p>
-          Quando non sto costruendo qualcosa, sto probabilmente leggendo della documentazione che nessuno ha letto fino in fondo.
-        </p>
-      </div>
-
-      <div class="space-y-4">
-        <h2 class="font-title text-2xl md:text-3xl text-primary mb-6">Stack & Competenze</h2>
-        <ul class="grid grid-cols-2 gap-3 text-sm text-primary/80">
-          {["HTML semantico", "CSS / Tailwind", "JavaScript (ES2024)", "React & Next.js", "Astro", "Accessibilità (WCAG)", "SEO on-page", "Performance web", "Git & GitHub", "Figma"].map(skill => (
-            <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0"></span>
-              {skill}
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div class="max-w-2xl mb-24 space-y-6 text-lg text-primary/80 leading-relaxed">
+      <p>
+        Sono <strong class="text-primary font-semibold">Mirko Passeri</strong>, Frontend Developer con base ad Anzio, nel Lazio.
+        Mi occupo di costruire siti web e interfacce digitali che funzionano bene — per gli utenti, per i motori di ricerca e per chi non ha mai aperto un browser con occhi da developer.
+      </p>
+      <p>
+        Il mio approccio parte sempre da tre domande: il sito è veloce? È accessibile? Si trova su Google?
+        Se la risposta a una di queste è "non lo so", c'è lavoro da fare.
+      </p>
+      <p>
+        Lavoro principalmente con <strong class="text-primary">Astro</strong>, <strong class="text-primary">React</strong> e <strong class="text-primary">Next.js</strong>, con attenzione particolare all'accessibilità web — campo in cui ho una certificazione formale rilasciata da W3C e edX.
+      </p>
+      <p>
+        Conosco le fondamenta — HTML, CSS, JavaScript — e da lì studio e implemento quello che serve, di volta in volta. Credo che un buon developer debba saper fare domande più che memorizzare framework.
+      </p>
+      <p>
+        Quando non sto costruendo qualcosa, sto probabilmente leggendo della documentazione che nessuno ha letto fino in fondo.
+      </p>
     </div>
 
     <Timeline />
