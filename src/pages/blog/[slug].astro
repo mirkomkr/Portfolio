@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const canonicalUrl = `https://www.mirkopasseri.it/blog/${post.id}/`;
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+const blogPostingSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.data.title,
+  "description": post.data.description,
+  "datePublished": post.data.pubDate.toISOString(),
+  "author": {
+    "@id": "https://www.mirkopasseri.it/#persona"
+  },
+  "publisher": {
+    "@id": "https://www.mirkopasseri.it/#persona"
+  },
+  "mainEntityOfPage": canonicalUrl,
+  "inLanguage": "it"
+};
+---
+
+<BaseLayout
+  title={`${post.data.title} — Mirko Passeri`}
+  description={post.data.description}
+  canonical={canonicalUrl}
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)}></script>
+  </Fragment>
+
+  <main class="min-h-screen">
+
+    <div class="max-w-2xl mx-auto px-8 md:px-0 py-20">
+
+      <a href="/blog/" class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline mb-12">
+        ← Tutti gli articoli
+      </a>
+
+      <header class="mb-12">
+        <time
+          datetime={post.data.pubDate.toISOString().split('T')[0]}
+          class="text-xs font-semibold uppercase tracking-widest text-accent"
+        >
+          {formatDate(post.data.pubDate)}
+        </time>
+        <h1 class="font-title text-4xl md:text-5xl text-primary leading-tight mt-3 mb-6">
+          {post.data.title}
+        </h1>
+        <p class="text-lg text-primary/70 leading-relaxed border-l-4 border-accent pl-4">
+          {post.data.description}
+        </p>
+      </header>
+
+      <article class="prose">
+        <Content />
+      </article>
+
+      <footer class="mt-16 pt-8 border-t border-primary/10">
+        <p class="text-sm text-primary/60">
+          Scritto da <strong class="text-primary">Mirko Passeri</strong> —
+          <a href="/contatti/" class="text-accent hover:underline">Scrivimi</a> se hai domande o vuoi parlarne.
+        </p>
+      </footer>
+
+    </div>
+
+  </main>
+</BaseLayout>
+
+<style>
+  .prose { color: #333333; line-height: 1.8; }
+  .prose :global(h2) {
+    font-family: 'Playfair Display Variable', serif;
+    font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+    font-weight: 700;
+    color: #333333;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+  }
+  .prose :global(h3) {
+    font-family: 'Playfair Display Variable', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333333;
+    margin-top: 1.75rem;
+    margin-bottom: 0.6rem;
+  }
+  .prose :global(p) {
+    margin-bottom: 1.3rem;
+    font-size: 1.0625rem;
+  }
+  .prose :global(strong) {
+    font-weight: 700;
+    color: #333333;
+  }
+  .prose :global(em) {
+    font-style: italic;
+    opacity: 0.8;
+  }
+  .prose :global(a) {
+    color: #4A6274;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .prose :global(a:hover) { opacity: 0.75; }
+  .prose :global(hr) {
+    border: none;
+    border-top: 1px solid rgba(51,51,51,0.12);
+    margin: 2.5rem 0;
+  }
+  .prose :global(ul) {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.3rem;
+  }
+  .prose :global(ul li) {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 0.7rem;
+    line-height: 1.75;
+  }
+  .prose :global(ul li::before) {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #4A6274;
+    font-weight: 700;
+  }
+  .prose :global(blockquote) {
+    border-left: 3px solid #4A6274;
+    padding: 0.75rem 1.25rem;
+    margin: 2rem 0;
+    background: rgba(74,98,116,0.05);
+    border-radius: 0 6px 6px 0;
+    font-size: 0.95rem;
+  }
+</style>

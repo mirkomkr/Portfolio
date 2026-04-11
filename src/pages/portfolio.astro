@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { projects } from '../components/projectArray.js';
+import Card from '../components/Card.astro';
+---
+
+<BaseLayout
+  title="Portfolio — Mirko Passeri, Frontend Developer"
+  description="Tutti i progetti di Mirko Passeri: siti web, app React, e-commerce. Lavori realizzati con Astro, Next.js, React e Tailwind CSS."
+  canonical="https://www.mirkopasseri.it/portfolio/"
+>
+  <main class="min-h-screen max-w-7xl mx-auto px-8 md:px-24 py-20">
+
+    <header class="mb-16 md:mb-24">
+      <a href="/" class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline mb-8">
+        ← Torna alla home
+      </a>
+      <h1 class="font-title text-5xl md:text-7xl text-primary leading-tight">
+        Portfolio
+      </h1>
+      <p class="mt-4 text-lg text-primary/70 max-w-xl">
+        Progetti realizzati con attenzione alla performance, all'accessibilità e all'esperienza utente.
+      </p>
+    </header>
+
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 w-full place-items-center md:place-items-stretch">
+      {projects.map((project) => (
+        <Card {...project} />
+      ))}
+    </ul>
+
+  </main>
+</BaseLayout>

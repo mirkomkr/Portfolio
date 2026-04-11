@@ -2,20 +2,46 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<footer class="w-full border-t border-primary/80 py-8 text-center bg-master">
-  <div class="flex items-center justify-center gap-2 text-sm text-primary">
+<footer class="w-full border-t border-primary/20 pt-12 pb-8 bg-master">
+
+  <nav aria-label="Navigazione del sito" class="max-w-7xl mx-auto px-8 md:px-24 mb-10">
+    <ul class="flex flex-wrap justify-center gap-6 md:gap-10">
+      <li>
+        <a href="/portfolio/" class="text-sm font-semibold uppercase tracking-widest text-primary/70 hover:text-accent transition-colors duration-300">
+          Portfolio
+        </a>
+      </li>
+      <li>
+        <a href="/chi-sono/" class="text-sm font-semibold uppercase tracking-widest text-primary/70 hover:text-accent transition-colors duration-300">
+          Chi Sono
+        </a>
+      </li>
+      <li>
+        <a href="/blog/" class="text-sm font-semibold uppercase tracking-widest text-primary/70 hover:text-accent transition-colors duration-300">
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href="/contatti/" class="text-sm font-semibold uppercase tracking-widest text-primary/70 hover:text-accent transition-colors duration-300">
+          Contatti
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="flex items-center justify-center gap-2 text-sm text-primary/60">
     <p>Sviluppato con passione utilizzando</p>
-    <a 
-      href="https://astro.build" 
-      target="_blank" 
-      rel="noopener noreferrer" 
+    <a
+      href="https://astro.build"
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label="Coded with Astro"
       class="hover:text-accent transition-colors duration-300"
     >
       <Icon name="astro" aria-hidden="true" class="w-6 h-6" />
     </a>
   </div>
-  <p class="text-xs text-primary/70 mt-4">
+  <p class="text-xs text-primary/50 mt-4 text-center">
     &copy; {new Date().getFullYear()} Mirko Passeri. Tutti i diritti riservati.
   </p>
 </footer>

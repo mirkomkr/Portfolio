@@ -1,0 +1,94 @@
+---
+import '../styles/global.css';
+import '@fontsource-variable/open-sans';
+import '@fontsource-variable/playfair-display';
+import { SEO } from 'astro-seo';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  ogImageAlt?: string;
+}
+
+const {
+  title,
+  description,
+  canonical = 'https://www.mirkopasseri.it',
+  ogImage = 'https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp',
+  ogImageAlt = 'Mirko Passeri — Frontend Developer & Web Designer',
+} = Astro.props;
+
+const baseSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.mirkopasseri.it/#persona",
+      "name": "Mirko Passeri",
+      "jobTitle": "Frontend Developer",
+      "url": "https://www.mirkopasseri.it",
+      "image": "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
+      "sameAs": [
+        "https://www.linkedin.com/in/mirko-passeri/",
+        "https://github.com/mirkomkr"
+      ],
+      "description": "Frontend Developer con base ad Anzio, specializzato nella creazione di siti web performanti, accessibili e ottimizzati per i motori di ricerca.",
+      "knowsAbout": ["HTML", "CSS", "JavaScript", "React", "Astro", "Next.js", "Web Accessibility", "SEO"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Anzio",
+        "addressRegion": "Lazio",
+        "addressCountry": "IT"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.mirkopasseri.it/#website",
+      "url": "https://www.mirkopasseri.it",
+      "name": "Mirko Passeri",
+      "description": "Portfolio e blog di Mirko Passeri, Frontend Developer ad Anzio.",
+      "author": { "@id": "https://www.mirkopasseri.it/#persona" },
+      "inLanguage": "it"
+    }
+  ]
+};
+---
+
+<html lang="it">
+  <head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Mirko Passeri" />
+    <SEO
+      title={title}
+      description={description}
+      canonical={canonical}
+      openGraph={{
+        basic: { title, type: 'website', image: ogImage },
+        optional: { description, locale: 'it_IT', siteName: 'Mirko Passeri' },
+        image: { alt: ogImageAlt, width: 1200, height: 630 },
+      }}
+      twitter={{
+        card: 'summary_large_image',
+        title,
+        description,
+        image: ogImage,
+        imageAlt: ogImageAlt,
+      }}
+    />
+    <link rel="alternate" hreflang="it" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href="https://www.mirkopasseri.it/" />
+    <script type="application/ld+json" set:html={JSON.stringify(baseSchema)}></script>
+    <slot name="schema" />
+  </head>
+  <body class="bg-master text-primary antialiased scroll-smooth">
+    <slot />
+    <Footer />
+  </body>
+</html>

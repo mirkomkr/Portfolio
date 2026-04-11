@@ -1,131 +1,24 @@
 ---
-import "../styles/global.css";
-import Hero from "../components/Hero.astro";
-import '@fontsource-variable/open-sans'
-import '@fontsource-variable/playfair-display'
-import Progetti from "../components/Progetti.astro";
-import Contatti from "../components/Contatti.astro";
-import Timeline from "../components/Timeline.astro";
-import Footer from "../components/Footer.astro";
-import { SEO } from "astro-seo";
-const title = "Sviluppo Web Ottimizzato e Design Accessibile | Mirko Passeri"
-const description = "Benvenuti nel portfolio di Mirko Passeri: sviluppo siti web performanti, accessibili e ottimizzati SEO ad Anzio e Nettuno. Scopri i miei progetti scalabili e moderni."
-const charset = "utf-8";
-const canonical = "https://www.mirkopasseri.it";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Progetti from '../components/Progetti.astro';
+import Timeline from '../components/Timeline.astro';
+import Contatti from '../components/Contatti.astro';
 ---
 
-<html lang="it">
-	<head>
-  <link rel="sitemap" href="https://www.mirkopasseri.it/sitemap-index.xml">
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="generator" content={Astro.generator} />
-<SEO 
-charset={charset}
-title={title}
-description={description}
-canonical={canonical}
-openGraph={{
-  basic: {
-    title: title,
-    type: "website",
-    image: "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
-  },
-  optional: {
-    description: description,
-    locale: "it_IT",
-    siteName: "Mirko Passeri"
-  },
-  image: {
-    alt: "Immagine del portfolio di Mirko Passeri"
-  }
-}}
-twitter={{
-  card: "summary_large_image",
-  title: title,
-  description: description,
-  image: "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
-  imageAlt: "Immagine del portfolio di Mirko Passeri",
-}}
-/>
-
-<meta name="keywords" content="sviluppo web Anzio, creazione siti web ad Anzio e Nettuno, accessibilità web, SEO on-page, siti web veloci, siti web ottimizzati, web developer web designer Anzio, Nettuno, Latina, Aprilia, Pomezia." />
-<meta name="author" content="Mirko Passeri" />
-<meta name="robots" content="index, follow" />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://www.mirkopasseri.it/",
-      "name": "Mirko Passeri",
-      "jobTitle": "Front End Developer",
-      "url": "https://www.mirkopasseri.it",
-      "sameAs": [
-        "https://www.linkedin.com/in/mirko-passeri/",
-        "https://github.com/mirkomkr"
-      ],
-      "description": "Sviluppatore Web specializzato nella creazione di siti moderni e performanti."
-    },
-    {
-      "@type": ["CreativeWork", "WebDesignService", "WebSite"],
-      "@id": "https://www.mirkopasseri.it/#progetti",
-      "name": "Sviluppo Siti Web e Design Accessibile, ad Anzio e Nettuno | Mirko Passeri",
-      "url": "https://www.mirkopasseri.it",
-      "image": "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
-      "description": "Benvenuti nel portfolio di Mirko Passeri, sviluppatore web focalizzato su performance, accessibilità e SEO on-page. Cerchi chi può creare un sito per la tua attività ad Anzio o Nettuno? Realizzo siti vetrina e soluzioni web per negozi e piccole imprese locali. Visibilità reale e codice curato per far crescere il tuo business sul territorio.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Anzio",
-        "addressRegion": "Lazio",
-        "addressCountry": "IT"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "41.4485", 
-        "longitude": "12.6289"
-      },
-      "areaServed": [
-        { "@type": "City", "name": "Anzio" },
-        { "@type": "City", "name": "Nettuno" },
-        { "@type": "City", "name": "Aprilia" },
-        { "@type": "City", "name": "Latina" },
-        { "@type": "City", "name": "Pomezia" },
-        { "@type": "City", "name": "Roma" },
-        { "@type": "City", "name": "Ariccia" },
-        { "@type": "City", "name": "Marino" },
-        { "@type": "City", "name": "Castelli Romani" }
-      ],
-      "founder": { "@id": "https://www.mirkopasseri.it/" },
-"contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "availableLanguage": "Italian",
-        "url": "https://www.mirkopasseri.it/#contattami"
-      },
-      "potentialAction": {
-        "@type": "CommunicateAction",
-        "target": "https://www.mirkopasseri.it/#contattami",
-        "description": "Entra in contatto con Mirko per una collaborazione o un progetto web"
-      }
-    }
-  ]
-}
-</script>
-	</head>
-	<body class="bg-master text-primary antialiased scroll-smooth">
-		<main>
-			<section aria-label="Introduzione" class="hero">
-				<Hero />
-			</section>
-			<section aria-label="Progetti" class="progetti">
-				<Progetti />
-        <Timeline />
-        <Contatti />
-			</section>
-		</main>
-    <Footer />
-	</body>
-</html>
+<BaseLayout
+  title="Mirko Passeri — Frontend Developer & Web Designer ad Anzio"
+  description="Portfolio di Mirko Passeri: sviluppo siti web moderni, accessibili e ottimizzati per Google. Anzio, Nettuno e zone limitrofe."
+  canonical="https://www.mirkopasseri.it"
+>
+  <main>
+    <section aria-label="Introduzione" class="hero">
+      <Hero />
+    </section>
+    <section aria-label="Contenuti" class="progetti">
+      <Progetti />
+      <Timeline />
+      <Contatti />
+    </section>
+  </main>
+</BaseLayout>

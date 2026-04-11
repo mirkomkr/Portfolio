@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Contatti from '../components/Contatti.astro';
+---
+
+<BaseLayout
+  title="Contatti — Mirko Passeri, Frontend Developer"
+  description="Scrivimi per un progetto web, una domanda tecnica o semplicemente per parlare di idee. Rispondo sempre."
+  canonical="https://www.mirkopasseri.it/contatti/"
+>
+  <main class="min-h-screen">
+    <div class="max-w-7xl mx-auto px-8 md:px-24 pt-16">
+      <a href="/" class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline">
+        ← Torna alla home
+      </a>
+    </div>
+    <Contatti />
+  </main>
+</BaseLayout>
