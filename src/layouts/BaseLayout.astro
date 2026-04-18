@@ -28,28 +28,53 @@ const baseSchema = {
       "@type": "Person",
       "@id": "https://www.mirkopasseri.it/#persona",
       "name": "Mirko Passeri",
-      "jobTitle": "Frontend Developer",
+      "jobTitle": "Frontend Developer & Web Designer",
       "url": "https://www.mirkopasseri.it",
       "image": "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
       "sameAs": [
         "https://www.linkedin.com/in/mirko-passeri/",
         "https://github.com/mirkomkr"
       ],
-      "description": "Frontend Developer con base ad Anzio, specializzato nella creazione di siti web performanti, accessibili e ottimizzati per i motori di ricerca.",
-      "knowsAbout": ["HTML", "CSS", "JavaScript", "React", "Astro", "Next.js", "Web Accessibility", "SEO"],
+      "description": "Frontend Developer e Web Designer con base ad Anzio (RM), specializzato nella creazione di siti web performanti, accessibili e ottimizzati per i motori di ricerca.",
+      "knowsAbout": ["HTML", "CSS", "JavaScript", "React", "Astro", "Next.js", "Web Accessibility", "SEO", "Web Design"],
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Anzio",
         "addressRegion": "Lazio",
-        "addressCountry": "IT"
+        "addressCountry": "IT",
+        "postalCode": "00042"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Anzio" },
+        { "@type": "City", "name": "Nettuno" },
+        { "@type": "City", "name": "Ardea" },
+        { "@type": "City", "name": "Pomezia" },
+        { "@type": "City", "name": "Torvaianica" },
+        { "@type": "City", "name": "Aprilia" },
+        { "@type": "City", "name": "Latina" },
+        { "@type": "City", "name": "Cisterna di Latina" },
+        { "@type": "City", "name": "Albano Laziale" },
+        { "@type": "City", "name": "Marino" },
+        { "@type": "City", "name": "Grottaferrata" },
+        { "@type": "City", "name": "Roma" }
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Frontend Developer",
+        "occupationLocation": {
+          "@type": "City",
+          "name": "Anzio"
+        },
+        "description": "Sviluppo di siti web e interfacce digitali con focus su accessibilità, performance e ottimizzazione per i motori di ricerca.",
+        "skills": "HTML, CSS, JavaScript, React, Astro, Next.js, Web Accessibility, SEO, Web Design"
       }
     },
     {
       "@type": "WebSite",
       "@id": "https://www.mirkopasseri.it/#website",
       "url": "https://www.mirkopasseri.it",
-      "name": "Mirko Passeri",
-      "description": "Portfolio e blog di Mirko Passeri, Frontend Developer ad Anzio.",
+      "name": "Mirko Passeri — Frontend Developer & Web Designer ad Anzio",
+      "description": "Portfolio e blog di Mirko Passeri, web designer e frontend developer con base ad Anzio, Lazio. Siti web per Anzio, Nettuno, Ardea, Pomezia, Latina e Roma.",
       "author": { "@id": "https://www.mirkopasseri.it/#persona" },
       "inLanguage": "it"
     }

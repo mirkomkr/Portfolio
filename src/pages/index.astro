@@ -5,14 +5,74 @@ import Progetti from '../components/Progetti.astro';
 import ChiSonoPreview from '../components/ChiSonoPreview.astro';
 import BlogPreview from '../components/BlogPreview.astro';
 import Timeline from '../components/Timeline.astro';
+import FAQ from '../components/FAQ.astro';
 import Contatti from '../components/Contatti.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quanto tempo ci vuole per fare un sito web?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dipende dalla complessità. Un sito vetrina semplice può essere pronto in 2-3 settimane. Un progetto più articolato richiede 4-8 settimane. La variabile più grande è spesso la disponibilità dei contenuti: testi e foto fanno la differenza."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ho già Instagram e Facebook. Perché dovrei avere anche un sito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I social mantengono il rapporto con chi già ti conosce. Il sito serve a farti trovare da chi non ti conosce ancora — su Google e gli altri motori di ricerca. Quando qualcuno cerca 'parrucchiere Anzio' o 'ristorante Nettuno', Google mostra i siti web, non i profili Instagram."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto costa fare un sito web?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il costo varia molto in base a complessità, numero di pagine e funzionalità. Un sito vetrina semplice e uno shop e-commerce hanno esigenze molto diverse. Non esiste una risposta universale — ogni progetto è a sé."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Cosa mi serve per iniziare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'essenziale è avere un'idea chiara di cosa vuoi comunicare e a chi ti rivolgi. Testi, immagini e logo si definiscono durante il percorso. Nessun prerequisito tecnico richiesto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quali tecnologie conosci?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Parto dalle fondamenta: HTML, CSS e JavaScript. Per ogni progetto scelgo gli strumenti più adatti al problema — non il contrario. Sono certificato Meta Frontend Developer e ho una certificazione in accessibilità web rilasciata da W3C e edX."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sei disponibile per collaborazioni?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sì. Sono aperto a collaborazioni con agenzie, team di sviluppo e altri professionisti su progetti specifici."
+      }
+    }
+  ]
+};
 ---
 
 <BaseLayout
-  title="Mirko Passeri — Frontend Developer & Web Designer ad Anzio"
-  description="Portfolio di Mirko Passeri: sviluppo siti web moderni, accessibili e ottimizzati per Google. Anzio, Nettuno e zone limitrofe."
+  title="Mirko Passeri — Web Designer & Frontend Developer ad Anzio"
+  description="Siti web moderni, veloci e accessibili. Mirko Passeri, web designer ad Anzio disponibile per Nettuno, Ardea, Pomezia, Aprilia, Latina e Roma."
   canonical="https://www.mirkopasseri.it"
 >
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
   <main>
     <section aria-label="Introduzione" class="hero">
       <Hero />
@@ -22,6 +82,7 @@ import Contatti from '../components/Contatti.astro';
       <Progetti />
       <BlogPreview />
       <Timeline />
+      <FAQ />
       <Contatti />
     </section>
   </main>
