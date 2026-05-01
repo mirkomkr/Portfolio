@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -24,7 +25,8 @@ const blogPostingSchema = {
   "author": { "@id": "https://www.mirkopasseri.it/#persona" },
   "publisher": { "@id": "https://www.mirkopasseri.it/#persona" },
   "mainEntityOfPage": canonicalUrl,
-  "inLanguage": "it"
+  "inLanguage": "it",
+  ...(post.data.image && { "image": post.data.imageAlt }),
 };
 ---
 
@@ -56,6 +58,20 @@ const blogPostingSchema = {
           {post.data.description}
         </p>
       </header>
+
+      {post.data.image && (
+        <figure class="mb-12 -mx-8 md:mx-0">
+          <Image
+            src={post.data.image}
+            alt={post.data.imageAlt ?? post.data.title}
+            widths={[400, 800, 1200]}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px"
+            class="w-full h-auto rounded-lg"
+            loading="eager"
+            decoding="auto"
+          />
+        </figure>
+      )}
 
       <article class="prose">
         <Content />

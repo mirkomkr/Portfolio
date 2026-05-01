@@ -3,8 +3,19 @@ title: "Perché la tua attività ha bisogno di un sito web"
 description: "Non hai ancora un sito per la tua attività? In questo articolo spiego — senza tecnicismi — perché nel 2026 non averlo costa più che averlo, e cosa cambia davvero nella pratica."
 pubDate: 2026-04-11
 author: "Mirko Passeri"
-tags: ["web", "attività locali", "sito web", "presenza online"]
-image: "/blog/attivita-sito-web-cover.webp"
+tags:
+  [
+    "web",
+    "attività locali",
+    "sito web",
+    "presenza online",
+    "Anzio",
+    "Nettuno",
+    "Pomezia",
+    "Latina",
+    "Aprilia",
+  ]
+image: ../../assets/blog/perche-la-tua-attivita-ha-bisogno-di-un-sito-web.webp
 imageAlt: "Schermata di un sito web aperto su uno smartphone, accanto al banco di un negozio"
 ---
 
@@ -89,7 +100,7 @@ La risposta onesta è: **prima di quando pensi**.
 
 Google impiega tempo per capire che esisti e per fidarsi abbastanza da mostrarti. Non è una cosa che succede in una settimana. Più si aspetta, più si ritarda anche il momento in cui i risultati iniziano ad arrivare.
 
-Se stai ancora pensando *"magari il prossimo anno"*, considera che ogni mese che passa è un mese in cui qualcun altro nel tuo settore — nella tua zona — sta costruendo quella visibilità al posto tuo.
+Se stai ancora pensando _"magari il prossimo anno"_, considera che ogni mese che passa è un mese in cui qualcun altro nel tuo settore — nella tua zona — sta costruendo quella visibilità al posto tuo.
 
 ---
 
@@ -104,14 +115,17 @@ Ma al di là dell'aspetto normativo, c'è una ragione più immediata per tenerci
 Pensa a queste situazioni comuni, che probabilmente riconosci:
 
 ### Visiva
+
 - Il cliente anziano cerca il tuo numero di telefono, ma il testo è piccolo e i colori si confondono — fa fatica a leggere
 - Chi ti cerca dallo smartphone sotto il sole non riesce a leggere nulla perché lo schermo è troppo chiaro rispetto alla luce — stesso problema, nessuna disabilità
 
 ### Motoria
+
 - Chi ha un tremore alle mani o una limitazione motoria non usa il mouse e naviga solo con la tastiera: se il sito non è costruito per farlo, si blocca alla prima pagina
 - Chi tiene il telefono con una mano sola mentre porta la spesa non riesce a cliccare su pulsanti piccoli e vicini — stesso problema, nessuna disabilità
 
 ### Cognitiva
+
 - Chi ha difficoltà di lettura o di concentrazione — dislessia, ADHD — abbandona immediatamente una pagina con muri di testo senza titoli, senza spazi, senza struttura
 - Chi legge in fretta tra una pausa e l'altra, sul telefono, in piedi — senza paragrafi brevi e gerarchia chiara, si perde e va via — stesso problema, nessuna disabilità
 
@@ -133,8 +147,8 @@ Quello che fa la differenza è come viene costruito: con attenzione alla velocit
 
 ---
 
-*Se stai pensando a qualcosa del genere per la tua attività, o semplicemente vuoi capire da dove iniziare, puoi scrivermi — trovi il form nella pagina [contatti](/contatti). Rispondo sempre.*
+_Se stai pensando a qualcosa del genere per la tua attività, o semplicemente vuoi capire da dove iniziare, puoi scrivermi — trovi il form nella pagina [contatti](/contatti)._
 
 ---
 
-> **Nota tecnica (per chi è del settore):** questo sito è costruito con [Astro](https://astro.build/), un framework che genera HTML statico lato server con zero JavaScript non necessario. Le performance su PageSpeed Insights sono sistematicamente superiori a 95/100, il che si traduce in un vantaggio diretto nel ranking di Google tramite Core Web Vitals. Il caso DTF Italia usa Next.js con ISR per la gestione del catalogo prodotti WooCommerce.
+> **Nota tecnica:** questo sito è costruito con [Astro](https://astro.build/), un framework che genera HTML statico lato server con zero JavaScript non necessario. Le performance su PageSpeed Insights sono sistematicamente superiori a 95/100, il che si traduce in un vantaggio diretto nel ranking di Google tramite Core Web Vitals. Il caso DTF Italia usa Next.js con ISR per la gestione del catalogo prodotti WooCommerce.

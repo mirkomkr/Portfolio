@@ -3,7 +3,20 @@ title: "Social media vs sito web: perché non sono la stessa cosa"
 description: "Hai già Instagram e Facebook per la tua attività. Basta così? No — e in questo articolo spiego perché i social e un sito web fanno cose completamente diverse, e perché hai bisogno di entrambi."
 pubDate: 2026-03-15
 author: "Mirko Passeri"
-tags: ["social media", "sito web", "presenza online", "digital marketing"]
+tags:
+  [
+    "social media",
+    "sito web",
+    "presenza online",
+    "digital marketing",
+    "Anzio",
+    "Nettuno",
+    "Pomezia",
+    "Latina",
+    "Aprilia",
+  ]
+image: ../../assets/blog/social-media-vs-sito-web.webp
+imageAlt: "Illustrazione minimal: smartphone con social media a sinistra, browser web a destra"
 ---
 
 ## La domanda più comune che ricevo
@@ -45,12 +58,14 @@ Un sito web è il modo in cui entri in quel mondo. È il tuo spazio su Google.
 I social media hanno una funzione precisa e la fanno molto bene: **mantengono il rapporto con chi già ti conosce**.
 
 Sono perfetti per:
+
 - Mostrare il dietro le quinte della tua attività
 - Pubblicare offerte o novità a chi già ti segue
 - Raccogliere feedback e interagire con i clienti abituali
 - Costruire un senso di comunità attorno al tuo brand
 
 Quello che non sanno fare:
+
 - Farti trovare da chi non ti conosce ancora su Google
 - Darti una presenza stabile che non dipende dagli algoritmi
 - Comunicare professionalità in modo duraturo (un profilo Instagram non sostituisce un sito curato)
@@ -76,7 +91,7 @@ I social per coltivare la relazione con chi già ti segue. Il sito per essere tr
 
 ---
 
-*Hai domande su come strutturare la tua presenza online? Scrivimi dalla pagina [contatti](/contatti).*
+_Hai domande su come strutturare la tua presenza online? Scrivimi dalla pagina [contatti](/contatti)._
 
 ---
 

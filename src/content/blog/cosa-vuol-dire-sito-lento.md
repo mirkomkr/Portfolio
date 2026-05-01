@@ -3,7 +3,20 @@ title: "Cosa vuol dire che un sito è 'lento' e perché importa"
 description: "Hai mai abbandonato un sito perché ci metteva troppo ad aprirsi? Ecco cosa succede tecnicamente in quei secondi di attesa — e perché Google penalizza i siti lenti."
 pubDate: 2026-02-20
 author: "Mirko Passeri"
-tags: ["performance web", "core web vitals", "velocità sito", "SEO"]
+tags:
+  [
+    "performance web",
+    "core web vitals",
+    "velocità sito",
+    "SEO",
+    "Anzio",
+    "Nettuno",
+    "Pomezia",
+    "Latina",
+    "Aprilia",
+  ]
+image: ../../assets/blog/cosa-vuol-dire-sito-lento.webp
+imageAlt: "Illustrazione minimal: tachimetro lento accanto a browser con spinner di caricamento"
 ---
 
 ## Tre secondi
@@ -50,13 +63,13 @@ Un sito che si carica in due secondi su fibra ottica può impiegarci otto su uno
 Google ha creato tre metriche standard per misurare l'esperienza di caricamento di un sito. Si chiamano **Core Web Vitals** e compaiono nel punteggio di PageSpeed Insights.
 
 **LCP — Largest Contentful Paint**
-Misura quanto tempo ci vuole perché l'elemento principale della pagina (di solito l'immagine o il titolo più grande) sia visibile. Il riferimento di Google è sotto i 2,5 secondi. Traduzione umana: *quando vedo finalmente qualcosa di utile?*
+Misura quanto tempo ci vuole perché l'elemento principale della pagina (di solito l'immagine o il titolo più grande) sia visibile. Il riferimento di Google è sotto i 2,5 secondi. Traduzione umana: _quando vedo finalmente qualcosa di utile?_
 
 **CLS — Cumulative Layout Shift**
-Misura quanto il contenuto si sposta mentre la pagina si carica. Hai presente quando stai per cliccare un bottone e tutto si sposta in basso e finisci per cliccare qualcos'altro? Quello è CLS alto. Traduzione umana: *la pagina si muove mentre leggo?*
+Misura quanto il contenuto si sposta mentre la pagina si carica. Hai presente quando stai per cliccare un bottone e tutto si sposta in basso e finisci per cliccare qualcos'altro? Quello è CLS alto. Traduzione umana: _la pagina si muove mentre leggo?_
 
 **INP — Interaction to Next Paint**
-Misura quanto ci vuole prima che la pagina risponda a un'azione (click, tocco, digitazione). Traduzione umana: *quando clicco, succede qualcosa subito?*
+Misura quanto ci vuole prima che la pagina risponda a un'azione (click, tocco, digitazione). Traduzione umana: _quando clicco, succede qualcosa subito?_
 
 ---
 
@@ -80,7 +93,7 @@ L'anziano con una connessione lenta. Chi ti cerca da un treno. Chi ha uno smartp
 
 ---
 
-*Vuoi sapere com'è la situazione del tuo sito? Scrivimi dalla pagina [contatti](/contatti) e facciamo un'analisi insieme.*
+_Vuoi sapere com'è la situazione del tuo sito? Scrivimi dalla pagina [contatti](/contatti)._
 
 ---
 

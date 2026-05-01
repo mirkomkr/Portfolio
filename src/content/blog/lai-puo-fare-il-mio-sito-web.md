@@ -3,7 +3,21 @@ title: "L'AI può fare il mio sito web? La risposta onesta"
 description: "Sempre più persone mi dicono 'tanto ci pensa l'AI'. In parte hanno ragione. In parte si sbagliano. Questa è la risposta onesta — anche se va contro i miei interessi dirla."
 pubDate: 2026-01-10
 author: "Mirko Passeri"
-tags: ["intelligenza artificiale", "AI", "ChatGPT", "sviluppo web"]
+tags:
+  [
+    "intelligenza artificiale",
+    "AI",
+    "ChatGPT",
+    "sviluppo web",
+    "Realizzare Sito Web",
+    "Anzio",
+    "Nettuno",
+    "Pomezia",
+    "Latina",
+    "Aprilia",
+  ]
+image: ../../assets/blog/lai-puo-fare-il-mio-sito-web.webp
+imageAlt: "Illustrazione minimal: icona robot AI e browser con codice, connessi da una mano umana"
 ---
 
 ## La domanda che sento sempre più spesso
@@ -21,6 +35,7 @@ Ma c'è una differenza tra qualcosa che sembra un sito e qualcosa che funziona c
 L'AI è uno strumento straordinario. Non lo dico per fare la figura di chi è "open minded" — lo dico perché lo uso ogni giorno nel mio lavoro.
 
 L'AI sa:
+
 - Generare codice a partire da descrizioni in linguaggio naturale
 - Spiegare errori e suggerire correzioni
 - Produrre bozze rapide di strutture HTML/CSS
@@ -71,7 +86,7 @@ La differenza non è tra AI e developer. È tra uno strumento usato bene e uno s
 
 ---
 
-*Hai già provato a creare un sito con AI e non sei soddisfatto del risultato? Scrivimi dalla pagina [contatti](/contatti) — possiamo parlarne.*
+_Hai già provato a creare un sito con AI e non sei soddisfatto del risultato? Scrivimi dalla pagina [contatti](/contatti)._
 
 ---
 
