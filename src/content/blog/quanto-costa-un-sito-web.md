@@ -17,6 +17,13 @@ tags:
   ]
 image: ../../assets/blog/quanto-costa-un-sito-web.webp
 imageAlt: "Illustrazione minimal che rappresenta il costo variabile di un sito web professionale"
+faq:
+  - q: "Quanto costa un sito web per una piccola impresa o un negozio?"
+    a: "Non esiste un prezzo fisso universale. Un sito vetrina professionale per un'attività locale parte generalmente da circa 800-1500 euro, mentre un e-commerce o un progetto complesso ha costi superiori. Il prezzo varia in base alle performance, all'ottimizzazione SEO locale e al design."
+  - q: "Perché ci sono preventivi per siti web da 300 euro e altri da 3000 euro?"
+    a: "La differenza di prezzo è data dal lavoro 'invisibile'. Un sito economico usa template lenti ed è invisibile su Google. Un sito professionale include ricerca sulle parole chiave, tempi di caricamento istantanei (sotto i 2 secondi), accessibilità e una struttura progettata per convertire i visitatori in clienti."
+  - q: "Ci sono costi fissi annuali dopo aver creato il sito web?"
+    a: "Sì, per mantenere un sito online servono un dominio e uno spazio server (hosting). Le tecnologie moderne come Astro permettono spesso di azzerare o ridurre drasticamente i costi di hosting rispetto ai vecchi siti in WordPress, limitando la spesa al solo rinnovo del dominio."
 ---
 
 ## Risposta breve

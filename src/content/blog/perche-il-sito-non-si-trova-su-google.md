@@ -18,6 +18,13 @@ tags:
   ]
 image: ../../assets/blog/perche-il-sito-non-si-trova-su-google.webp
 imageAlt: "Illustrazione minimal: lente di ingrandimento su browser con pagina non trovata"
+faq:
+  - q: "Perché il mio sito non si trova su Google se cerco il nome della mia attività?"
+    a: "Se il sito non appare nemmeno cercando il nome esatto, le cause sono due: è online da troppo poco tempo e Google non lo ha ancora indicizzato, oppure c'è un blocco tecnico nel codice (come un tag 'noindex') che vieta ai motori di ricerca di scansionarlo."
+  - q: "Perché non compaio su Google quando i clienti cercano i miei servizi ad Anzio o Nettuno?"
+    a: "Questo è un problema di ottimizzazione (SEO Locale). Significa che il tuo sito non contiene le parole chiave usate dai clienti nei titoli, manca di autorevolezza, oppure non è collegato correttamente al tuo Google Business Profile."
+  - q: "È vero che Google penalizza i siti web lenti?"
+    a: "Sì. Dal 2021 la velocità è un fattore di ranking ufficiale (Core Web Vitals). Se il tuo sito impiega più di 2,5 secondi a caricare o scatta mentre l'utente legge, Google lo considererà di bassa qualità e spingerà in alto i siti più veloci dei tuoi concorrenti."
 ---
 
 ## "Ho già un sito, ma..."

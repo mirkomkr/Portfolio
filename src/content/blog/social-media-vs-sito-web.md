@@ -17,6 +17,11 @@ tags:
   ]
 image: ../../assets/blog/social-media-vs-sito-web.webp
 imageAlt: "Illustrazione minimal: smartphone con social media a sinistra, browser web a destra"
+faq:
+  - q: "A cosa serve un sito web se ho già Instagram e Facebook?"
+    a: "I social media servono a mantenere il rapporto con chi già ti conosce o ti segue, ma sono spazi in affitto soggetti ai cambi di algoritmo. Un sito web è l'unico spazio digitale di tua proprietà, progettato specificamente per farti trovare su Google da chi non ti conosce ancora ma sta cercando i tuoi servizi."
+  - q: "Un sito web può sostituire i social media per un'attività locale?"
+    a: "No, fanno lavori diversi e complementari. Il sito web cattura la domanda consapevole (chi cerca su Google 'ristorante ad Anzio'), mentre i social media stimolano la domanda latente (chi vede un bel piatto su Instagram e decide di venirti a trovare). Per una strategia efficace, servono entrambi."
 ---
 
 ## La domanda più comune che ricevo

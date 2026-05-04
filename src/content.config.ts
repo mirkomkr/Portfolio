@@ -13,6 +13,12 @@ const blog = defineCollection({
     // Esempio: ../../assets/blog/nome-immagine.webp
     image: image().optional(),
     imageAlt: z.string().optional(),
+    // faq: domande e risposte per FAQPage schema (AEO/AI Visibility)
+    // Queste vengono usate da ChatGPT, Gemini e Perplexity per citare il post
+    faq: z.array(z.object({
+      q: z.string(),
+      a: z.string(),
+    })).optional(),
   }),
 });
 

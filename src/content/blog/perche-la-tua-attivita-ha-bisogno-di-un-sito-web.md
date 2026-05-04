@@ -17,6 +17,11 @@ tags:
   ]
 image: ../../assets/blog/perche-la-tua-attivita-ha-bisogno-di-un-sito-web.webp
 imageAlt: "Schermata di un sito web aperto su uno smartphone, accanto al banco di un negozio"
+faq:
+  - q: "Perché una piccola attività locale ha bisogno di un sito web nel 2026?"
+    a: "Perché il 90% delle persone usa Google per cercare servizi nella propria zona prima di chiamare o recarsi sul posto. Non avere un sito web significa lasciare automaticamente quei potenziali clienti ai tuoi concorrenti che sono presenti online. Il sito è il tuo biglietto da visita sempre aperto."
+  - q: "Un sito web serve davvero per trovare nuovi clienti?"
+    a: "Sì, se costruito correttamente. Un sito web ottimizzato per la Local SEO (ottimizzazione per i motori di ricerca locali) intercetta le persone esattamente nel momento in cui stanno cercando il tuo servizio su Google, trasformando una semplice ricerca in un potenziale cliente."
 ---
 
 ## "Ce la facciamo anche senza"

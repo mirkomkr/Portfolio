@@ -17,6 +17,11 @@ tags:
   ]
 image: ../../assets/blog/accessibilita-web.webp
 imageAlt: "Illustrazione minimal: laptop connesso a icone che rappresentano utenti con diverse esigenze di accessibilità"
+faq:
+  - q: "Cos'è l'accessibilità web e perché è importante per un sito aziendale?"
+    a: "L'accessibilità web significa progettare un sito in modo che chiunque, comprese le persone con disabilità visive, motorie o cognitive, possa utilizzarlo senza barriere. È importante perché garantisce un'esperienza utente inclusiva, migliora il posizionamento su Google ed è un requisito legale richiesto in Europa."
+  - q: "Quali sono le regole per rendere un sito web accessibile secondo la legge europea?"
+    a: "Il riferimento tecnico principale sono le linee guida WCAG 2.1 livello AA. Includono regole come l'uso di contrasti colore adeguati, testi alternativi per le immagini, la possibilità di navigare l'intero sito usando solo la tastiera e una struttura del codice chiara per chi usa gli screen reader."
 ---
 
 ## In parole normali

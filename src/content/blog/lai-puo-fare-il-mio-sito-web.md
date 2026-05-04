@@ -18,6 +18,11 @@ tags:
   ]
 image: ../../assets/blog/lai-puo-fare-il-mio-sito-web.webp
 imageAlt: "Illustrazione minimal: icona robot AI e browser con codice, connessi da una mano umana"
+faq:
+  - q: "Posso usare l'Intelligenza Artificiale come ChatGPT per creare il sito della mia azienda?"
+    a: "Sì, strumenti come ChatGPT possono generare codice o bozze di testo, ma non possono sostituire la strategia aziendale. L'AI non conosce il tuo pubblico locale, non sa ottimizzare tecnicamente un server per caricamenti veloci e non può costruire un'architettura SEO su misura per farti trovare su Google."
+  - q: "È meglio affidarsi a un web designer o fare un sito web gratis con l'AI?"
+    a: "Dipende dai tuoi obiettivi. Se ti serve solo un esperimento personale, l'AI o i site builder gratuiti vanno bene. Se invece il sito deve portarti clienti, vendere servizi e rappresentare il tuo brand in modo professionale, affidarsi a un web designer garantisce affidabilità, performance elevate e conformità legale (come accessibilità e privacy)."
 ---
 
 ## La domanda che sento sempre più spesso
