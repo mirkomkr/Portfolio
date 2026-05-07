@@ -26,11 +26,33 @@
             }
           ]
         },
+        "dateModified": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
         "author": {
           "type": "string",
           "default": "Mirko Passeri"
         },
         "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "related": {
           "type": "array",
           "items": {
             "type": "string"

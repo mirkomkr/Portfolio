@@ -17,6 +17,9 @@ tags:
   ]
 image: ../../assets/blog/accessibilita-web.webp
 imageAlt: "Illustrazione minimal: laptop connesso a icone che rappresentano utenti con diverse esigenze di accessibilità"
+related:
+  - cosa-vuol-dire-sito-lento
+  - perche-la-tua-attivita-ha-bisogno-di-un-sito-web
 faq:
   - q: "Cos'è l'accessibilità web e perché è importante per un sito aziendale?"
     a: "L'accessibilità web significa progettare un sito in modo che chiunque, comprese le persone con disabilità visive, motorie o cognitive, possa utilizzarlo senza barriere. È importante perché garantisce un'esperienza utente inclusiva, migliora il posizionamento su Google ed è un requisito legale richiesto in Europa."

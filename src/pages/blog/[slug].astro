@@ -16,6 +16,12 @@ const { Content } = await render(post);
 
 const canonicalUrl = `https://www.mirkopasseri.it/blog/${post.id}/`;
 
+// Articoli correlati: fetcha tutti, filtra per gli slug definiti in related[]
+const allPosts = await getCollection('blog');
+const relatedPosts = post.data.related
+  ? allPosts.filter((p) => post.data.related!.includes(p.id))
+  : [];
+
 const blogPostingSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -62,6 +68,8 @@ const faqSchema = post.data.faq && post.data.faq.length > 0 ? {
   description={post.data.description}
   canonical={canonicalUrl}
   ogType="article"
+  ogImage={post.data.image ? `https://www.mirkopasseri.it${post.data.image.src}` : undefined}
+  ogImageAlt={post.data.imageAlt}
 >
   <Fragment slot="schema">
     <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)}></script>
@@ -110,6 +118,28 @@ const faqSchema = post.data.faq && post.data.faq.length > 0 ? {
       </article>
 
       <footer class="mt-16 pt-8 border-t border-primary/10">
+
+        {relatedPosts.length > 0 && (
+          <nav aria-label="Articoli correlati" class="mb-10">
+            <p class="text-xs font-semibold uppercase tracking-widest text-accent mb-6">Leggi anche</p>
+            <ul class="space-y-4">
+              {relatedPosts.map((related) => (
+                <li>
+                  <a
+                    href={`/blog/${related.id}/`}
+                    class="group block border border-primary/10 rounded-xl p-5 hover:border-accent/40 hover:bg-primary/[0.02] transition-all duration-300"
+                  >
+                    <p class="font-semibold text-primary group-hover:text-accent transition-colors duration-300 mb-1">
+                      {related.data.title}
+                    </p>
+                    <p class="text-sm text-primary/60 leading-relaxed">{related.data.description}</p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+
         <p class="text-sm text-primary/75">
           Scritto da <strong class="text-primary">Mirko Passeri</strong> —
           <a href="/contatti/" class="text-accent hover:underline">Scrivimi</a> se hai domande o vuoi parlarne.

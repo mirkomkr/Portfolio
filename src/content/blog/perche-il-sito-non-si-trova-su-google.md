@@ -18,6 +18,9 @@ tags:
   ]
 image: ../../assets/blog/perche-il-sito-non-si-trova-su-google.webp
 imageAlt: "Illustrazione minimal: lente di ingrandimento su browser con pagina non trovata"
+related:
+  - cosa-vuol-dire-sito-lento
+  - perche-la-tua-attivita-ha-bisogno-di-un-sito-web
 faq:
   - q: "Perché il mio sito non si trova su Google se cerco il nome della mia attività?"
     a: "Se il sito non appare nemmeno cercando il nome esatto, le cause sono due: è online da troppo poco tempo e Google non lo ha ancora indicizzato, oppure c'è un blocco tecnico nel codice (come un tag 'noindex') che vieta ai motori di ricerca di scansionarlo."

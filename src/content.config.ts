@@ -10,6 +10,9 @@ const blog = defineCollection({
     dateModified: z.coerce.date().optional(),
     author: z.string().default('Mirko Passeri'),
     tags: z.array(z.string()).optional(),
+    // related: slug degli articoli correlati da mostrare a fondo post (internal linking)
+    // Esempio: ["quanto-costa-un-sito-web", "perche-il-sito-non-si-trova-su-google"]
+    related: z.array(z.string()).optional(),
     // image: usa path relativo dal file .md verso src/assets/blog/
     // Esempio: ../../assets/blog/nome-immagine.webp
     image: image().optional(),

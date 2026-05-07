@@ -17,6 +17,9 @@ tags:
   ]
 image: ../../assets/blog/cosa-vuol-dire-sito-lento.webp
 imageAlt: "Illustrazione minimal: tachimetro lento accanto a browser con spinner di caricamento"
+related:
+  - perche-il-sito-non-si-trova-su-google
+  - accessibilita-web
 faq:
   - q: "Cosa significa esattamente che un sito web è lento?"
     a: "Un sito è considerato lento quando impiega più di 2,5 - 3 secondi a mostrare il contenuto principale sullo schermo del telefono o del computer. Google misura questa lentezza attraverso i Core Web Vitals, valutando il tempo di caricamento (LCP), la reattività ai click (INP) e la stabilità visiva (CLS)."
