@@ -1,6 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Timeline from '../components/Timeline.astro';
+
+const profilePageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://www.mirkopasseri.it/chi-sono/#profilepage",
+  "url": "https://www.mirkopasseri.it/chi-sono/",
+  "name": "Chi Sono — Mirko Passeri",
+  "inLanguage": "it",
+  "isPartOf": { "@id": "https://www.mirkopasseri.it/#website" },
+  "about": { "@id": "https://www.mirkopasseri.it/#persona" },
+  "mainEntity": { "@id": "https://www.mirkopasseri.it/#persona" }
+};
 ---
 
 <BaseLayout
@@ -8,6 +20,9 @@ import Timeline from '../components/Timeline.astro';
   description="Scopri chi è Mirko Passeri: web designer e frontend developer con base ad Anzio. Certificato Meta e W3C, specializzato in accessibilità, performance e SEO."
   canonical="https://www.mirkopasseri.it/chi-sono/"
 >
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(profilePageSchema)}></script>
+  </Fragment>
   <main class="min-h-screen max-w-7xl mx-auto px-8 md:px-24 py-20">
 
     <header class="mb-16 md:mb-24">

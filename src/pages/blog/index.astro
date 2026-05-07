@@ -5,6 +5,19 @@ import { Image } from 'astro:assets';
 
 const posts = await getCollection('blog');
 const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Articoli sul Web Design e la SEO — Mirko Passeri",
+  "url": "https://www.mirkopasseri.it/blog/",
+  "itemListElement": sortedPosts.map((post, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "url": `https://www.mirkopasseri.it/blog/${post.id}/`,
+    "name": post.data.title
+  }))
+};
 ---
 
 <BaseLayout
@@ -12,6 +25,9 @@ const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDa
   description="Articoli su siti web, accessibilità e SEO scritti in modo chiaro — per titolari di attività e sviluppatori. Da Anzio, per chiunque."
   canonical="https://www.mirkopasseri.it/blog/"
 >
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+  </Fragment>
   <main class="min-h-screen max-w-7xl mx-auto px-8 md:px-24 py-20">
 
     <header class="mb-16 md:mb-24">

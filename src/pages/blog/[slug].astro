@@ -22,11 +22,22 @@ const blogPostingSchema = {
   "headline": post.data.title,
   "description": post.data.description,
   "datePublished": post.data.pubDate.toISOString(),
+  ...(post.data.dateModified && { "dateModified": post.data.dateModified.toISOString() }),
   "author": { "@id": "https://www.mirkopasseri.it/#persona" },
   "publisher": { "@id": "https://www.mirkopasseri.it/#persona" },
   "mainEntityOfPage": canonicalUrl,
   "inLanguage": "it",
-  ...(post.data.image && { "image": post.data.imageAlt }),
+  ...(post.data.image && { "image": `https://www.mirkopasseri.it${post.data.image.src}` }),
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mirkopasseri.it" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.mirkopasseri.it/blog/" },
+    { "@type": "ListItem", "position": 3, "name": post.data.title, "item": canonicalUrl }
+  ]
 };
 
 // FAQPage schema — generato solo se il post ha FAQ nel frontmatter
@@ -50,9 +61,11 @@ const faqSchema = post.data.faq && post.data.faq.length > 0 ? {
   title={`${post.data.title} — Mirko Passeri`}
   description={post.data.description}
   canonical={canonicalUrl}
+  ogType="article"
 >
   <Fragment slot="schema">
     <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
     {faqSchema && (
       <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
     )}

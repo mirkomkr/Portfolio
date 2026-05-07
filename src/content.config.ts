@@ -7,6 +7,7 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     pubDate: z.coerce.date(),
+    dateModified: z.coerce.date().optional(),
     author: z.string().default('Mirko Passeri'),
     tags: z.array(z.string()).optional(),
     // image: usa path relativo dal file .md verso src/assets/blog/
