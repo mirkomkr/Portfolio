@@ -41,24 +41,24 @@ const faqs: FAQ[] = [
     Le risposte alle domande che ricevo più spesso.
   </p>
 
-  <dl class="divide-y divide-primary/10">
+  <div class="divide-y divide-primary/10">
     {faqs.map((faq) => (
       <details class="group py-6" name="faq-accordion">
         <summary class="flex justify-between items-center gap-6 cursor-pointer list-none marker:hidden [&::-webkit-details-marker]:hidden">
-          <dt class="text-base md:text-lg font-semibold text-primary group-open:text-accent transition-colors duration-200">
+          <span class="text-base md:text-lg font-semibold text-primary group-open:text-accent transition-colors duration-200">
             {faq.q}
-          </dt>
+          </span>
           <span aria-hidden="true" class="shrink-0 text-accent transition-transform duration-300 group-open:rotate-180">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 15.414l-6.293-6.293-1.414 1.414L12 18.243l7.707-7.708-1.414-1.414z"/>
             </svg>
           </span>
         </summary>
-        <dd class="mt-4 text-primary/75 leading-relaxed text-base max-w-2xl pb-2">
+        <p class="mt-4 text-primary/75 leading-relaxed text-base max-w-2xl pb-2">
           {faq.a}
-        </dd>
+        </p>
       </details>
     ))}
-  </dl>
+  </div>
 
 </section>

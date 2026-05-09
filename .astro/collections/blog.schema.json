@@ -46,6 +46,10 @@
           "type": "string",
           "default": "Mirko Passeri"
         },
+        "draft": {
+          "type": "boolean",
+          "default": false
+        },
         "tags": {
           "type": "array",
           "items": {

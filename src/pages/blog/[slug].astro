@@ -5,7 +5,10 @@ import { Image } from 'astro:assets';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map((post) => ({
+  const isDev = import.meta.env.DEV;
+  // In produzione non genera la pagina per i post con draft: true
+  const visiblePosts = isDev ? posts : posts.filter((p) => !p.data.draft);
+  return visiblePosts.map((post) => ({
     params: { slug: post.id },
     props: { post },
   }));

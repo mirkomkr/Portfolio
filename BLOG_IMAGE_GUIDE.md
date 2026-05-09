@@ -197,3 +197,22 @@ Wide format 1200x630px.
 - [ ] Salva in `src/assets/blog/`
 - [ ] Decommenta la riga `image:` nel frontmatter del post
 - [ ] Verifica con `npm run build`
+
+---
+
+## POST 8 — "Google Business Profile: cos'è, a cosa serve e come usarlo"
+**File:** `google-business-profile.webp`
+
+```
+A clean, minimal flat illustration for a blog post about Google Business Profile and local search visibility.
+Dark background (#333333).
+Center: a simple map location pin icon (teardrop shape).
+Left: a small storefront/shop icon with a simplified facade.
+Right: three horizontal star icons in a row (representing reviews).
+Bottom center: a simplified smartphone showing a map screen.
+Thin connecting lines between all elements.
+Cream/beige (#F5F5DC) and muted blue-grey (#4A6274) color palette only.
+No text, no gradients, no shadows. Professional, modern, editorial flat illustration style.
+Wide format 1200x630px.
+```
+

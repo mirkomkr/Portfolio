@@ -9,6 +9,8 @@ const blog = defineCollection({
     pubDate: z.coerce.date(),
     dateModified: z.coerce.date().optional(),
     author: z.string().default('Mirko Passeri'),
+    // draft: true = post nascosto in produzione, visibile in locale (dev)
+    draft: z.boolean().default(false),
     tags: z.array(z.string()).optional(),
     // related: slug degli articoli correlati da mostrare a fondo post (internal linking)
     // Esempio: ["quanto-costa-un-sito-web", "perche-il-sito-non-si-trova-su-google"]
