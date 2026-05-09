@@ -14,6 +14,7 @@ export const projects = [
     altimage:
       "Screenshot del sito DTF Italia, e-commerce per la stampa professionale.",
     link: "https://www.dtfitalia.it/",
+    lighthouseScore: 100,
   },
   {
     title: "App Meteo",
