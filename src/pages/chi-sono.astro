@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Timeline from '../components/Timeline.astro';
-import LighthouseResults from '../components/LighthouseResults.astro';
 
 const profilePageSchema = {
   "@context": "https://schema.org",
@@ -61,7 +60,7 @@ const profilePageSchema = {
       </p>
     </div>
 
-    <LighthouseResults />
+    <hr class="border-t border-primary/10 mb-0" aria-hidden="true" />
 
     <Timeline />
 

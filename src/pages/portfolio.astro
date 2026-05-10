@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { projects } from '../components/projectArray.js';
 import Card from '../components/Card.astro';
+import LighthouseResults from '../components/LighthouseResults.astro';
 ---
 
 <BaseLayout
@@ -28,6 +29,8 @@ import Card from '../components/Card.astro';
         <Card {...project} />
       ))}
     </ul>
+
+    <LighthouseResults />
 
   </main>
 </BaseLayout>
