@@ -1,10 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 
-const isDev = import.meta.env.DEV;
 const allPosts = await getCollection('blog');
 const latestPosts = allPosts
-  .filter((p) => isDev || !p.data.draft)
+  .filter((p) => !p.data.draft)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 3);
 ---
