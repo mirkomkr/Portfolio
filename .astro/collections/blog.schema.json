@@ -42,13 +42,13 @@
             }
           ]
         },
-        "author": {
-          "type": "string",
-          "default": "Mirko Passeri"
-        },
         "draft": {
           "type": "boolean",
           "default": false
+        },
+        "author": {
+          "type": "string",
+          "default": "Mirko Passeri"
         },
         "tags": {
           "type": "array",

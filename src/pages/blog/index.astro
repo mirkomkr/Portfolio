@@ -3,11 +3,10 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 
-const isDev = import.meta.env.DEV;
 const allPosts = await getCollection('blog');
-// In produzione esclude i post con draft: true — in dev li mostra tutti per preview
-const posts = isDev ? allPosts : allPosts.filter((p) => !p.data.draft);
-const sortedPosts = posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const sortedPosts = allPosts
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const itemListSchema = {
   "@context": "https://schema.org",
