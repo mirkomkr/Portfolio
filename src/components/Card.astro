@@ -11,6 +11,8 @@ const {title, description, image, altimage, link, lighthouseScore} = Astro.props
         src={image}
         class="transition-transform duration-700 group-hover:scale-105 aspect-video object-cover w-full"
         alt={altimage}
+        widths={[400, 800, 1200]}
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
       />
 
 <!--  Badge Lighthouse score da applicare direttamente alla card -->
