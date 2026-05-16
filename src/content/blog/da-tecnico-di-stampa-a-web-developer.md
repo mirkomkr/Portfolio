@@ -1,7 +1,7 @@
 ---
 title: "Ho cambiato mestiere dopo 15 anni. Ecco cosa ho portato con me (e cosa ho dovuto imparare da zero)"
 description: "Da tecnico di stampa industriale a web developer — non un salto nel vuoto, ma un trasferimento di competenze che ha più senso di quanto sembri. La risposta onesta."
-pubDate: 2026-07-10
+pubDate: 2026-05-27
 draft: true
 author: "Mirko Passeri"
 tags:

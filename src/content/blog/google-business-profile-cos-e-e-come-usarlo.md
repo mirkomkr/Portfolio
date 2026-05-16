@@ -1,7 +1,7 @@
 ---
 title: "Google Business Profile: cos'è, a cosa serve e come usarlo (anche se hai già un sito)"
 description: "La scheda che appare su Google Maps e nei risultati locali non è automatica — va creata, verificata e curata. Ecco cos'è il Google Business Profile e come farlo lavorare per te."
-pubDate: 2026-06-12
+pubDate: 2026-06-17
 draft: true
 author: "Mirko Passeri"
 tags:
@@ -98,7 +98,7 @@ Il primo: la scheda non esiste. Google non sa che la tua attività è in quella 
 
 Il secondo, più subdolo: la scheda esiste ma non l'hai creata tu. Google a volte genera automaticamente schede parziali basandosi su informazioni sparse online. Queste schede non verificate possono contenere informazioni sbagliate — indirizzo errato, orari inesistenti, categoria imprecisa — che danneggiano attivamente la tua reputazione senza che tu lo sappia.
 
-La verifica è il modo in cui dichiari a Google: *questa attività è mia, e quelle informazioni le controllo io.*
+La verifica è il modo in cui dichiari a Google: _questa attività è mia, e quelle informazioni le controllo io._
 
 ---
 
@@ -131,7 +131,7 @@ Più recensioni, più recenti, con risposta dell'attività — tutto questo dice
 
 Come chiederle senza sembrare disperato?
 
-Il momento migliore è subito dopo un'esperienza positiva. In modo diretto: *"Se hai un minuto, una recensione su Google ci aiuta tanto."* Puoi creare un link diretto alla tua scheda Google che porta l'utente direttamente al form delle recensioni — Google lo genera dal pannello del Business Profile.
+Il momento migliore è subito dopo un'esperienza positiva. In modo diretto: _"Se hai un minuto, una recensione su Google ci aiuta tanto."_ Puoi creare un link diretto alla tua scheda Google che porta l'utente direttamente al form delle recensioni — Google lo genera dal pannello del Business Profile.
 
 Quello che non va fatto: chiedere recensioni false, offrire sconti in cambio di recensioni, ignorare le recensioni negative. Quest'ultima è forse l'errore più comune e più costoso: una risposta professionale a una recensione negativa dice più di una risposta a dieci positive.
 
