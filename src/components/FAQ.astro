@@ -30,8 +30,21 @@ const faqs: FAQ[] = [
     a: "Sì. Sono aperto a collaborazioni con agenzie, team di sviluppo e altri professionisti su progetti specifici."
   },
 ];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+};
 ---
 
+<script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
 <section id="faq" aria-labelledby="titolo-faq" class="w-full max-w-7xl mx-auto px-8 md:px-24 py-20">
 
   <h2 id="titolo-faq" class="font-title text-4xl md:text-6xl text-primary mb-4">
