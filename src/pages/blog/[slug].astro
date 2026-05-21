@@ -85,7 +85,7 @@ const faqSchema = post.data.faq && post.data.faq.length > 0 ? {
   <main class="min-h-screen">
     <div class="max-w-2xl mx-auto px-8 md:px-0 py-20">
 
-      <a href="/blog/" class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline mb-12">
+      <a href="/blog/" class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline mb-12 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded">
         ← Tutti gli articoli
       </a>
 
@@ -130,7 +130,7 @@ const faqSchema = post.data.faq && post.data.faq.length > 0 ? {
                 <li>
                   <a
                     href={`/blog/${related.id}/`}
-                    class="group block border border-primary/10 rounded-xl p-5 hover:border-accent/40 hover:bg-primary/[0.02] transition-all duration-300"
+                    class="group block border border-primary/10 rounded-xl p-5 hover:border-accent/40 hover:bg-primary/[0.02] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
                   >
                     <p class="font-semibold text-primary group-hover:text-accent transition-colors duration-300 mb-1">
                       {related.data.title}
@@ -145,7 +145,7 @@ const faqSchema = post.data.faq && post.data.faq.length > 0 ? {
 
         <p class="text-sm text-primary/75">
           Scritto da <strong class="text-primary">Mirko Passeri</strong> —
-          <a href="/contatti/" class="text-accent hover:underline">Scrivimi</a> se hai domande o vuoi parlarne.
+          <a href="/contatti/" class="text-accent hover:underline focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded">Scrivimi</a> se hai domande o vuoi parlarne.
         </p>
       </footer>
 

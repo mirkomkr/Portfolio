@@ -4,6 +4,7 @@ import '@fontsource-variable/open-sans';
 import '@fontsource-variable/playfair-display';
 import { SEO } from 'astro-seo';
 import Footer from '../components/Footer.astro';
+import { contact } from '../data/contact.js';
 
 interface Props {
   title: string;
@@ -32,6 +33,7 @@ const baseSchema = {
       "name": "Mirko Passeri",
       "jobTitle": "Frontend Developer & Web Designer",
       "url": "https://www.mirkopasseri.it",
+      "telephone": contact.phoneDisplay,
       "image": "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
       "sameAs": [
         "https://www.linkedin.com/in/mirko-passeri/",
@@ -73,6 +75,7 @@ const baseSchema = {
       "name": "Mirko Passeri — Realizzazione Siti Web",
       "description": "Web designer e frontend developer freelance ad Anzio. Realizzazione siti web professionali, veloci, accessibili e ottimizzati per i motori di ricerca (SEO) per imprese e professionisti.",
       "url": "https://www.mirkopasseri.it",
+      "telephone": contact.phoneDisplay,
       "image": "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
       "founder": { "@id": "https://www.mirkopasseri.it/#persona" },
       "employee": { "@id": "https://www.mirkopasseri.it/#persona" },
@@ -183,7 +186,7 @@ const baseSchema = {
   <body class="bg-master text-primary antialiased scroll-smooth">
     <a
       href="#main-content"
-      class="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:top-4 focus:left-4 focus:px-5 focus:py-3 focus:bg-primary focus:text-master focus:rounded-md focus:font-semibold focus:text-sm focus:shadow-lg"
+      class="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:top-4 focus:left-4 focus:px-5 focus:py-3 focus:bg-primary focus:text-master focus:rounded-md focus:font-semibold focus:text-sm focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
     >
       Vai al contenuto principale
     </a>
