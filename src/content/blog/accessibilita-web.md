@@ -2,28 +2,28 @@
 title: "Cos'è l'accessibilità web (e perché riguarda anche la tua attività)"
 description: "Dal 2025 esiste una legge europea che riguarda i siti web. Ma l'accessibilità non è solo burocrazia: è il modo in cui il tuo sito parla a tutti i tuoi clienti, non solo ad alcuni."
 pubDate: 2026-05-20
-author: "Mirko Passeri"
+author: 'Mirko Passeri'
 tags:
   [
-    "accessibilità web",
-    "WCAG",
-    "European Accessibility Act",
-    "Realizzare sito web",
-    "Anzio",
-    "Nettuno",
-    "Pomezia",
-    "Latina",
-    "Aprilia",
+    'accessibilità web',
+    'WCAG',
+    'European Accessibility Act',
+    'Realizzare sito web',
+    'Anzio',
+    'Nettuno',
+    'Pomezia',
+    'Latina',
+    'Aprilia',
   ]
 image: ../../assets/blog/accessibilita-web.webp
-imageAlt: "Illustrazione minimal: laptop connesso a icone che rappresentano utenti con diverse esigenze di accessibilità"
+imageAlt: 'Illustrazione minimal: laptop connesso a icone che rappresentano utenti con diverse esigenze di accessibilità'
 related:
   - cosa-vuol-dire-sito-lento
   - perche-la-tua-attivita-ha-bisogno-di-un-sito-web
 faq:
   - q: "Cos'è l'accessibilità web e perché è importante per un sito aziendale?"
     a: "L'accessibilità web significa progettare un sito in modo che chiunque, comprese le persone con disabilità visive, motorie o cognitive, possa utilizzarlo senza barriere. È importante perché garantisce un'esperienza utente inclusiva, migliora il posizionamento su Google ed è un requisito legale richiesto in Europa."
-  - q: "Quali sono le regole per rendere un sito web accessibile secondo la legge europea?"
+  - q: 'Quali sono le regole per rendere un sito web accessibile secondo la legge europea?'
     a: "Il riferimento tecnico principale sono le linee guida WCAG 2.1 livello AA. Includono regole come l'uso di contrasti colore adeguati, testi alternativi per le immagini, la possibilità di navigare l'intero sito usando solo la tastiera e una struttura del codice chiara per chi usa gli screen reader."
 ---
 
@@ -109,4 +109,4 @@ _Se vuoi sapere se il tuo sito attuale ha problemi di accessibilità, scrivimi d
 
 ---
 
-> **Nota tecnica:** lo standard di riferimento è WCAG 2.1 livello AA, ora richiesto dal EAA. Comprende 50 criteri di successo organizzati su tre principi: Percepibile, Utilizzabile, Comprensibile, Robusto (POUR). Gli strumenti di audit automatico (Axe, Lighthouse Accessibility) coprono circa il 30-40% dei problemi reali — il restante richiede test manuali e testing con screen reader (NVDA, VoiceOver). In Astro, l'accessibilità parte da HTML semantico nativo: niente `<div>` cliccabili, `<button>` per le azioni, `<a>` per la navigazione, `role` e `aria-*` solo quando il markup nativo non è sufficiente.
+> **Nota tecnica:** lo standard di riferimento è WCAG 2.1 livello AA, ora richiesto dal EAA. Comprende 50 criteri di successo organizzati su quattro principi: Percepibile, Utilizzabile, Comprensibile, Robusto (POUR). Gli strumenti di audit automatico (Axe, Lighthouse Accessibility) coprono circa il 30-40% dei problemi reali — il restante richiede test manuali e testing con screen reader (NVDA, VoiceOver). In Astro, l'accessibilità parte da HTML semantico nativo: niente `<div>` cliccabili, `<button>` per le azioni, `<a>` per la navigazione, `role` e `aria-*` solo quando il markup nativo non è sufficiente.
