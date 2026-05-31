@@ -152,7 +152,7 @@ La parte buona è che spesso i problemi più gravi sono anche i più facili da r
 
 ---
 
-_Vuoi capire perché il tuo sito non compare su Google? Scrivimi dalla pagina [contatti](/contatti)._
+_Vuoi capire perché il tuo sito non compare su Google? Scrivimi dalla pagina [contatti](/contatti/)._
 
 ---
 

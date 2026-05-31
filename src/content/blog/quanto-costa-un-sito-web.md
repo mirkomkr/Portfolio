@@ -141,7 +141,7 @@ Più il preventivo è chiaro, meno sorprese ci saranno dopo.
 
 ---
 
-_Hai in mente un progetto e vuoi capire da dove iniziare? Scrivimi dalla pagina [contatti](/contatti)._
+_Hai in mente un progetto e vuoi capire da dove iniziare? Scrivimi dalla pagina [contatti](/contatti/)._
 
 ---
 

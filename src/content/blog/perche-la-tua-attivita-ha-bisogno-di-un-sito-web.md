@@ -182,7 +182,7 @@ Quello che fa la differenza è come viene costruito: con attenzione alla velocit
 
 ---
 
-_Se stai pensando a qualcosa del genere per la tua attività, o semplicemente vuoi capire da dove iniziare, puoi scrivermi — trovi il form nella pagina [contatti](/contatti)._
+_Se stai pensando a qualcosa del genere per la tua attività, o semplicemente vuoi capire da dove iniziare, puoi scrivermi — trovi il form nella pagina [contatti](/contatti/)._
 
 ---
 

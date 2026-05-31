@@ -166,7 +166,7 @@ La velocità non è un dettaglio finale. È una conseguenza di come il sito vien
 
 ---
 
-_Vuoi sapere com'è la situazione del tuo sito? Scrivimi dalla pagina [contatti](/contatti)._
+_Vuoi sapere com'è la situazione del tuo sito? Scrivimi dalla pagina [contatti](/contatti/)._
 
 ---
 

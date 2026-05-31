@@ -197,7 +197,7 @@ Ma qualcuno deve sapere quali domande fare, quali risposte scartare e quando una
 
 ---
 
-_Hai già provato a creare un sito con l'AI e non sei soddisfatto del risultato? Scrivimi dalla pagina [contatti](/contatti)._
+_Hai già provato a creare un sito con l'AI e non sei soddisfatto del risultato? Scrivimi dalla pagina [contatti](/contatti/)._
 
 ---
 

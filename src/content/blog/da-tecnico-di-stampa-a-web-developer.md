@@ -131,7 +131,7 @@ Quello che è cambiato è che posso portare tutto questo in un settore che mi in
 
 ---
 
-_Se vuoi lavorare con qualcuno che unisce attenzione visiva, precisione produttiva e sviluppo web, puoi scrivermi dalla pagina [contatti](/contatti)._
+_Se vuoi lavorare con qualcuno che unisce attenzione visiva, precisione produttiva e sviluppo web, puoi scrivermi dalla pagina [contatti](/contatti/)._
 
 ---
 

@@ -136,7 +136,7 @@ Ho conseguito la certificazione **WAI0.1x — Introduction to Web Accessibility*
 
 ---
 
-_Se vuoi sapere se il tuo sito attuale ha problemi di accessibilità, scrivimi dalla pagina [contatti](/contatti)._
+_Se vuoi sapere se il tuo sito attuale ha problemi di accessibilità, scrivimi dalla pagina [contatti](/contatti/)._
 
 ---
 

@@ -166,7 +166,7 @@ Il punto di partenza, se non hai ancora fatto nulla, è semplice: crea o rivendi
 
 ---
 
-_Hai la scheda Google ma non sai se è impostata nel modo giusto? Scrivimi dalla pagina [contatti](/contatti)._
+_Hai la scheda Google ma non sai se è impostata nel modo giusto? Scrivimi dalla pagina [contatti](/contatti/)._
 
 ---
 
