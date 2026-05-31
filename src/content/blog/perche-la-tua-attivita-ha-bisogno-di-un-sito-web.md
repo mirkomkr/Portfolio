@@ -21,10 +21,23 @@ related:
   - social-media-vs-sito-web
   - perche-il-sito-non-si-trova-su-google
 faq:
-  - q: "Perché una piccola attività locale ha bisogno di un sito web nel 2026?"
-    a: "Perché il 90% delle persone usa Google per cercare servizi nella propria zona prima di chiamare o recarsi sul posto. Non avere un sito web significa lasciare automaticamente quei potenziali clienti ai tuoi concorrenti che sono presenti online. Il sito è il tuo biglietto da visita sempre aperto."
-  - q: "Un sito web serve davvero per trovare nuovi clienti?"
-    a: "Sì, se costruito correttamente. Un sito web ottimizzato per la Local SEO (ottimizzazione per i motori di ricerca locali) intercetta le persone esattamente nel momento in cui stanno cercando il tuo servizio su Google, trasformando una semplice ricerca in un potenziale cliente."
+  - q: "Perché una piccola attività dovrebbe avere un sito web?"
+    a: "Un sito web aiuta le persone a capire chi sei, cosa fai e come contattarti senza confusione. È un punto di riferimento stabile dove puoi presentare servizi, orari, foto, informazioni utili e contenuti importanti senza dipendere solo da piattaforme esterne."
+
+  - q: "Se uso già Instagram o Facebook, mi serve comunque un sito?"
+    a: "Sì, perché i social sono utili per comunicare, ma non sostituiscono un sito web. Sui social i contenuti scorrono velocemente, gli algoritmi cambiano e non tutte le persone cercano un’attività da lì. Il sito resta un punto stabile, raggiungibile anche da Google."
+
+  - q: "Che differenza c’è tra sito web e Google Business Profile?"
+    a: "Google Business Profile è molto utile per comparire su Maps e nelle ricerche locali, ma offre uno spazio limitato per raccontare bene la tua attività. Il sito web ti permette di spiegare servizi, metodo di lavoro, progetti, domande frequenti e contenuti in modo più completo."
+
+  - q: "Un sito web aiuta davvero a farsi trovare online?"
+    a: "Sì, se è costruito con contenuti chiari e pagine ben organizzate. Google riesce a capire meglio quali servizi offri, dove lavori e quali informazioni possono essere utili agli utenti. Non garantisce i primi posti, ma è una base importante per essere presenti nelle ricerche giuste."
+
+  - q: "Un sito web aumenta la fiducia verso un’attività?"
+    a: "Spesso sì. Quando una persona trova un sito curato, leggibile e aggiornato, percepisce più serietà e professionalità. Il sito può aiutare a rispondere ai dubbi prima del contatto, mostrando informazioni concrete invece di lasciare tutto a messaggi o post sparsi."
+
+  - q: "Perché è importante avere uno spazio controllato dalla propria attività?"
+    a: "Perché il sito è uno spazio tuo: decidi cosa mostrare, come organizzarlo e quali informazioni mettere in evidenza. Social e piattaforme esterne possono cambiare regole, visibilità e formato dei contenuti. Il sito rimane il punto centrale della tua presenza online."
 ---
 
 ## "Ce la facciamo anche senza"
@@ -33,7 +46,7 @@ L'ho sentita spesso, questa frase. E la capisco.
 
 Hai aperto la tua attività, hai i clienti abituali, magari hai già una pagina Facebook o un profilo Instagram che funziona. Il sito web sembra una spesa in più, qualcosa per le grandi aziende, complicato da gestire.
 
-Ma c'è una cosa che cambia in modo silenzioso, ogni giorno, mentre aspetti: **Google non sa che esisti**.
+Ma c'è una cosa che cambia in modo silenzioso, ogni giorno, mentre aspetti: **Google non sa bene chi sei, cosa fai e quando dovrebbe mostrarti alle persone che ti cercano**.
 
 ---
 
@@ -45,19 +58,33 @@ Hai cliccato sulla seconda pagina dei risultati? Probabilmente no.
 
 Se la tua attività non è lì — su quella prima schermata — per il tuo potenziale cliente semplicemente non esisti. Non importa quanti anni di esperienza hai, quanta qualità metti in quello che fai. Se non appari, non sei considerato.
 
-Un sito web ben fatto è esattamente quello: **il modo in cui Google impara chi sei e ti mostra alle persone giuste, nel momento in cui stanno cercando quello che fai**.
+Un sito web ben fatto è esattamente quello: **il modo in cui Google capisce chi sei e può mostrarti alle persone giuste, nel momento in cui stanno cercando quello che fai**.
 
 ---
 
 ## "Ma ho già i social, non basta?"
 
-I social sono utili per mantenere il rapporto con chi già ti conosce. Ma hanno un problema: **non ti possiedi**.
+I social sono utili per mantenere il rapporto con chi già ti conosce. Ma hanno un problema: **non sono davvero tuoi**.
 
-Se Instagram cambia le regole — o decide di mostrare meno i tuoi post senza che tu paghi — non puoi farci niente. Se Facebook sparisce o diventa irrilevante (ed è già meno usato di prima), perdi tutto quello che hai costruito lì.
+Se Instagram cambia le regole — o decide di mostrare meno i tuoi post senza che tu paghi — non puoi farci niente. Se Facebook diventa meno rilevante per il tuo pubblico, perdi parte della visibilità che hai costruito lì.
 
-Il tuo sito, invece, è tuo. Ti appartiene. Nessuno può toglierti visibilità perché ha cambiato un algoritmo.
+Il tuo sito, invece, è uno spazio controllato da te. Decidi cosa mostrare, come organizzarlo e quali informazioni mettere in evidenza.
 
-E poi c'è un'altra differenza fondamentale: **Google non indicizza Instagram**. Se cerchi "parrucchiere Anzio" su Google, non ti mostra i profili Instagram — ti mostra i siti web.
+E poi c'è un'altra differenza fondamentale: i profili e i contenuti social possono anche comparire su Google, ma non offrono lo stesso controllo, la stessa struttura e la stessa profondità di un sito web.
+
+Per ricerche locali e servizi specifici, un sito ben organizzato dà a Google informazioni molto più chiare.
+
+---
+
+## Il sito collega tutto il resto
+
+Il sito non deve sostituire social, Google Business Profile o passaparola. Deve diventare il punto centrale che li collega.
+
+I social portano attenzione. Google Business Profile aiuta nelle ricerche locali. Il passaparola crea fiducia.
+
+Il sito raccoglie tutto in uno spazio chiaro, ordinato e sempre disponibile: informazioni, servizi, contatti, esempi di lavoro, risposte alle domande frequenti.
+
+In questo modo la tua presenza online non dipende da un solo canale, ma diventa più solida.
 
 ---
 
@@ -65,19 +92,19 @@ E poi c'è un'altra differenza fondamentale: **Google non indicizza Instagram**.
 
 Non sto parlando di cose astratte. Ecco cosa succede nella pratica:
 
-**Vieni trovato da chi non ti conosce ancora.**
-Un cliente nuovo, che non ha mai sentito il tuo nome, può trovarti cercando quello che fai nella tua zona. Senza che tu spenda un euro in pubblicità.
+**Vieni trovato da chi non ti conosce ancora.**  
+Un cliente nuovo, che non ha mai sentito il tuo nome, può trovarti cercando quello che fai nella tua zona. Senza che tu debba dipendere solo da pubblicità, social o passaparola.
 
-**Dai un'impressione professionale.**
+**Dai un'impressione professionale.**  
 Quando dai il tuo biglietto da visita o dici il tuo nome, le persone ti cercano online. Un sito ben fatto — semplice ma curato — comunica serietà e attenzione al dettaglio. Un'assenza online, o peggio, una pagina Facebook aggiornata l'ultima volta due anni fa, comunica il contrario.
 
-**Rispondi alle domande prima ancora che te le facciano.**
+**Rispondi alle domande prima ancora che te le facciano.**  
 Dove sei. Quando sei aperto. Cosa fai esattamente. Qual è il tuo contatto. Un sito mette tutto questo in ordine, disponibile 24 ore su 24, senza che tu debba rispondere ogni volta alle stesse domande su WhatsApp.
 
-**Diventi credibile anche per chi ti ha già scelto.**
-I tuoi clienti esistenti ti mandano referral — amici, parenti, colleghi. Quando quelle persone ti cercano per verificare chi sei, trovano qualcosa di solido. Questo trasforma una raccomandazione informale in una conversione reale.
+**Diventi credibile anche per chi ti ha già scelto.**  
+I tuoi clienti esistenti ti mandano referral — amici, parenti, colleghi. Quando quelle persone ti cercano per verificare chi sei, trovano qualcosa di solido. Questo trasforma una raccomandazione informale in una possibilità concreta di contatto.
 
-**Raggiungi più persone — comprese quelle che altri ignorano.**
+**Raggiungi più persone — comprese quelle che altri ignorano.**  
 Un sito accessibile funziona bene anche per chi ha difficoltà visive, chi usa lo smartphone con una mano sola, chi ha una connessione lenta, chi è anziano e non è abituato agli schermi. Queste non sono casistiche rare: sono una fetta significativa dei tuoi potenziali clienti.
 
 ---
@@ -139,7 +166,7 @@ Pensa a queste situazioni comuni, che probabilmente riconosci:
 
 Tutte persone reali. Tutti potenziali clienti che un sito mal fatto allontana senza che tu te ne accorga.
 
-Google lo sa, e per questo considera l'accessibilità come uno dei segnali di qualità nel valutare i siti. Non è un caso che siti accessibili tendano a posizionarsi meglio.
+L’accessibilità non è un trucco SEO, ma spesso migliora aspetti che contano davvero: struttura dei contenuti, leggibilità, navigazione, esperienza mobile e qualità complessiva della pagina. Per questo lavora bene insieme alla SEO.
 
 Ho conseguito la certificazione **WAI0.1x — Introduction to Web Accessibility** rilasciata da W3C e edX proprio per integrare questo principio in ogni progetto che costruisco. Non come checkbox da spuntare, ma come modo di ragionare fin dalla prima riga di codice.
 
@@ -149,9 +176,9 @@ Ho conseguito la certificazione **WAI0.1x — Introduction to Web Accessibility*
 
 C'è un'ultima cosa che vale la pena dire.
 
-Non tutti i siti funzionano allo stesso modo. Un sito lento, che non si vede bene sul telefono, o costruito senza pensare a come Google lo legge, può essere peggio di non averne uno — perché dà un'impressione sbagliata senza darti nessuno dei benefici.
+Non tutti i siti funzionano allo stesso modo. Un sito lento, che non si vede bene sul telefono, o costruito senza pensare a come Google lo legge, può trasmettere un’impressione sbagliata e ridurre la fiducia invece di aumentarla.
 
-Quello che fa la differenza è come viene costruito: con attenzione alla velocità, alla leggibilità su tutti i dispositivi, e a come i motori di ricerca lo interpretano.
+Quello che fa la differenza è come viene costruito: con attenzione alla velocità, alla leggibilità su tutti i dispositivi, all’accessibilità e a come i motori di ricerca lo interpretano.
 
 ---
 
@@ -159,4 +186,4 @@ _Se stai pensando a qualcosa del genere per la tua attività, o semplicemente vu
 
 ---
 
-> **Nota tecnica:** questo sito è costruito con [Astro](https://astro.build/), un framework che genera HTML statico lato server con zero JavaScript non necessario. Le performance su PageSpeed Insights sono sistematicamente superiori a 95/100, il che si traduce in un vantaggio diretto nel ranking di Google tramite Core Web Vitals. Il caso DTF Italia usa Next.js con ISR per la gestione del catalogo prodotti WooCommerce.
+> **Nota tecnica:** questo sito è costruito con [Astro](https://astro.build/), un framework che permette di generare pagine molto leggere e veloci. Meno JavaScript inutile significa tempi di caricamento migliori, esperienza utente più fluida e basi tecniche più solide per la SEO. Il progetto DTF Italia usa invece Next.js con ISR per gestire contenuti dinamici e catalogo prodotti WooCommerce.

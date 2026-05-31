@@ -120,6 +120,33 @@ const faqSchema = post.data.faq && post.data.faq.length > 0 ? {
         <Content />
       </article>
 
+      {post.data.faq && post.data.faq.length > 0 && (
+        <section aria-labelledby="faq-articolo" class="mt-16 border-t border-primary/10 pt-10">
+          <h2 id="faq-articolo" class="font-title text-3xl md:text-4xl text-primary mb-8">
+            Domande frequenti
+          </h2>
+          <div class="divide-y divide-primary/10">
+            {post.data.faq.map((faq) => (
+              <details class="group py-5" name="faq-articolo">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-6 marker:hidden [&::-webkit-details-marker]:hidden">
+                  <span class="font-semibold text-primary transition-colors duration-200 group-open:text-accent">
+                    {faq.q}
+                  </span>
+                  <span aria-hidden="true" class="shrink-0 text-accent transition-transform duration-300 group-open:rotate-180">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 15.414l-6.293-6.293-1.414 1.414L12 18.243l7.707-7.708-1.414-1.414z"/>
+                    </svg>
+                  </span>
+                </summary>
+                <p class="mt-4 max-w-2xl text-base leading-relaxed text-primary/75">
+                  {faq.a}
+                </p>
+              </details>
+            ))}
+          </div>
+        </section>
+      )}
+
       <footer class="mt-16 pt-8 border-t border-primary/10">
 
         {relatedPosts.length > 0 && (
