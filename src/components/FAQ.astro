@@ -1,50 +1,7 @@
 ---
-interface FAQ {
-  q: string;
-  a: string;
-}
-
-const faqs: FAQ[] = [
-  {
-    q: "Quanto tempo ci vuole per fare un sito web?",
-    a: "Dipende dalla complessità. Un sito vetrina semplice può essere pronto in 2-3 settimane. Un progetto più articolato — con più pagine, funzionalità o integrazioni — richiede 4-8 settimane. La variabile più grande è spesso la disponibilità dei contenuti: testi e foto fanno la differenza."
-  },
-  {
-    q: "Ho già Instagram e Facebook. Perché dovrei avere anche un sito?",
-    a: "I social mantengono il rapporto con chi già ti conosce. Il sito serve a farti trovare da chi non ti conosce ancora — su Google e gli altri motori di ricerca. Quando qualcuno cerca \"parrucchiere Anzio\" o \"ristorante Nettuno\", Google mostra i siti web, non i profili Instagram. Sono due strumenti diversi: entrambi utili, non intercambiabili."
-  },
-  {
-    q: "Quanto costa fare un sito web?",
-    a: "Il costo varia molto in base a complessità, numero di pagine e funzionalità. Un sito vetrina semplice e uno shop e-commerce hanno esigenze molto diverse. Non esiste una risposta universale — ogni progetto è a sé."
-  },
-  {
-    q: "Cosa mi serve per iniziare?",
-    a: "L'essenziale è avere un'idea chiara di cosa vuoi comunicare e a chi ti rivolgi. Testi, immagini e logo si definiscono durante il percorso. Nessun prerequisito tecnico richiesto."
-  },
-  {
-    q: "Quali tecnologie conosci?",
-    a: "Parto dalle fondamenta: HTML, CSS e JavaScript. Per ogni progetto scelgo gli strumenti più adatti al problema — non il contrario. Sono certificato Meta Frontend Developer e ho una certificazione in accessibilità web rilasciata da W3C e edX."
-  },
-  {
-    q: "Sei disponibile per collaborazioni?",
-    a: "Sì. Sono aperto a collaborazioni con agenzie, team di sviluppo e altri professionisti su progetti specifici."
-  },
-];
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.a
-    }
-  }))
-};
+import { faqs } from '../data/faqs.js';
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
 <section id="faq" aria-labelledby="titolo-faq" class="w-full max-w-7xl mx-auto px-8 md:px-24 py-20">
 
   <h2 id="titolo-faq" class="font-title text-4xl md:text-6xl text-primary mb-4">

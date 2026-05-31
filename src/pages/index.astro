@@ -6,6 +6,20 @@ import ChiSonoPreview from '../components/ChiSonoPreview.astro';
 import BlogPreview from '../components/BlogPreview.astro';
 import FAQ from '../components/FAQ.astro';
 import Contatti from '../components/Contatti.astro';
+import { faqs } from '../data/faqs.js';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+};
 ---
 
 <BaseLayout
@@ -13,6 +27,10 @@ import Contatti from '../components/Contatti.astro';
   description="Siti web moderni, veloci e accessibili. Mirko Passeri, web designer ad Anzio disponibile per Nettuno, Pomezia, Aprilia, Latina e Roma."
   canonical="https://www.mirkopasseri.it"
 >
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+
   <main>
     <section aria-label="Introduzione" class="hero">
       <Hero />
