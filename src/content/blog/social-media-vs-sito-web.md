@@ -1,6 +1,6 @@
 ---
-title: "Social media vs sito web: perché non sono la stessa cosa"
-description: "Hai già Instagram e Facebook per la tua attività. Basta così? No: social e sito web fanno lavori diversi. In questo articolo spiego perché servono entrambi e come usarli nel modo giusto."
+title: "Social media vs sito web"
+description: "Perché social e sito web hanno ruoli diversi e come usarli insieme per dare informazioni chiare, stabili e trovabili."
 pubDate: 2026-03-15
 author: "Mirko Passeri"
 tags:

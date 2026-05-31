@@ -1,6 +1,6 @@
 ---
-title: "Google Business Profile: cos'è, a cosa serve e come usarlo (anche se hai già un sito)"
-description: "La scheda che appare su Google Maps e nei risultati locali non è automatica: va creata, verificata e curata. Ecco cos'è il Google Business Profile e come farlo lavorare per la tua attività."
+title: "Google Business Profile: guida pratica"
+description: "Cos’è Google Business Profile, perché affianca il sito web e quali informazioni curare per migliorare la presenza locale."
 pubDate: 2026-06-17
 draft: true
 author: "Mirko Passeri"

@@ -1,6 +1,6 @@
 ---
-title: "Perché il tuo sito non si trova su Google (e come rimediare)"
-description: "Hai già un sito web ma non lo vede nessuno su Google? Non sei solo. In questo articolo spiego le cause più comuni — e cosa si può fare concretamente."
+title: "Perché il sito non si trova su Google"
+description: "Cause comuni per cui un sito non compare su Google: indicizzazione, struttura, contenuti, performance e segnali di fiducia."
 pubDate: 2026-06-05
 author: "Mirko Passeri"
 tags:

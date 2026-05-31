@@ -1,6 +1,6 @@
 ---
-title: "Cosa vuol dire che un sito è 'lento' e perché importa"
-description: "Hai mai abbandonato un sito perché ci metteva troppo ad aprirsi? Ecco cosa succede tecnicamente in quei secondi di attesa — e perché la velocità conta per utenti, mobile e visibilità su Google."
+title: "Sito lento: cosa significa"
+description: "Cosa rende lento un sito, perché può far perdere contatti e come velocità, mobile e usabilità influenzano l’esperienza."
 pubDate: 2026-02-20
 author: "Mirko Passeri"
 tags:

@@ -1,6 +1,6 @@
 ---
-title: "Perché la tua attività ha bisogno di un sito web"
-description: "Non hai ancora un sito per la tua attività? In questo articolo spiego — senza tecnicismi — perché nel 2026 non averlo costa più che averlo, e cosa cambia davvero nella pratica."
+title: "Perché serve un sito web"
+description: "Perché un sito web aiuta una piccola attività a farsi capire, raccogliere contatti e costruire fiducia senza dipendere solo dai social."
 pubDate: 2026-04-11
 author: "Mirko Passeri"
 tags:

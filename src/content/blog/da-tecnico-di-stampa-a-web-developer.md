@@ -1,6 +1,6 @@
 ---
-title: "Da tecnico di stampa a web developer: cosa ho portato con me"
-description: "Da tecnico di stampa industriale a web developer: non un salto nel vuoto, ma un trasferimento di metodo, precisione e responsabilità nel modo di costruire siti web."
+title: "Da tecnico di stampa a web developer"
+description: "Dal lavoro nella stampa industriale allo sviluppo web: metodo, precisione e controllo della qualità applicati ai siti web."
 pubDate: 2026-05-27
 author: "Mirko Passeri"
 tags:

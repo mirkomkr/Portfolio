@@ -1,6 +1,6 @@
 ---
-title: "Cos'è l'accessibilità web (e perché riguarda anche la tua attività)"
-description: "Dal 2025 l’accessibilità digitale riguarda anche molte attività private. Ma non è solo una questione di legge: è il modo in cui il tuo sito permette a più persone di leggere, capire e usare i tuoi servizi."
+title: "Accessibilità web: perché è importante"
+description: "Cos’è l’accessibilità web, perché riguarda anche molte attività e come migliora usabilità, chiarezza e inclusione."
 pubDate: 2026-05-20
 author: "Mirko Passeri"
 tags:

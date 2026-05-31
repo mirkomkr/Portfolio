@@ -1,6 +1,6 @@
 ---
 title: "Quanto costa un sito web?"
-description: "Vuoi sapere quanto costa un sito web professionale? Dipende da molti fattori. In questo articolo spiego cosa determina davvero il costo — senza cifre a caso e senza giri di parole."
+description: "Da cosa dipende il costo di un sito web professionale: obiettivi, contenuti, design, sviluppo, accessibilità e manutenzione."
 pubDate: 2026-05-10
 author: "Mirko Passeri"
 tags:

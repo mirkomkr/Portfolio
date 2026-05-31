@@ -1,6 +1,6 @@
 ---
-title: "L'AI può fare il mio sito web? La risposta onesta"
-description: "Sempre più persone mi dicono 'tanto ci pensa l'AI'. In parte hanno ragione. In parte si sbagliano. Questa è la risposta onesta — anche se va contro i miei interessi dirla."
+title: "L’AI può fare il mio sito web?"
+description: "Cosa può fare l’AI nella creazione di un sito e perché strategia, verifica, accessibilità e performance richiedono ancora controllo umano."
 pubDate: 2026-01-10
 author: "Mirko Passeri"
 tags:
