@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const supportCards = [
+  {
+    title: 'Sviluppo da layout',
+    text: 'Trasformo layout Figma, Adobe o mockup grafici in interfacce responsive, pulite e usabili.',
+  },
+  {
+    title: 'Accessibilità e semantica HTML',
+    text: 'Curo struttura, markup semantico, navigazione e buone pratiche WCAG per rendere le interfacce più chiare, accessibili e fruibili.',
+  },
+  {
+    title: 'Performance frontend',
+    text: 'Ottimizzo caricamento, stabilità visiva e qualità tecnica, con attenzione a Core Web Vitals e mobile.',
+  },
+  {
+    title: 'Supporto white-label',
+    text: 'Posso intervenire dietro le quinte su landing page, sezioni frontend, componenti, refactor o picchi di lavoro.',
+  },
+  {
+    title: 'Frontend per e-commerce',
+    text: 'Supporto su pagine prodotto, categorie, landing promozionali e sezioni frontend di e-commerce già esistenti, con attenzione a mobile, performance e chiarezza del percorso utente.',
+  },
+  {
+    title: 'Refactor e ottimizzazione',
+    text: 'Intervengo su sezioni esistenti per migliorare struttura, manutenibilità, leggibilità del codice e qualità dell’esperienza utente.',
+  },
+];
+
+const targets = [
+  'Web agency con picchi di lavoro frontend',
+  'Designer o studi grafici che hanno clienti ma non sviluppo interno',
+  'Freelance che vogliono delegare parti tecniche',
+  'Partner locali che vogliono completare la propria offerta web',
+  'Realtà che lavorano su siti vetrina, landing page o e-commerce e hanno bisogno di supporto frontend',
+];
+
+const collaborationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': 'https://www.mirkopasseri.it/collaborazioni/#service',
+  name: 'Collaborazioni frontend per agenzie e designer',
+  serviceType: 'Supporto frontend esterno',
+  url: 'https://www.mirkopasseri.it/collaborazioni/',
+  provider: { '@id': 'https://www.mirkopasseri.it/#persona' },
+  description:
+    'Supporto frontend per agenzie, freelance, designer e realtà creative: sviluppo responsive, accessibilità, performance, qualità del codice e interfacce e-commerce.',
+};
+---
+
+<BaseLayout
+  title="Collaborazioni frontend per agenzie e designer | Mirko Passeri"
+  description="Supporto frontend per agenzie, freelance, designer e realtà creative: sviluppo responsive, accessibilità, performance, qualità del codice e interfacce e-commerce."
+  canonical="https://www.mirkopasseri.it/collaborazioni/"
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(collaborationSchema)} />
+  </Fragment>
+
+  <main class="min-h-screen max-w-7xl mx-auto px-5 sm:px-8 md:px-24 py-16 md:py-20 overflow-x-hidden">
+    <header class="mb-16 md:mb-24">
+      <a
+        href="/"
+        class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline mb-8 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+      >
+        ← Torna alla home
+      </a>
+      <div class="flex items-start gap-5">
+        <div>
+          <h1 class="font-title text-4xl sm:text-5xl md:text-7xl text-primary leading-tight text-balance">
+            Collaborazioni frontend per agenzie e realtà creative
+          </h1>
+          <p class="mt-6 max-w-3xl text-lg text-primary/80 leading-relaxed">
+            Affianco professionisti e piccoli team nella realizzazione di interfacce responsive,
+            accessibili e performanti, intervenendo anche su singole parti di progetto.
+          </p>
+          <a
+            href="/contatti/"
+            class="mt-10 inline-flex w-full sm:w-auto max-w-full items-center justify-center gap-2 text-center text-sm font-semibold uppercase tracking-normal sm:tracking-widest bg-accent text-master border border-accent px-5 sm:px-6 py-3 rounded-md hover:bg-transparent hover:text-accent transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+          >
+            <span class="sm:hidden">Parliamone</span>
+            <span class="hidden sm:inline">Valutiamo una collaborazione</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section aria-labelledby="supporto-collaborazioni" class="mb-20 md:mb-28">
+      <h2 id="supporto-collaborazioni" class="font-title text-4xl md:text-5xl text-primary mb-10">
+        Come posso supportarti
+      </h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          supportCards.map((card) => (
+            <li class="border border-primary/20 rounded-2xl p-6 transition-all duration-300 hover:border-accent/60 hover:bg-primary/[0.03]">
+              <h3 class="font-title text-2xl text-primary mb-3">{card.title}</h3>
+              <p class="text-primary/75 leading-relaxed">{card.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section aria-labelledby="target-collaborazioni" class="mb-20 md:mb-28">
+      <h2 id="target-collaborazioni" class="font-title text-4xl md:text-5xl text-primary mb-10">
+        Per chi è utile
+      </h2>
+      <ul class="space-y-5 max-w-3xl">
+        {
+          targets.map((target) => (
+            <li class="flex gap-4 text-primary/80 leading-relaxed">
+              <span aria-hidden="true" class="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
+              <span>{target}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section
+      aria-labelledby="cta-collaborazioni"
+      class="rounded-2xl border border-accent/30 bg-accent/10 p-6 sm:p-8 md:p-12"
+    >
+      <h2
+        id="cta-collaborazioni"
+        class="font-title text-3xl sm:text-4xl md:text-5xl text-primary mb-6 text-balance"
+      >
+        Hai bisogno di supporto frontend su un progetto?
+      </h2>
+      <p class="max-w-2xl text-lg text-primary/75 leading-relaxed mb-10">
+        Se hai un progetto da chiudere, una parte frontend da delegare o vuoi valutare una
+        collaborazione, possiamo parlarne.
+      </p>
+      <a
+        href="/contatti/"
+        class="inline-flex w-full sm:w-auto max-w-full items-center justify-center gap-2 text-center text-sm font-semibold uppercase tracking-normal sm:tracking-widest bg-accent text-master border border-accent px-5 sm:px-6 py-3 rounded-md hover:bg-transparent hover:text-accent transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+      >
+        <span>Contattami</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+  </main>
+</BaseLayout>

@@ -14,7 +14,7 @@ import { Icon } from 'astro-icon/components';
 
   <nav aria-label="Navigazione principale">
     <ul
-      class="grid grid-cols-3 md:grid-cols-6 justify-items-center items-center md:justify-end gap-6 md:gap-8 w-fit mx-auto md:mx-0 md:ml-auto mb-10"
+      class="grid grid-cols-2 sm:grid-cols-4 justify-items-center items-center md:justify-end gap-6 md:gap-8 w-full max-w-lg md:max-w-2xl mx-auto md:mx-0 md:ml-auto mb-10"
     >
       <li>
         <a
@@ -46,64 +46,30 @@ import { Icon } from 'astro-icon/components';
       </li>
       <li>
         <a
-          href="#blog"
-          aria-label="Leggi il blog"
+          href="#collaborazioni"
+          aria-label="Scopri le collaborazioni frontend"
           class="flex flex-col items-center gap-2 group transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
         >
           <Icon
-            name="blog"
+            name="collaborazioni"
             aria-hidden="true"
             class="w-8 h-8 md:w-10 md:h-10 group-hover:text-accent transition-colors"
           />
-          <span class="text-xs md:text-sm font-semibold uppercase tracking-widest">Blog</span>
+          <span class="text-xs md:text-sm font-semibold uppercase tracking-widest">Collaborazioni</span>
         </a>
       </li>
       <li>
         <a
-          href="https://www.linkedin.com/in/mirko-passeri/"
-          rel="noopener noreferrer"
-          target="_blank"
-          aria-label="Vai al mio profilo LinkedIn"
+          href="#contatti"
+          aria-label="Vai ai contatti"
           class="flex flex-col items-center gap-2 group transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
         >
           <Icon
-            name="linkedin"
+            name="messaggio"
             aria-hidden="true"
             class="w-8 h-8 md:w-10 md:h-10 group-hover:text-accent transition-colors"
           />
-          <span class="text-xs md:text-sm font-semibold uppercase tracking-widest">LinkedIn</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/mirkomkr"
-          rel="noopener noreferrer"
-          target="_blank"
-          aria-label="Vai al mio profilo GitHub"
-          class="flex flex-col items-center gap-2 group transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
-        >
-          <Icon
-            name="github"
-            aria-hidden="true"
-            class="w-8 h-8 md:w-10 md:h-10 group-hover:text-accent transition-colors"
-          />
-          <span class="text-xs md:text-sm font-semibold uppercase tracking-widest">GitHub</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.figma.com/proto/YOmJbScwFqpC5ns8DMpfmV/Little-Lemon-Coursera-Assignment---UX-UI-Portfolio-%E2%80%93-Meta-Certificate?page-id=14%3A2&node-id=14-3&p=f&viewport=383%2C396%2C0.6&t=hdItkZxxZeCD5Vop-1&scaling=min-zoom&content-scaling=fixed"
-          rel="noopener noreferrer"
-          target="_blank"
-          aria-label="Vai al mio progetto Figma"
-          class="flex flex-col items-center gap-2 group transition-all focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
-        >
-          <Icon
-            name="figma"
-            aria-hidden="true"
-            class="size-8 md:size-10 group-hover:text-accent transition-colors"
-          />
-          <span class="text-xs md:text-sm font-semibold uppercase tracking-widest">Figma</span>
+          <span class="text-xs md:text-sm font-semibold uppercase tracking-widest">Contatti</span>
         </a>
       </li>
     </ul>
@@ -117,7 +83,7 @@ import { Icon } from 'astro-icon/components';
     <a
       href="#contatti"
       aria-label="Contattami"
-      class="inline-flex items-center gap-3 px-8 py-4 rounded-md bg-black text-white font-bold transition-all hover:bg-neutral-800 hover:-translate-y-1 shadow-xl focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+      class="inline-flex items-center gap-3 px-8 py-4 rounded-md bg-accent text-master border border-accent font-bold transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
     >
       <Icon name="messaggio" aria-hidden="true" class="size-5" />
       Contattami
