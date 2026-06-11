@@ -1,0 +1,47 @@
+---
+const percorsi = [
+  {
+    title: 'Siti web per attività e professionisti',
+    text: 'Realizzo siti vetrina, landing page, restyling ed e-commerce leggeri per presentare servizi e prodotti con chiarezza, anche da mobile.',
+    link: '/realizzazione-siti-web/',
+    linkText: 'Scopri i servizi per siti web',
+  },
+  {
+    title: 'Supporto frontend per agenzie e designer',
+    text: 'Trasformo layout e specifiche in interfacce responsive, accessibili e performanti, anche white-label o su singole parti di progetto.',
+    link: '/collaborazioni/',
+    linkText: 'Scopri il supporto frontend',
+  },
+];
+---
+
+<section
+  id="percorsi-commerciali"
+  aria-labelledby="titolo-percorsi-commerciali"
+  class="w-full max-w-7xl mx-auto px-8 md:px-24 py-16 md:py-24"
+>
+  <h2
+    id="titolo-percorsi-commerciali"
+    class="font-title text-center md:text-right text-4xl md:text-6xl text-primary mb-12 md:mb-16"
+  >
+    Come posso aiutarti
+  </h2>
+
+  <ul class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {
+      percorsi.map((percorso) => (
+        <li class="flex flex-col items-start rounded-2xl border border-primary/20 p-6 sm:p-8 transition-all duration-300 hover:border-accent/60 hover:bg-primary/[0.03]">
+          <h3 class="font-title text-2xl sm:text-3xl text-primary mb-4">{percorso.title}</h3>
+          <p class="text-primary/75 leading-relaxed mb-8">{percorso.text}</p>
+          <a
+            href={percorso.link}
+            class="mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-accent/40 px-5 py-3 text-center text-sm font-semibold uppercase tracking-normal text-accent transition-all hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
+          >
+            <span>{percorso.linkText}</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

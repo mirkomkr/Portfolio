@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const interventi = [
+  {
+    title: 'Sito vetrina',
+    text: 'Un sito chiaro per presentare attività, servizi, punti di forza e contatti.',
+  },
+  {
+    title: 'Landing page',
+    text: 'Una pagina focalizzata su un servizio, una campagna o una richiesta specifica.',
+  },
+  {
+    title: 'Restyling',
+    text: 'Un intervento su struttura, contenuti e interfaccia per rendere più efficace un sito esistente.',
+  },
+  {
+    title: 'E-commerce leggero',
+    text: 'Una soluzione essenziale per vendere un catalogo contenuto senza complicare la gestione.',
+  },
+];
+
+const destinatari = [
+  'Attività locali che vogliono presentarsi online con chiarezza',
+  'Professionisti che hanno bisogno di spiegare servizi e competenze',
+  'Piccole imprese e attività commerciali che vogliono migliorare il proprio sito',
+];
+
+const metodo = [
+  'Definiamo obiettivi, pubblico e contenuti necessari.',
+  'Organizzo struttura e percorso delle pagine.',
+  'Sviluppo e verifico il sito sui dispositivi principali.',
+  'Prepariamo insieme pubblicazione e passaggi successivi.',
+];
+
+const qualita = [
+  {
+    title: 'Mobile',
+    text: 'Il sito viene progettato per essere chiaro e facile da usare anche sugli schermi più piccoli.',
+  },
+  {
+    title: 'Performance',
+    text: 'Mantengo pagine e risorse leggere, evitando complessità che non portano un beneficio reale.',
+  },
+  {
+    title: 'Accessibilità',
+    text: 'Struttura, navigazione e contenuti accessibili fanno parte naturale di un sito costruito bene.',
+  },
+  {
+    title: 'SEO tecnico',
+    text: 'Curo le basi tecniche e la struttura dei contenuti per aiutare motori di ricerca e persone a comprendere il sito.',
+  },
+];
+---
+
+<BaseLayout
+  title="Realizzazione siti web per attività e professionisti | Mirko Passeri"
+  description="Realizzazione di siti vetrina, landing page, restyling ed e-commerce leggeri per attività, professionisti e piccole imprese."
+  canonical="https://www.mirkopasseri.it/realizzazione-siti-web/"
+>
+  <main class="min-h-screen max-w-7xl mx-auto px-5 sm:px-8 md:px-24 py-16 md:py-20 overflow-x-hidden">
+    <header class="mb-16 md:mb-24">
+      <a
+        href="/"
+        class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline mb-8 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+      >
+        ← Torna alla home
+      </a>
+      <h1 class="font-title text-4xl sm:text-5xl md:text-7xl text-primary leading-tight text-balance">
+        Siti web pensati per attività e professionisti
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-primary/80 leading-relaxed">
+        Realizzo siti web chiari e semplici da usare, costruiti intorno ai servizi che offri e alle
+        informazioni di cui hanno bisogno i tuoi clienti.
+      </p>
+      <a
+        href="/contatti/"
+        class="mt-10 inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-6 py-3 text-center text-sm font-semibold uppercase tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
+      >
+        Parliamo del tuo sito
+        <span aria-hidden="true">→</span>
+      </a>
+    </header>
+
+    <section aria-labelledby="tipologie-intervento" class="mb-20 md:mb-28">
+      <h2 id="tipologie-intervento" class="font-title text-4xl md:text-5xl text-primary mb-10">
+        Cosa posso realizzare
+      </h2>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {
+          interventi.map((intervento) => (
+            <li class="rounded-2xl border border-primary/20 p-6">
+              <h3 class="font-title text-2xl text-primary mb-3">{intervento.title}</h3>
+              <p class="text-primary/75 leading-relaxed">{intervento.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section aria-labelledby="destinatari-siti-web" class="mb-20 md:mb-28">
+      <h2 id="destinatari-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10">
+        Per chi è utile
+      </h2>
+      <ul class="space-y-5 max-w-3xl">
+        {
+          destinatari.map((destinatario) => (
+            <li class="flex gap-4 text-primary/80 leading-relaxed">
+              <span aria-hidden="true" class="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
+              <span>{destinatario}</span>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-8 max-w-3xl text-primary/80 leading-relaxed">
+        Lavoro con attività e professionisti ad Anzio, Nettuno, Aprilia, Pomezia, Latina, Roma e da
+        remoto in tutta Italia.
+      </p>
+    </section>
+
+    <section aria-labelledby="metodo-siti-web" class="mb-20 md:mb-28">
+      <h2 id="metodo-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10">
+        Come lavoriamo
+      </h2>
+      <ol class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {
+          metodo.map((passaggio, index) => (
+            <li class="rounded-2xl border border-primary/20 p-6">
+              <span class="text-xs font-semibold uppercase tracking-widest text-accent">
+                Passaggio {index + 1}
+              </span>
+              <p class="mt-3 text-primary/80 leading-relaxed">{passaggio}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section aria-labelledby="qualita-siti-web" class="mb-20 md:mb-28">
+      <h2 id="qualita-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10">
+        Un sito costruito bene
+      </h2>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {
+          qualita.map((elemento) => (
+            <li class="rounded-2xl border border-primary/20 p-6">
+              <h3 class="font-title text-2xl text-primary mb-3">{elemento.title}</h3>
+              <p class="text-primary/75 leading-relaxed">{elemento.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section
+      aria-labelledby="cta-siti-web"
+      class="rounded-2xl border border-accent/30 bg-accent/10 p-6 sm:p-8 md:p-12"
+    >
+      <h2 id="cta-siti-web" class="font-title text-3xl sm:text-4xl md:text-5xl text-primary mb-6 text-balance">
+        Hai un sito da realizzare o migliorare?
+      </h2>
+      <p class="max-w-2xl text-lg text-primary/75 leading-relaxed mb-10">
+        Raccontami cosa deve fare, a chi si rivolge e quali contenuti hai già a disposizione.
+      </p>
+      <a
+        href="/contatti/"
+        class="inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-6 py-3 text-center text-sm font-semibold uppercase tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
+      >
+        Parliamo del tuo progetto
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+  </main>
+</BaseLayout>

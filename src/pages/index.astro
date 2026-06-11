@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import ProgettiPreview from '../components/ProgettiPreview.astro';
 import ChiSonoPreview from '../components/ChiSonoPreview.astro';
-import CollaborazioniPreview from '../components/CollaborazioniPreview.astro';
+import PercorsiCommercialiPreview from '../components/PercorsiCommercialiPreview.astro';
 import BlogPreview from '../components/BlogPreview.astro';
 import FAQ from '../components/FAQ.astro';
 import Contatti from '../components/Contatti.astro';
@@ -33,13 +33,11 @@ const faqSchema = {
   </Fragment>
 
   <main>
-    <section aria-label="Introduzione" class="hero">
-      <Hero />
-    </section>
+    <Hero />
     <section aria-label="Contenuti principali">
+      <PercorsiCommercialiPreview />
       <ChiSonoPreview />
       <ProgettiPreview />
-      <CollaborazioniPreview />
       <BlogPreview />
       <FAQ />
       <Contatti />
