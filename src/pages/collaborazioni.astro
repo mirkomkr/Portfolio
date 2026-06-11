@@ -1,57 +1,91 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const supportCards = [
+const situations = [
+  'Hai un layout pronto da trasformare in un’interfaccia responsive',
+  'Devi delegare una landing page o alcune sezioni del sito',
+  'Il team sta gestendo un picco di lavoro',
+  'Un progetto esistente richiede restyling o ottimizzazione frontend',
+  'Serve supporto su pagine e sezioni e-commerce',
+];
+
+const services = [
   {
     title: 'Sviluppo da layout',
-    text: 'Trasformo layout Figma, Adobe o mockup grafici in interfacce responsive, pulite e usabili.',
+    text: 'Trasformo layout Figma, mockup e specifiche in interfacce responsive e curate.',
   },
   {
-    title: 'Accessibilità e semantica HTML',
-    text: 'Curo struttura, markup semantico, navigazione e buone pratiche WCAG per rendere le interfacce più chiare, accessibili e fruibili.',
+    title: 'Landing page e sezioni di sito',
+    text: 'Sviluppo pagine o componenti circoscritti, integrandoli nel progetto esistente.',
   },
   {
-    title: 'Performance frontend',
-    text: 'Ottimizzo caricamento, stabilità visiva e qualità tecnica, con attenzione a Core Web Vitals e mobile.',
+    title: 'Restyling e refactor frontend',
+    text: 'Intervengo su interfacce esistenti per migliorarne struttura, leggibilità e utilizzo da mobile.',
   },
   {
-    title: 'Supporto white-label',
-    text: 'Posso intervenire dietro le quinte su landing page, sezioni frontend, componenti, refactor o picchi di lavoro.',
+    title: 'Frontend per e-commerce leggeri',
+    text: 'Lavoro su pagine prodotto, categorie, promozioni e percorsi di acquisto essenziali.',
   },
   {
-    title: 'Frontend per e-commerce',
-    text: 'Supporto su pagine prodotto, categorie, landing promozionali e sezioni frontend di e-commerce già esistenti, con attenzione a mobile, performance e chiarezza del percorso utente.',
-  },
-  {
-    title: 'Refactor e ottimizzazione',
-    text: 'Intervengo su sezioni esistenti per migliorare struttura, manutenibilità, leggibilità del codice e qualità dell’esperienza utente.',
+    title: 'Verifiche tecniche',
+    text: 'Controllo comportamento responsive, performance, semantica e principali aspetti di accessibilità.',
   },
 ];
 
-const targets = [
-  'Web agency con picchi di lavoro frontend',
-  'Designer o studi grafici che hanno clienti ma non sviluppo interno',
-  'Freelance che vogliono delegare parti tecniche',
-  'Partner locali che vogliono completare la propria offerta web',
-  'Realtà che lavorano su siti vetrina, landing page o e-commerce e hanno bisogno di supporto frontend',
+const process = [
+  {
+    title: 'Brief e materiali',
+    text: 'Condividi obiettivi, layout, specifiche, accessi disponibili e vincoli del progetto.',
+  },
+  {
+    title: 'Definizione dello scope',
+    text: 'Definiamo cosa deve essere sviluppato, cosa è già disponibile e quali aspetti richiedono chiarimenti.',
+  },
+  {
+    title: 'Sviluppo e confronto',
+    text: 'Procedo sullo scope concordato e segnalo tempestivamente dubbi o criticità.',
+  },
+  {
+    title: 'Revisione e consegna',
+    text: 'Verifichiamo il risultato, gestiamo le revisioni previste e prepariamo la consegna.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Posso delegarti solo una parte del progetto?',
+    a: 'Sì. Possiamo definire uno scope circoscritto, come una landing page, alcune sezioni, componenti o un intervento su un’interfaccia esistente.',
+  },
+  {
+    q: 'Lavori anche da layout già pronti?',
+    a: 'Sì. Posso sviluppare da layout Figma, mockup grafici o specifiche condivise, chiarendo prima comportamenti responsive e dettagli mancanti.',
+  },
+  {
+    q: 'Puoi lavorare white-label?',
+    a: 'È possibile valutarlo in base al progetto. Prima di iniziare definiamo modalità di comunicazione, responsabilità e livello di coinvolgimento.',
+  },
+  {
+    q: 'Puoi intervenire su un progetto già avviato?',
+    a: 'Sì, dopo una verifica iniziale della struttura esistente, degli strumenti utilizzati e dello scope richiesto.',
+  },
 ];
 
 const collaborationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   '@id': 'https://www.mirkopasseri.it/collaborazioni/#service',
-  name: 'Collaborazioni frontend per agenzie e designer',
+  name: 'Supporto frontend per agenzie e designer',
   serviceType: 'Supporto frontend esterno',
   url: 'https://www.mirkopasseri.it/collaborazioni/',
   provider: { '@id': 'https://www.mirkopasseri.it/#persona' },
   description:
-    'Supporto frontend per agenzie, freelance, designer e realtà creative: sviluppo responsive, accessibilità, performance, qualità del codice e interfacce e-commerce.',
+    'Supporto frontend per agenzie, designer e piccoli team: sviluppo da layout, landing page, sezioni di sito, refactor e interventi frontend con scope definito.',
 };
 ---
 
 <BaseLayout
-  title="Collaborazioni frontend per agenzie e designer | Mirko Passeri"
-  description="Supporto frontend per agenzie, freelance, designer e realtà creative: sviluppo responsive, accessibilità, performance, qualità del codice e interfacce e-commerce."
+  title="Supporto frontend per agenzie e designer | Mirko Passeri"
+  description="Supporto frontend per agenzie, designer e piccoli team: sviluppo da layout, landing page, sezioni di sito, refactor e interventi frontend con scope definito."
   canonical="https://www.mirkopasseri.it/collaborazioni/"
 >
   <Fragment slot="schema">
@@ -66,57 +100,133 @@ const collaborationSchema = {
       >
         ← Torna alla home
       </a>
-      <div class="flex items-start gap-5">
-        <div>
-          <h1 class="font-title text-4xl sm:text-5xl md:text-7xl text-primary leading-tight text-balance">
-            Collaborazioni frontend per agenzie e realtà creative
-          </h1>
-          <p class="mt-6 max-w-3xl text-lg text-primary/80 leading-relaxed">
-            Affianco professionisti e piccoli team nella realizzazione di interfacce responsive,
-            accessibili e performanti, intervenendo anche su singole parti di progetto.
-          </p>
-          <a
-            href="/contatti/"
-            class="mt-10 inline-flex w-full sm:w-auto max-w-full items-center justify-center gap-2 text-center text-sm font-semibold uppercase tracking-normal sm:tracking-widest bg-accent text-master border border-accent px-5 sm:px-6 py-3 rounded-md hover:bg-transparent hover:text-accent transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
-          >
-            <span class="sm:hidden">Parliamone</span>
-            <span class="hidden sm:inline">Valutiamo una collaborazione</span>
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
+      <h1 class="font-title text-4xl sm:text-5xl md:text-7xl text-primary leading-tight text-balance">
+        Supporto frontend per agenzie, designer e piccoli team
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-primary/80 leading-relaxed">
+        Affianco professionisti e team creativi nello sviluppo di interfacce già progettate, landing
+        page, sezioni di sito e interventi frontend con uno scope definito.
+      </p>
+      <a
+        href="/contatti/"
+        class="mt-10 inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-5 sm:px-6 py-3 text-center text-sm font-semibold uppercase tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
+      >
+        <span>Parliamo del progetto da delegare</span>
+        <span aria-hidden="true">→</span>
+      </a>
     </header>
 
-    <section aria-labelledby="supporto-collaborazioni" class="mb-20 md:mb-28">
-      <h2 id="supporto-collaborazioni" class="font-title text-4xl md:text-5xl text-primary mb-10">
-        Come posso supportarti
+    <section aria-labelledby="quando-utile" class="mb-20 md:mb-24">
+      <h2 id="quando-utile" class="font-title text-4xl md:text-5xl text-primary mb-6">
+        Quando posso essere utile
       </h2>
-      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <p class="max-w-3xl text-primary/80 leading-relaxed mb-8">
+        Posso entrare nel progetto quando serve una risorsa frontend esterna per completare una fase
+        di lavoro o gestire un’attività specifica.
+      </p>
+      <ul class="space-y-4 max-w-3xl">
         {
-          supportCards.map((card) => (
-            <li class="border border-primary/20 rounded-2xl p-6 transition-all duration-300 hover:border-accent/60 hover:bg-primary/[0.03]">
-              <h3 class="font-title text-2xl text-primary mb-3">{card.title}</h3>
-              <p class="text-primary/75 leading-relaxed">{card.text}</p>
+          situations.map((situation) => (
+            <li class="flex gap-4 text-primary/80 leading-relaxed">
+              <span aria-hidden="true" class="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
+              <span>{situation}</span>
             </li>
           ))
         }
       </ul>
     </section>
 
-    <section aria-labelledby="target-collaborazioni" class="mb-20 md:mb-28">
-      <h2 id="target-collaborazioni" class="font-title text-4xl md:text-5xl text-primary mb-10">
-        Per chi è utile
+    <section aria-labelledby="servizi-delegabili" class="mb-20 md:mb-24">
+      <h2 id="servizi-delegabili" class="font-title text-4xl md:text-5xl text-primary mb-10">
+        Cosa puoi delegarmi
       </h2>
-      <ul class="space-y-5 max-w-3xl">
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {
-          targets.map((target) => (
-            <li class="flex gap-4 text-primary/80 leading-relaxed">
-              <span aria-hidden="true" class="mt-2 h-2 w-2 shrink-0 rounded-full bg-accent" />
-              <span>{target}</span>
+          services.map((service) => (
+            <li class="rounded-2xl border border-primary/20 p-6">
+              <h3 class="font-title text-2xl text-primary mb-3">{service.title}</h3>
+              <p class="text-primary/75 leading-relaxed">{service.text}</p>
             </li>
           ))
         }
       </ul>
+    </section>
+
+    <section aria-labelledby="gestione-collaborazione" class="mb-20 md:mb-24">
+      <h2 id="gestione-collaborazione" class="font-title text-4xl md:text-5xl text-primary mb-10">
+        Come gestisco la collaborazione
+      </h2>
+      <ol class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {
+          process.map((step, index) => (
+            <li class="rounded-2xl border border-primary/20 p-6">
+              <span class="text-xs font-semibold uppercase tracking-widest text-accent">
+                Passaggio {index + 1}
+              </span>
+              <h3 class="font-title text-2xl text-primary mt-3 mb-3">{step.title}</h3>
+              <p class="text-primary/75 leading-relaxed">{step.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section aria-labelledby="modalita-collaborazione" class="mb-20 md:mb-24 max-w-3xl">
+      <h2 id="modalita-collaborazione" class="font-title text-4xl md:text-5xl text-primary mb-6">
+        Una collaborazione adatta al progetto
+      </h2>
+      <div class="space-y-5 text-primary/80 leading-relaxed">
+        <p>
+          Posso supportarti su una singola attività, su una fase delimitata oppure valutare una
+          collaborazione più continuativa.
+        </p>
+        <p>
+          Quando necessario posso lavorare dietro le quinte, definendo prima modalità,
+          responsabilità e comunicazione.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="esempi-frontend" class="mb-20 md:mb-24">
+      <h2 id="esempi-frontend" class="font-title text-4xl md:text-5xl text-primary mb-6">
+        Esempi di lavoro frontend
+      </h2>
+      <p class="max-w-3xl text-primary/80 leading-relaxed mb-8">
+        Nel portfolio trovi progetti che mostrano il mio approccio a sviluppo responsive,
+        performance, accessibilità e integrazioni frontend.
+      </p>
+      <a
+        href="/progetti/"
+        class="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-accent/40 px-5 py-3 text-center text-sm font-semibold uppercase tracking-normal text-accent transition-all hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
+      >
+        <span>Guarda i progetti</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </section>
+
+    <section aria-labelledby="faq-collaborazioni" class="mb-20 md:mb-24">
+      <h2 id="faq-collaborazioni" class="font-title text-4xl md:text-5xl text-primary mb-10">
+        Domande frequenti
+      </h2>
+      <div class="divide-y divide-primary/10">
+        {
+          faqs.map((faq) => (
+            <details class="group py-6" name="faq-collaborazioni">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-6 marker:hidden [&::-webkit-details-marker]:hidden">
+                <span class="font-semibold text-primary transition-colors duration-200 group-open:text-accent">
+                  {faq.q}
+                </span>
+                <span aria-hidden="true" class="shrink-0 text-accent transition-transform duration-300 group-open:rotate-180">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 15.414l-6.293-6.293-1.414 1.414L12 18.243l7.707-7.708-1.414-1.414z" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-4 max-w-3xl pb-2 text-primary/75 leading-relaxed">{faq.a}</p>
+            </details>
+          ))
+        }
+      </div>
     </section>
 
     <section
@@ -127,17 +237,17 @@ const collaborationSchema = {
         id="cta-collaborazioni"
         class="font-title text-3xl sm:text-4xl md:text-5xl text-primary mb-6 text-balance"
       >
-        Hai bisogno di supporto frontend su un progetto?
+        Hai una parte frontend da delegare?
       </h2>
       <p class="max-w-2xl text-lg text-primary/75 leading-relaxed mb-10">
-        Se hai un progetto da chiudere, una parte frontend da delegare o vuoi valutare una
-        collaborazione, possiamo parlarne.
+        Raccontami cosa è già pronto, cosa deve essere sviluppato e quali vincoli dobbiamo
+        considerare.
       </p>
       <a
         href="/contatti/"
-        class="inline-flex w-full sm:w-auto max-w-full items-center justify-center gap-2 text-center text-sm font-semibold uppercase tracking-normal sm:tracking-widest bg-accent text-master border border-accent px-5 sm:px-6 py-3 rounded-md hover:bg-transparent hover:text-accent transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+        class="inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-5 sm:px-6 py-3 text-center text-sm font-semibold uppercase tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
       >
-        <span>Contattami</span>
+        <span>Valutiamo una collaborazione frontend</span>
         <span aria-hidden="true">→</span>
       </a>
     </section>
