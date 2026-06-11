@@ -15,7 +15,7 @@ const interventi = [
     text: 'Un intervento su struttura, contenuti e interfaccia per rendere più efficace un sito esistente.',
   },
   {
-    title: 'E-commerce leggero',
+    title: 'E-commerce',
     text: 'Una soluzione essenziale per vendere un catalogo contenuto senza complicare la gestione.',
   },
 ];
@@ -51,11 +51,34 @@ const qualita = [
     text: 'Curo le basi tecniche e la struttura dei contenuti per aiutare motori di ricerca e persone a comprendere il sito.',
   },
 ];
+
+const faqs = [
+  {
+    q: 'Quanto costa realizzare un sito web?',
+    a: 'Dipende da obiettivi, numero di pagine, contenuti disponibili e complessità tecnica. Prima di parlare di costo è utile capire cosa deve fare il sito e quali materiali sono già pronti.',
+  },
+  {
+    q: 'Quanto tempo serve per pubblicare un sito?',
+    a: 'Dipende dallo scope e dalla disponibilità di testi, immagini e decisioni. Un sito semplice richiede meno tempo di un restyling o di un progetto con più sezioni e integrazioni.',
+  },
+  {
+    q: 'Puoi migliorare un sito già esistente?',
+    a: 'Sì. Posso intervenire su struttura, contenuti, interfaccia, mobile, performance e aspetti tecnici che rendono il sito più chiaro e più semplice da usare.',
+  },
+  {
+    q: 'Realizzi anche e-commerce?',
+    a: 'Sì. Posso lavorare su pagine prodotto, categorie, sezioni promozionali, percorsi di acquisto e integrazioni frontend con strumenti esistenti. La complessità del progetto va valutata in base a catalogo, funzionalità, gestione ordini e strumenti già presenti.',
+  },
+  {
+    q: 'Mi aiuti anche con testi, struttura e contenuti?',
+    a: 'Sì. Posso aiutarti a organizzare le informazioni principali, chiarire le sezioni del sito e rendere i contenuti più comprensibili per chi visita la pagina.',
+  },
+];
 ---
 
 <BaseLayout
   title="Realizzazione siti web per attività e professionisti | Mirko Passeri"
-  description="Realizzazione di siti vetrina, landing page, restyling ed e-commerce leggeri per attività, professionisti e piccole imprese."
+  description="Realizzazione di siti vetrina, landing page, restyling ed e-commerce per attività, professionisti e piccole imprese."
   canonical="https://www.mirkopasseri.it/realizzazione-siti-web/"
 >
   <main class="min-h-screen max-w-7xl mx-auto px-5 sm:px-8 md:px-24 py-16 md:py-20 overflow-x-hidden">
@@ -150,6 +173,31 @@ const qualita = [
           ))
         }
       </ul>
+    </section>
+
+    <section aria-labelledby="faq-siti-web" class="mb-20 md:mb-28">
+      <h2 id="faq-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10">
+        Domande frequenti
+      </h2>
+      <div class="divide-y divide-primary/10">
+        {
+          faqs.map((faq) => (
+            <details class="group py-6" name="faq-siti-web">
+              <summary class="flex cursor-pointer list-none items-center justify-between gap-6 marker:hidden [&::-webkit-details-marker]:hidden">
+                <span class="font-semibold text-primary transition-colors duration-200 group-open:text-accent">
+                  {faq.q}
+                </span>
+                <span aria-hidden="true" class="shrink-0 text-accent transition-transform duration-300 group-open:rotate-180">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 15.414l-6.293-6.293-1.414 1.414L12 18.243l7.707-7.708-1.414-1.414z" />
+                  </svg>
+                </span>
+              </summary>
+              <p class="mt-4 max-w-3xl pb-2 text-primary/75 leading-relaxed">{faq.a}</p>
+            </details>
+          ))
+        }
+      </div>
     </section>
 
     <section
