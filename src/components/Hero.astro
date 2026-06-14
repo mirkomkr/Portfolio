@@ -1,3 +1,7 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
 <section
   aria-label="Introduzione"
   class="bg-master text-primary flex min-h-[85svh] md:min-h-screen flex-col justify-center items-center text-center md:items-end md:text-right w-full max-w-7xl mx-auto px-8 md:px-24 py-24 md:py-28"
@@ -14,6 +18,69 @@
     Realizzo siti web chiari, veloci e accessibili, e sviluppo interfacce frontend curate per
     attività, professionisti, agenzie e designer.
   </p>
+
+  <nav aria-label="Navigazione rapida" class="mt-10 w-full sm:w-auto">
+    <ul
+      class="grid grid-cols-2 items-start justify-items-center gap-6 sm:grid-cols-4 md:justify-end md:gap-8"
+    >
+      <li>
+        <a
+          href="#chi-sono"
+          aria-label="Scopri chi sono"
+          class="group flex flex-col items-center gap-2 rounded-md px-2 py-1 transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+        >
+          <Icon
+            name="persona"
+            aria-hidden="true"
+            class="size-8 transition-colors md:size-10"
+          />
+          <span class="text-xs font-semibold uppercase tracking-widest md:text-sm">Chi sono</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="#blog"
+          aria-label="Leggi il blog"
+          class="group flex flex-col items-center gap-2 rounded-md px-2 py-1 transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+        >
+          <Icon
+            name="blog"
+            aria-hidden="true"
+            class="size-8 transition-colors md:size-10"
+          />
+          <span class="text-xs font-semibold uppercase tracking-widest md:text-sm">Blog</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="#progetti"
+          aria-label="Esplora i miei progetti"
+          class="group flex flex-col items-center gap-2 rounded-md px-2 py-1 transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+        >
+          <Icon
+            name="progetti"
+            aria-hidden="true"
+            class="size-8 transition-colors md:size-10"
+          />
+          <span class="text-xs font-semibold uppercase tracking-widest md:text-sm">Progetti</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="#contatti"
+          aria-label="Vai ai contatti"
+          class="group flex flex-col items-center gap-2 rounded-md px-2 py-1 transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+        >
+          <Icon
+            name="messaggio"
+            aria-hidden="true"
+            class="size-8 transition-colors md:size-10"
+          />
+          <span class="text-xs font-semibold uppercase tracking-widest md:text-sm">Contattami</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
   <div class="mt-10 w-full sm:w-auto">
     <a
