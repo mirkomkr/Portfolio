@@ -15,9 +15,7 @@ const {title, description, image, altimage, link, lighthouseScore} = Astro.props
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
       />
 
-<!--  Badge Lighthouse score da applicare direttamente alla card -->
-
-<!-- {lighthouseScore && (
+<!--       {lighthouseScore && (
         <span
           class="absolute top-3 right-3 inline-flex items-center gap-1.5 bg-master/90 backdrop-blur-sm text-accent border border-accent/30 text-xs font-bold px-2.5 py-1 rounded-full shadow-md"
           aria-label={`Punteggio Lighthouse ${lighthouseScore} su 100`}

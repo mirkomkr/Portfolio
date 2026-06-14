@@ -9,15 +9,22 @@ const results = [
     site: "Portfolio Mirko Passeri",
     url: "mirkopasseri.it",
     image: LhPortfolio,
-    alt: "Screenshot del test Lighthouse per il portfolio di Mirko Passeri: punteggio 100 su 100 in Performance, Accessibility, Best Practices e SEO.",
+    alt: "Risultato Lighthouse del portfolio Mirko Passeri con punteggio 100 in Performance, Accessibilità, Best Practices e SEO.",
   },
   {
     id: "lh-dtf",
     site: "DTF Italia — E-commerce",
     url: "dtfitalia.it",
     image: LhDtf,
-    alt: "Screenshot del test Lighthouse per DTF Italia, e-commerce headless: punteggio 100 su 100 in Performance, Accessibility, Best Practices e SEO.",
+    alt: "Risultato Lighthouse del progetto DTF Italia con punteggio 100 in Performance, Accessibilità, Best Practices e SEO.",
   },
+];
+
+const metrics = [
+  { label: "Performance", value: 100 },
+  { label: "Accessibilità", value: 100 },
+  { label: "Best Practices", value: 100 },
+  { label: "SEO", value: 100 },
 ];
 ---
 
@@ -32,15 +39,21 @@ const results = [
   >
     Risultati misurabili
   </h2>
-  <p class="text-primary/70 text-lg mb-16 max-w-xl">
-    Lighthouse è lo strumento di audit di Google. Punteggio 100/100 su tutti e
-    quattro i parametri: Performance, Accessibilità, Best Practices e SEO.
-  </p>
+  <div class="text-primary/70 text-lg mb-16 max-w-3xl space-y-4">
+    <p>
+      Ogni progetto viene verificato anche con strumenti di audit tecnico come Lighthouse, per
+      controllare performance, accessibilità, SEO e best practices.
+    </p>
+    <p>
+      I punteggi non sono l’unico criterio di qualità, ma aiutano a misurare se il sito è leggero,
+      navigabile, ben strutturato e tecnicamente solido.
+    </p>
+  </div>
 
   <ul
     class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"
     role="list"
-    aria-label="Screenshot test Lighthouse per progetto"
+    aria-label="Risultati degli audit Lighthouse per progetto"
   >
     {
       results.map((r) => (
@@ -48,7 +61,8 @@ const results = [
           <button
             type="button"
             class="group w-full text-left rounded-2xl overflow-hidden hover:border-accent/70 border border-primary/30 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-master"
-            aria-label={`Ingrandisci il test Lighthouse per ${r.site}`}
+            aria-labelledby={`azione-${r.id}`}
+            aria-describedby={`metriche-${r.id}`}
             aria-haspopup="dialog"
             data-lightbox-trigger={r.id}
           >
@@ -87,30 +101,24 @@ const results = [
                 </div>
               </div>
               <figcaption class="p-5">
-                <div class="flex items-start justify-between gap-4">
-                  <div>
-                    <p class="font-bold text-primary text-base group-hover:text-accent transition-colors duration-300">
-                      {r.site}
-                    </p>
-                    <p class="text-xs text-primary/50 mt-0.5">{r.url}</p>
-                  </div>
-                  <span
-                    class="shrink-0 inline-flex items-center gap-1.5 bg-accent/10 text-accent border border-accent/20 text-xs font-bold px-3 py-1.5 rounded-full"
-                    aria-label="Punteggio Lighthouse 100 su 100"
-                  >Lighthouse score: 
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12"
-                      height="12"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                    </svg>
-                    100 / 100
-                  </span>
-                </div>
+                <span id={`azione-${r.id}`} class="sr-only">
+                  Ingrandisci il risultato Lighthouse per {r.site}
+                </span>
+                <p class="font-bold text-primary text-base group-hover:text-accent transition-colors duration-300">
+                  {r.site}
+                </p>
+                <p class="text-xs text-primary/50 mt-0.5">{r.url}</p>
+                <dl
+                  id={`metriche-${r.id}`}
+                  class="grid grid-cols-2 gap-x-5 gap-y-2 mt-5 pt-4 border-t border-primary/10 text-sm"
+                >
+                  {metrics.map((metric) => (
+                    <div class="flex items-baseline justify-between gap-3">
+                      <dt class="text-primary/65">{metric.label}</dt>
+                      <dd class="font-semibold text-primary">{metric.value}</dd>
+                    </div>
+                  ))}
+                </dl>
               </figcaption>
             </figure>
           </button>
@@ -162,27 +170,19 @@ const results = [
             widths={[400, 800, 1200]}
             sizes="(max-width: 1024px) 100vw, 1200px"
           />
-          <figcaption class="px-6 py-4 flex items-center justify-between gap-4">
+          <figcaption class="px-6 py-4">
             <div>
               <p class="font-bold text-primary text-base">{r.site}</p>
               <p class="text-xs text-primary/50 mt-0.5">{r.url}</p>
             </div>
-            <span
-              class="shrink-0 inline-flex items-center gap-1.5 bg-accent/10 text-accent border border-accent/20 text-xs font-bold px-3 py-1.5 rounded-full"
-              aria-label="Punteggio Lighthouse 100 su 100"
-            >Lighthouse score:
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="12"
-                height="12"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-              </svg>
-              100 / 100
-            </span>
+            <dl class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4 pt-4 border-t border-primary/10">
+              {metrics.map((metric) => (
+                <div>
+                  <dt class="text-xs text-primary/60">{metric.label}</dt>
+                  <dd class="font-semibold text-primary">{metric.value}</dd>
+                </div>
+              ))}
+            </dl>
           </figcaption>
         </figure>
       </div>
