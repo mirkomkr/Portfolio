@@ -2,11 +2,13 @@
 title: "Caso studio: sito demo per un ristorante di pesce"
 description: "Come ho progettato un sito demo per un ristorante di pesce, con attenzione a performance, accessibilità, SEO tecnica e chiarezza dei contenuti."
 pubDate: 2026-06-14
+dateModified: 2026-06-15
 author: "Mirko Passeri"
 tags:
   [
     "Caso studio frontend",
     "Astro",
+    "Vue 3",
     "Performance web",
     "Accessibilità web",
     "SEO tecnica",
@@ -33,7 +35,7 @@ faq:
     a: "Il progetto è stato costruito con attenzione a performance mobile, accessibilità, SEO tecnica, struttura dei contenuti, immagini ottimizzate, dati strutturati prudenti, header di sicurezza e navigazione chiara."
 
   - q: "Che tecnologia è stata usata?"
-    a: "Il sito è stato realizzato con Astro, privilegiando un approccio statico, leggero e performante. L’obiettivo era ridurre JavaScript non necessario e costruire pagine veloci, accessibili e semplici da mantenere."
+    a: "Il sito è stato realizzato principalmente con Astro, privilegiando un approccio statico, leggero e performante. Vue 3 è stato utilizzato per sviluppare il form di prenotazione demo, dove era necessaria una maggiore interattività."
 
   - q: "Un sito per ristoranti deve essere per forza complesso?"
     a: "No. Molti ristoranti hanno bisogno prima di tutto di informazioni chiare: menu, posizione, atmosfera, orari, contatti e un percorso semplice verso la prenotazione. La complessità va aggiunta solo quando serve davvero."
@@ -104,7 +106,7 @@ Il progetto deve avere un’identità coerente senza ricorrere a effetti pesanti
 
 ---
 
-## Lo stack: Astro e approccio statico
+## Lo stack: Astro, Vue 3 e approccio statico
 
 Per questo progetto ho scelto **Astro**, perché era adatto all’obiettivo: costruire un sito leggero, statico e orientato ai contenuti.
 
@@ -120,7 +122,9 @@ L’approccio è stato quindi:
 * struttura chiara delle pagine;
 * contenuti pensati per utenti reali, non solo per Lighthouse.
 
-La parte interattiva, come il percorso di prenotazione demo, è stata trattata con prudenza: il form serve a mostrare il flusso, non a inviare richieste reali a un ristorante inesistente.
+Per mantenere leggere le pagine, Vue 3 è stato utilizzato solamente dove offriva un vantaggio concreto: il form di prenotazione demo. Il componente gestisce l’interazione e il flusso del form, senza trasformare l’intero sito in un’applicazione JavaScript.
+
+Il form serve a mostrare il percorso di prenotazione, non a inviare richieste reali a un ristorante inesistente.
 
 ---
 

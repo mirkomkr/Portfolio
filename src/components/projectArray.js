@@ -9,7 +9,7 @@ export const projects = [
   {
     title: 'Azzurro di Mare',
     description:
-      'Sito vetrina ad alte prestazioni per un ristorante di pesce contemporaneo. Sviluppato con Astro e Vue, presenta menu e flusso di prenotazione demo attraverso un’esperienza accessibile e responsive. Focus su accessibilità, performance, ottimizzazione delle immagini e SEO locale per Anzio e Nettuno.',
+      'Sito vetrina ad alte prestazioni per un ristorante di pesce contemporaneo. Sviluppato con Astro, integra un form di prenotazione demo realizzato con Vue 3. Offre un’esperienza accessibile e responsive, con particolare attenzione a performance, ottimizzazione delle immagini e SEO locale per Anzio e Nettuno.',
     image: AzzurroDiMare,
     altimage:
       'Screenshot del sito Azzurro di Mare, un progetto dimostrativo pensato come caso studio frontend per un ristorante di pesce immaginario tra Anzio e Nettuno.',
