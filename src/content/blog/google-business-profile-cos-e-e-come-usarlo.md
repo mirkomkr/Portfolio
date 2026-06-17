@@ -2,7 +2,6 @@
 title: "Google Business Profile: guida pratica"
 description: "Cos’è Google Business Profile, perché affianca il sito web e quali informazioni curare per migliorare la presenza locale."
 pubDate: 2026-06-17
-draft: true
 author: "Mirko Passeri"
 tags:
   [
