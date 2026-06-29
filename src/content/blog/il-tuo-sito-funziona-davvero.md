@@ -188,7 +188,9 @@ Non è un audit completo, ma un primo controllo utile per capire se vale la pena
 * 2–3 osservazioni principali;
 * un’indicazione sulle eventuali criticità da approfondire.
 
-Puoi scrivermi dalla pagina [contatti](https://www.mirkopasseri.it/contatti).
+Se vuoi capire anche come lavoro su realizzazione e miglioramento di siti web, trovi una sintesi nella pagina [realizzazione siti web](/realizzazione-siti-web/).
+
+Per richiedere la verifica, puoi scrivermi dalla pagina [contatti](/contatti/).
 
 ---
 

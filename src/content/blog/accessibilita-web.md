@@ -18,6 +18,7 @@ tags:
 image: ../../assets/blog/accessibilita-web.webp
 imageAlt: "Illustrazione minimal: laptop connesso a icone che rappresentano utenti con diverse esigenze di accessibilità"
 related:
+  - il-tuo-sito-funziona-davvero
   - cosa-vuol-dire-sito-lento
   - perche-la-tua-attivita-ha-bisogno-di-un-sito-web
 faq:
@@ -136,7 +137,7 @@ Ho conseguito la certificazione **WAI0.1x — Introduction to Web Accessibility*
 
 ---
 
-_Se vuoi sapere se il tuo sito attuale ha problemi di accessibilità, scrivimi dalla pagina [contatti](/contatti/)._
+_Se vuoi capire se la homepage del tuo sito presenta problemi evidenti di accessibilità, la [prima verifica tecnica gratuita](/realizzazione-siti-web/) può essere un buon punto di partenza: controllo automatico, struttura della pagina e percorso di contatto. Per richiederla, scrivimi dalla pagina [contatti](/contatti/)._
 
 ---
 

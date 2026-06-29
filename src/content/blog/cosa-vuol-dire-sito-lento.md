@@ -18,6 +18,7 @@ tags:
 image: ../../assets/blog/cosa-vuol-dire-sito-lento.webp
 imageAlt: "Illustrazione minimal: tachimetro lento accanto a browser con spinner di caricamento"
 related:
+  - il-tuo-sito-funziona-davvero
   - perche-il-sito-non-si-trova-su-google
   - accessibilita-web
 faq:
@@ -50,7 +51,7 @@ Quando qualcuno apre il tuo sito da smartphone, magari mentre è in giro, con un
 
 E tu probabilmente non lo saprai mai, perché chi abbandona un sito lento non ti avvisa.
 
-Google ha riportato che il 53% delle visite mobile può essere abbandonato se una pagina impiega più di 3 secondi a caricarsi. Non significa che ogni utente si comporti sempre così, ma dà bene l’idea: la pazienza online è molto bassa. :contentReference[oaicite:2]{index=2}
+Google ha riportato che il 53% delle visite mobile può essere abbandonato se una pagina impiega più di 3 secondi a caricarsi. Non significa che ogni utente si comporti sempre così, ma dà bene l’idea: la pazienza online è molto bassa.
 
 ---
 
@@ -166,7 +167,7 @@ La velocità non è un dettaglio finale. È una conseguenza di come il sito vien
 
 ---
 
-_Vuoi sapere com'è la situazione del tuo sito? Scrivimi dalla pagina [contatti](/contatti/)._
+_Se vuoi capire se la homepage del tuo sito ha problemi evidenti di velocità, struttura o percorso di contatto, trovi i dettagli della [prima verifica tecnica gratuita](/realizzazione-siti-web/). Per richiederla puoi scrivermi dalla pagina [contatti](/contatti/)._
 
 ---
 

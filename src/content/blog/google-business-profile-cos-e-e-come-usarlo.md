@@ -145,7 +145,7 @@ Come chiederle senza sembrare disperato?
 
 Il momento migliore è subito dopo un'esperienza positiva. In modo diretto: _"Se hai un minuto, una recensione su Google ci aiuta tanto."_ Puoi creare un link diretto alla tua scheda Google che porta l'utente direttamente al form delle recensioni.
 
-Quello che non va fatto: chiedere recensioni false, offrire sconti in cambio di recensioni, ignorare le recensioni negative. Google vieta contenuti non basati su esperienze reali e recensioni incentivate, quindi conviene costruire fiducia nel modo corretto. :contentReference[oaicite:2]{index=2}
+Quello che non va fatto: chiedere recensioni false, offrire sconti in cambio di recensioni, ignorare le recensioni negative. Google vieta contenuti non basati su esperienze reali e recensioni incentivate, quindi conviene costruire fiducia nel modo corretto.
 
 E soprattutto: una risposta professionale a una recensione negativa dice più di una risposta a dieci positive.
 

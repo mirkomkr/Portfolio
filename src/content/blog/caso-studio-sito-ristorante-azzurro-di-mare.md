@@ -342,7 +342,7 @@ Puoi vedere il progetto qui: [Azzurro di Mare](https://azzurro-di-mare.mirkopass
 
 ---
 
-*Se hai un’attività locale e vuoi capire se il tuo sito comunica in modo chiaro, veloce e professionale, puoi scrivermi dalla pagina [contatti](/contatti/).*
+*Se hai un’attività locale e vuoi capire se il tuo sito comunica in modo chiaro, veloce e professionale, puoi partire da una [prima verifica tecnica gratuita](/realizzazione-siti-web/). Non è un audit completo, ma aiuta a individuare eventuali segnali da approfondire sulla homepage. Per richiederla, puoi scrivermi dalla pagina [contatti](/contatti/).*
 
 ---
 
