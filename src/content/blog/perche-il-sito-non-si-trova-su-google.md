@@ -153,7 +153,7 @@ La parte buona è che spesso i problemi più gravi sono anche i più facili da r
 
 ---
 
-_Se vuoi capire se il problema nasce da indicizzazione, struttura, performance o chiarezza dei contenuti, puoi partire da una [prima verifica tecnica gratuita](/realizzazione-siti-web/) della homepage. Per richiederla, scrivimi dalla pagina [contatti](/contatti/)._
+_Se vuoi capire se il problema nasce da indicizzazione, struttura, performance o chiarezza dei contenuti, puoi partire da una [prima verifica gratuita del sito](/verifica-gratuita/) della homepage. Per richiederla, scrivimi dalla pagina [contatti](/contatti/)._
 
 ---
 

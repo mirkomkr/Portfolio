@@ -81,14 +81,24 @@ const faqs = [
   description="Realizzazione di siti vetrina, landing page, restyling ed e-commerce per attività, professionisti e piccole imprese."
   canonical="https://www.mirkopasseri.it/realizzazione-siti-web/"
 >
-  <main class="min-h-screen max-w-7xl mx-auto px-5 sm:px-8 md:px-24 py-16 md:py-20 overflow-x-hidden">
+  <main class="max-w-7xl mx-auto px-5 sm:px-8 md:px-24 py-16 md:py-20 overflow-x-hidden">
     <header class="mb-16 md:mb-24">
-      <a
-        href="/"
-        class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline mb-8 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
-      >
-        ← Torna alla home
-      </a>
+      <nav aria-label="Breadcrumb" class="mb-8 text-sm text-primary/70">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li>
+            <a
+              href="/"
+              class="font-semibold text-accent transition-colors hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+            >
+              Home
+            </a>
+          </li>
+          <li aria-hidden="true" class="text-primary/40">/</li>
+          <li aria-current="page" class="font-semibold text-primary">
+            Siti web
+          </li>
+        </ol>
+      </nav>
       <h1 class="font-title text-4xl sm:text-5xl md:text-7xl text-primary leading-tight text-balance">
         Siti web pensati per attività e professionisti
       </h1>
@@ -98,7 +108,7 @@ const faqs = [
       </p>
       <a
         href="/contatti/"
-        class="mt-10 inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-6 py-3 text-center text-sm font-semibold uppercase tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
+        class="mt-10 inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-6 py-3 text-center text-sm font-semibold normal-case tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
       >
         Parliamo del tuo sito
         <span aria-hidden="true">→</span>
@@ -184,7 +194,7 @@ const faqs = [
       <div class="grid gap-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-start">
         <div class="max-w-3xl">
           <h2 id="verifica-tecnica-gratuita" class="font-title text-3xl sm:text-4xl text-primary mb-5 text-balance">
-            Prima verifica tecnica gratuita
+            Prima verifica gratuita del sito
           </h2>
           <p class="text-primary/80 leading-relaxed">
             Hai già un sito online e vuoi capire da dove partire? Posso fare un controllo
@@ -196,12 +206,12 @@ const faqs = [
             approfondire prima di parlare di restyling o interventi più ampi.
           </p>
         </div>
-        <div class="flex flex-col items-start gap-4 md:min-w-64">
+        <div class="flex flex-col items-start gap-8 md:min-w-64">
           <a
-            href="/contatti/"
-            class="inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-6 py-3 text-center text-sm font-semibold uppercase tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
+            href="/verifica-gratuita/"
+            class="inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-6 py-3 text-center text-sm font-semibold normal-case tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
           >
-            Richiedi la verifica
+            Scopri la verifica gratuita
             <span aria-hidden="true">→</span>
           </a>
           <a
@@ -252,7 +262,7 @@ const faqs = [
       </p>
       <a
         href="/contatti/"
-        class="inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-6 py-3 text-center text-sm font-semibold uppercase tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
+        class="inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-6 py-3 text-center text-sm font-semibold normal-case tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
       >
         Parliamo del tuo progetto
         <span aria-hidden="true">→</span>

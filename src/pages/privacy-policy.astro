@@ -7,19 +7,32 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Informativa sul trattamento dei dati personali (Privacy Policy) ai sensi del Regolamento (UE) 2016/679 (GDPR)."
   canonical="https://www.mirkopasseri.it/privacy-policy/"
 >
-  <main class="min-h-screen max-w-7xl mx-auto px-8 md:px-24 py-20">
+  <main class="max-w-7xl mx-auto px-8 md:px-24 py-16 md:py-20">
 
     <header class="mb-16 md:mb-24">
-      <a href="/" class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline mb-8 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded">
-        ← Torna alla home
-      </a>
+      <nav aria-label="Breadcrumb" class="mb-8 text-sm text-primary/70">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li>
+            <a
+              href="/"
+              class="font-semibold text-accent transition-colors hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+            >
+              Home
+            </a>
+          </li>
+          <li aria-hidden="true" class="text-primary/40">/</li>
+          <li aria-current="page" class="font-semibold text-primary">
+            Privacy Policy
+          </li>
+        </ol>
+      </nav>
       <h1 class="font-title text-4xl md:text-6xl text-primary leading-tight">
         Privacy Policy
       </h1>
       <p class="mt-4 text-sm text-primary/80">Ultimo aggiornamento: Maggio 2026</p>
     </header>
 
-    <div class="max-w-3xl mb-24 space-y-6 text-lg text-primary/80 leading-relaxed prose prose-invert prose-p:text-primary/80 prose-headings:text-primary prose-a:text-accent hover:prose-a:underline focus:prose-a:outline-none focus:prose-a:ring-2 focus:prose-a:ring-accent focus:prose-a:ring-offset-2 focus:prose-a:ring-offset-master focus:prose-a:rounded">
+    <div class="max-w-3xl mb-24 space-y-6 text-lg text-primary/80 leading-relaxed prose prose-p:text-primary/80 prose-headings:text-primary prose-a:text-accent hover:prose-a:underline focus:prose-a:outline-none focus:prose-a:ring-2 focus:prose-a:ring-accent focus:prose-a:ring-offset-2 focus:prose-a:ring-offset-master focus:prose-a:rounded">
       <p>
         La presente informativa descrive le modalità di gestione di questo sito web in riferimento al trattamento dei dati personali degli utenti che lo consultano. L'informativa è resa ai sensi dell'art. 13 del Regolamento (UE) 2016/679 (GDPR).
       </p>

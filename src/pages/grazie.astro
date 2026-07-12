@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Grazie per avermi contattato"
+  description="Messaggio inviato correttamente. Ti risponderò appena possibile."
+  canonical="https://www.mirkopasseri.it/grazie/"
+  robots="noindex, nofollow"
+>
+  <main class="max-w-7xl mx-auto px-8 md:px-24 py-16 md:py-20">
+    <section aria-labelledby="titolo-grazie" class="max-w-3xl">
+      <nav aria-label="Breadcrumb" class="mb-8 text-sm text-primary/70">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li>
+            <a
+              href="/"
+              class="font-semibold text-accent transition-colors hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+            >
+              Home
+            </a>
+          </li>
+          <li aria-hidden="true" class="text-primary/40">/</li>
+          <li aria-current="page" class="font-semibold text-primary">
+            Grazie
+          </li>
+        </ol>
+      </nav>
+
+      <h1
+        id="titolo-grazie"
+        class="font-title text-5xl md:text-7xl text-primary leading-tight text-balance"
+      >
+        Grazie per avermi contattato
+      </h1>
+
+      <div class="mt-8 space-y-5 text-lg text-primary/80 leading-relaxed">
+        <p>
+          Ho ricevuto il tuo messaggio. Ti risponderò appena possibile con un primo riscontro.
+        </p>
+        <p>
+          Se mi hai scritto per la verifica gratuita, controllerò il link che mi hai inviato e ti
+          risponderò con le prime osservazioni.
+        </p>
+      </div>
+
+      <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+        <a
+          href="/"
+          class="inline-flex min-h-12 items-center justify-center rounded-md border border-accent bg-accent px-6 py-3 text-center text-sm font-semibold normal-case tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+        >
+          Torna alla home
+        </a>
+        <a
+          href="/realizzazione-siti-web/"
+          class="inline-flex min-h-12 items-center justify-center rounded-md border border-accent/40 px-6 py-3 text-center text-sm font-semibold normal-case tracking-normal text-accent transition-all hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+        >
+          Guarda i servizi
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

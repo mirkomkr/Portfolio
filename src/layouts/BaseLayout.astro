@@ -4,6 +4,7 @@ import '@fontsource-variable/open-sans';
 import '@fontsource-variable/playfair-display';
 import { SEO } from 'astro-seo';
 import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 import { contact } from '../data/contact.js';
 
 interface Props {
@@ -13,6 +14,7 @@ interface Props {
   ogImage?: string;
   ogImageAlt?: string;
   ogType?: 'website' | 'article';
+  robots?: string;
 }
 
 const {
@@ -22,6 +24,7 @@ const {
   ogImage = 'https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp',
   ogImageAlt = 'Mirko Passeri — Frontend Developer & Web Designer',
   ogType = 'website',
+  robots = 'index, follow',
 } = Astro.props;
 
 const serviceArea = [
@@ -98,6 +101,7 @@ const baseSchema = {
     }
   ]
 };
+
 ---
 
 <html lang="it">
@@ -107,7 +111,7 @@ const baseSchema = {
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content={robots} />
     <meta name="author" content="Mirko Passeri" />
     <meta name="google-site-verification" content="JTVN5TjnWgrOKZasixKrMiB0Vut79SXjvAUbB67eu-Y" />
     <SEO
@@ -128,7 +132,6 @@ const baseSchema = {
       }}
     />
     <link rel="alternate" hreflang="it" href={canonical} />
-    <link rel="alternate" hreflang="x-default" href="https://www.mirkopasseri.it/" />
     <script type="application/ld+json" set:html={JSON.stringify(baseSchema)}></script>
     <slot name="schema" />
   </head>
@@ -139,6 +142,7 @@ const baseSchema = {
     >
       Vai al contenuto principale
     </a>
+    <Header />
     <div id="main-content" tabindex="-1">
       <slot />
     </div>
@@ -147,9 +151,12 @@ const baseSchema = {
     <button
       id="torna-su"
       aria-label="Torna in cima alla pagina"
-      class="fixed bottom-8 right-8 z-50 flex items-center justify-center w-11 h-11 rounded-full bg-primary text-master shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:bg-primary/80 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+      aria-hidden="true"
+      tabindex="-1"
+      disabled
+      class="fixed bottom-3 right-3 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-master shadow-md opacity-0 pointer-events-none transition-all duration-300 hover:bg-primary/80 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master md:bottom-8 md:right-8 md:h-11 md:w-11 md:shadow-lg"
     >
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M12 8.586l-6.293 6.293-1.414-1.414L12 5.757l7.707 7.708-1.414 1.414z"/>
       </svg>
     </button>
@@ -157,14 +164,53 @@ const baseSchema = {
     <script is:inline>
       const btn = document.getElementById('torna-su');
       if (btn) {
-        window.addEventListener('scroll', () => {
-          const visible = window.scrollY > 400;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        const getVisibilityThreshold = () => {
+          const width = window.innerWidth;
+
+          if (width < 640) {
+            return 750;
+          }
+
+          if (width <= 1024) {
+            return 550;
+          }
+
+          return 400;
+        };
+
+        const setBackToTopAvailability = (visible) => {
           btn.style.opacity = visible ? '1' : '0';
           btn.style.pointerEvents = visible ? 'auto' : 'none';
-        }, { passive: true });
+          btn.toggleAttribute('disabled', !visible);
+          btn.setAttribute('aria-hidden', String(!visible));
+
+          if (visible) {
+            btn.removeAttribute('tabindex');
+          } else {
+            btn.setAttribute('tabindex', '-1');
+
+            if (document.activeElement === btn) {
+              btn.blur();
+            }
+          }
+        };
+
+        const updateBackToTopVisibility = () => {
+          const visible = window.scrollY > getVisibilityThreshold();
+          setBackToTopAvailability(visible);
+        };
+
+        window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+        window.addEventListener('resize', updateBackToTopVisibility);
         btn.addEventListener('click', () => {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({
+            top: 0,
+            behavior: prefersReducedMotion.matches ? 'auto' : 'smooth',
+          });
         });
+        updateBackToTopVisibility();
       }
     </script>
   </body>

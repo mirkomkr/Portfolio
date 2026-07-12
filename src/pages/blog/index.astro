@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { Image } from 'astro:assets';
 
 const allPosts = await getCollection('blog');
 const sortedPosts = allPosts
@@ -30,16 +29,29 @@ const itemListSchema = {
   <Fragment slot="schema">
     <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
   </Fragment>
-  <main class="min-h-screen max-w-7xl mx-auto px-8 md:px-24 py-20">
+  <main class="max-w-7xl mx-auto px-8 md:px-24 py-16 md:py-20">
 
-    <header class="mb-16 md:mb-24">
-      <a href="/" class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline mb-8 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded">
-        ← Torna alla home
-      </a>
+    <header class="mb-16 md:mb-20">
+      <nav aria-label="Breadcrumb" class="mb-8 text-sm text-primary/70">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li>
+            <a
+              href="/"
+              class="font-semibold text-accent transition-colors hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+            >
+              Home
+            </a>
+          </li>
+          <li aria-hidden="true" class="text-primary/40">/</li>
+          <li aria-current="page" class="font-semibold text-primary">
+            Blog
+          </li>
+        </ol>
+      </nav>
       <h1 class="font-title text-5xl md:text-7xl text-primary leading-tight">
         Blog
       </h1>
-      <p class="mt-4 text-lg text-primary/75 max-w-xl">
+      <p class="mt-6 text-lg text-primary/75 max-w-2xl leading-relaxed">
         Note su web design, accessibilità e come costruire cose che funzionano davvero.
       </p>
     </header>
@@ -47,12 +59,17 @@ const itemListSchema = {
     {sortedPosts.length === 0 ? (
       <p class="text-primary/75">Nessun articolo ancora. Torna presto.</p>
     ) : (
-      <ul class="space-y-12">
+      <ul class="space-y-8">
         {sortedPosts.map((post) => (
-          <li class="group border-b border-primary/10 pb-12">
+          <li class="group border-b border-primary/10 pb-8">
             <article>
-              <h2 class="font-title text-2xl md:text-4xl text-primary mt-2 mb-3 group-hover:text-accent transition-colors duration-300">
-                <a href={`/blog/${post.id}/`} class="focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded">{post.data.title}</a>
+              <h2 class="font-title text-2xl md:text-4xl text-primary mb-3 leading-tight break-words text-balance group-hover:text-accent transition-colors duration-300">
+                <a
+                  href={`/blog/${post.id}/`}
+                  class="focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+                >
+                  {post.data.title}
+                </a>
               </h2>
               <p class="text-primary/75 leading-relaxed max-w-2xl">{post.data.description}</p>
             </article>

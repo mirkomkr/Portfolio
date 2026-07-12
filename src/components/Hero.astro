@@ -1,93 +1,100 @@
 ---
-import { Icon } from 'astro-icon/components';
+// import { Image } from 'astro:assets';
+// import HeroPortrait from '../assets/images/profile/mirko-passeri-hero.webp';
 ---
 
 <section
   aria-label="Introduzione"
-  class="bg-master text-primary flex min-h-[85svh] md:min-h-screen flex-col justify-center items-center text-center md:items-end md:text-right w-full max-w-7xl mx-auto px-8 md:px-24 py-24 md:py-28"
+  class="hero-section bg-master text-primary flex items-start w-full max-w-7xl mx-auto px-8 md:px-24 py-14 md:py-16"
 >
-  <h1 class="font-title text-6xl sm:text-7xl md:text-8xl font-bold leading-tight text-balance">
-    Mirko Passeri
-  </h1>
+  <div class="w-full">
+    <div class="text-center md:max-w-3xl md:text-left">
+      <!-- Foto temporaneamente sospesa in attesa dell'asset definitivo.
+      <div class="mb-6 flex justify-center md:justify-start lg:hidden">
+        <Image
+          src={HeroPortrait}
+          alt="Ritratto di Mirko Passeri, frontend developer e web designer."
+          widths={[320, 384, 480, 640]}
+          sizes="(min-width: 640px) 24rem, calc(100vw - 4rem)"
+          class="hero-intro-image aspect-[16/10] w-full max-w-xs rounded-2xl border border-primary/20 object-cover object-[center_38%] shadow-sm sm:max-w-sm"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      -->
 
-  <p class="mt-4 text-xl md:text-2xl font-medium text-accent/90 tracking-tight">
-    Sviluppatore Frontend &amp; Web Designer
-  </p>
+      <p class="text-base md:text-lg font-medium normal-case tracking-normal text-accent">Ciao, sono</p>
 
-  <p class="mt-8 max-w-3xl text-lg md:text-xl text-primary/80 leading-relaxed">
-    Realizzo siti web chiari, veloci e accessibili, e sviluppo interfacce frontend curate per
-    attività, professionisti, agenzie e designer.
-  </p>
+      <h1
+        class="mt-4 font-title text-6xl sm:text-7xl md:text-8xl font-bold leading-tight text-balance"
+      >
+        Mirko Passeri
+      </h1>
 
-  <nav aria-label="Navigazione rapida" class="mt-10 w-full sm:w-auto">
-    <ul
-      class="grid grid-cols-2 items-start justify-items-center gap-6 sm:grid-cols-4 md:justify-end md:gap-8"
-    >
-      <li>
-        <a
-          href="#chi-sono"
-          aria-label="Scopri chi sono"
-          class="group flex flex-col items-center gap-2 rounded-md px-2 py-1 transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
-        >
-          <Icon
-            name="persona"
-            aria-hidden="true"
-            class="size-8 transition-colors md:size-10"
-          />
-          <span class="text-xs font-semibold uppercase tracking-widest md:text-sm">Chi sono</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="#blog"
-          aria-label="Leggi il blog"
-          class="group flex flex-col items-center gap-2 rounded-md px-2 py-1 transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
-        >
-          <Icon
-            name="blog"
-            aria-hidden="true"
-            class="size-8 transition-colors md:size-10"
-          />
-          <span class="text-xs font-semibold uppercase tracking-widest md:text-sm">Blog</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="#progetti"
-          aria-label="Esplora i miei progetti"
-          class="group flex flex-col items-center gap-2 rounded-md px-2 py-1 transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
-        >
-          <Icon
-            name="progetti"
-            aria-hidden="true"
-            class="size-8 transition-colors md:size-10"
-          />
-          <span class="text-xs font-semibold uppercase tracking-widest md:text-sm">Progetti</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="#contatti"
-          aria-label="Vai ai contatti"
-          class="group flex flex-col items-center gap-2 rounded-md px-2 py-1 transition-colors hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
-        >
-          <Icon
-            name="messaggio"
-            aria-hidden="true"
-            class="size-8 transition-colors md:size-10"
-          />
-          <span class="text-xs font-semibold uppercase tracking-widest md:text-sm">Contattami</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+      <p
+        class="mt-6 max-w-3xl font-title text-3xl md:text-4xl text-primary leading-tight text-balance"
+      >
+        Progetto e sviluppo interfacce web chiare, veloci e accessibili.
+      </p>
 
-  <div class="mt-10 w-full sm:w-auto">
-    <a
-      href="#servizi"
-      class="inline-flex min-h-12 items-center justify-center rounded-md border border-accent bg-accent px-6 py-3 text-center text-sm font-semibold uppercase tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
-    >
-      Scopri come posso aiutarti
-    </a>
+      <p class="mt-8 max-w-3xl text-lg md:text-xl text-primary/80 leading-relaxed">
+        Aiuto attività, professionisti, agenzie e designer a costruire o migliorare pagine, landing
+        e frontend curati nella struttura, nelle performance, nell’accessibilità e nella SEO
+        tecnica.
+      </p>
+
+      <div
+        class="mt-10 flex flex-col items-stretch justify-center gap-4 sm:flex-row md:justify-start"
+      >
+        <a
+          href="/realizzazione-siti-web/"
+          class="inline-flex min-h-12 items-center justify-center rounded-md border border-accent bg-accent px-6 py-3 text-center text-sm font-semibold normal-case tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+        >
+          Scopri i servizi
+        </a>
+        <a
+          href="/progetti/"
+          class="inline-flex min-h-12 items-center justify-center rounded-md border border-accent/40 px-6 py-3 text-center text-sm font-semibold normal-case tracking-normal text-accent transition-all hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+        >
+          Guarda i progetti
+        </a>
+      </div>
+    </div>
+
+    <!-- Foto temporaneamente sospesa in attesa dell'asset definitivo.
+    <div class="hidden justify-center lg:flex lg:justify-end">
+      <div
+        class="flex aspect-[3/4] w-full max-w-44 items-center justify-center overflow-hidden rounded-lg border border-primary/20 bg-primary/[0.03] shadow-sm sm:max-w-56 lg:max-w-80 lg:shadow-md"
+      >
+        <Image
+          src={HeroPortrait}
+          alt="Ritratto di Mirko Passeri, frontend developer e web designer."
+          widths={[240, 320, 448, 640]}
+          sizes="20rem"
+          class="h-full w-full object-cover"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+    </div>
+    -->
   </div>
 </section>
+
+<style>
+  /*
+  @media (min-width: 640px) and (max-height: 1100px) {
+    .hero-intro-image {
+      max-width: 20rem;
+    }
+  }
+  */
+
+  @media (min-width: 1280px) and (min-height: 900px) {
+    .hero-section {
+      align-items: center;
+      min-height: 82svh;
+      padding-block: 6rem;
+    }
+  }
+</style>

@@ -1,36 +1,86 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { projects } from '../components/projectArray.js';
-import Card from '../components/Card.astro';
+import Progetti from '../components/Progetti.astro';
 import LighthouseResults from '../components/LighthouseResults.astro';
 ---
 
 <BaseLayout
-  title="Portfolio — Siti Web e Progetti Digitali di Mirko Passeri"
-  description="Esempi di siti web, app e interfacce digitali sviluppati da Mirko Passeri, web designer e frontend developer con base ad Anzio."
+  title="Progetti web — Mirko Passeri"
+  description="Una raccolta di progetti web, siti demo e interfacce realizzate con attenzione a struttura, accessibilità, performance e responsive design."
   canonical="https://www.mirkopasseri.it/progetti/"
 >
-  <main class="min-h-screen max-w-7xl mx-auto px-8 md:px-24 py-20">
+  <main class="max-w-7xl mx-auto px-8 md:px-24 py-16 md:py-20 overflow-x-hidden">
 
-    <header class="mb-16 md:mb-24">
-      <a href="/" class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline mb-8 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded">
-        ← Torna alla home
-      </a>
+    <header class="mb-16 md:mb-20">
+      <nav aria-label="Breadcrumb" class="mb-8 text-sm text-primary/70">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li>
+            <a
+              href="/"
+              class="font-semibold text-accent transition-colors hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+            >
+              Home
+            </a>
+          </li>
+          <li aria-hidden="true" class="text-primary/40">/</li>
+          <li aria-current="page" class="font-semibold text-primary">
+            Progetti
+          </li>
+        </ol>
+      </nav>
       <h1 class="font-title text-5xl md:text-7xl text-primary leading-tight">
-        Portfolio
+        Progetti
       </h1>
-      <p class="mt-4 text-lg text-primary/70 max-w-xl">
-        Progetti realizzati con attenzione alla performance, all'accessibilità e all'esperienza utente.
-      </p>
+      <div class="mt-6 max-w-3xl space-y-4 text-lg text-primary/80 leading-relaxed">
+        <p>
+          Una raccolta di progetti e interfacce web realizzate per mostrare metodo, struttura e
+          attenzione tecnica: responsive design, accessibilità, performance e chiarezza dei
+          contenuti.
+        </p>
+        <p>
+          Alcuni lavori sono progetti dimostrativi: non servono a mostrare solo una grafica, ma il
+          modo in cui organizzo pagine, componenti e percorsi utente.
+        </p>
+      </div>
     </header>
 
-    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 w-full place-items-center md:place-items-stretch">
-      {projects.map((project) => (
-        <Card {...project} />
-      ))}
-    </ul>
+    <Progetti />
 
     <LighthouseResults />
+
+    <section
+      aria-labelledby="cta-progetti"
+      class="mt-20 md:mt-24 rounded-2xl border border-accent/30 bg-accent/10 p-6 sm:p-8 md:p-12"
+    >
+      <h2 id="cta-progetti" class="font-title text-3xl sm:text-4xl md:text-5xl text-primary mb-6 text-balance">
+        Hai bisogno di un sito o di supporto frontend?
+      </h2>
+      <p class="max-w-2xl text-lg text-primary/75 leading-relaxed mb-10">
+        Posso aiutarti a costruire o migliorare una pagina, una landing o un’interfaccia partendo
+        da obiettivi, contenuti e priorità reali.
+      </p>
+      <a
+        href="/contatti/"
+        class="inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-6 py-3 text-center text-sm font-semibold normal-case tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+      >
+        Parliamo del tuo progetto
+        <span aria-hidden="true">→</span>
+      </a>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <a
+          href="/realizzazione-siti-web/"
+          class="text-sm font-semibold text-accent underline underline-offset-4 transition-opacity hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+        >
+          Siti web per attività e professionisti
+        </a>
+        <a
+          href="/collaborazioni/"
+          class="text-sm font-semibold text-accent underline underline-offset-4 transition-opacity hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+        >
+          Supporto frontend per agenzie e designer
+        </a>
+      </div>
+    </section>
 
   </main>
 </BaseLayout>

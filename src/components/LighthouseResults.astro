@@ -31,22 +31,22 @@ const metrics = [
 <section
   id="risultati"
   aria-labelledby="titolo-risultati"
-  class="w-full mt-20 md:mt-28 pt-16 md:pt-20 border-t border-primary/10"
+  class="w-full mt-20 md:mt-24 pt-16 md:pt-20 border-t border-primary/10"
 >
   <h2
     id="titolo-risultati"
-    class="font-title text-4xl md:text-6xl text-primary mb-4"
+    class="font-title text-4xl md:text-5xl text-primary mb-4"
   >
-    Risultati misurabili
+    Risultati tecnici
   </h2>
   <div class="text-primary/70 text-lg mb-16 max-w-3xl space-y-4">
     <p>
-      Ogni progetto viene verificato anche con strumenti di audit tecnico come Lighthouse, per
-      controllare performance, accessibilità, SEO e best practices.
+      Alcuni progetti vengono verificati anche con strumenti come Lighthouse, per controllare
+      performance, accessibilità, SEO e buone pratiche tecniche.
     </p>
     <p>
-      I punteggi non sono l’unico criterio di qualità, ma aiutano a misurare se il sito è leggero,
-      navigabile, ben strutturato e tecnicamente solido.
+      I punteggi non raccontano tutto, ma aiutano a leggere se una pagina è leggera, navigabile e
+      costruita con basi solide.
     </p>
   </div>
 
@@ -64,6 +64,8 @@ const metrics = [
             aria-labelledby={`azione-${r.id}`}
             aria-describedby={`metriche-${r.id}`}
             aria-haspopup="dialog"
+            aria-controls={`dialog-${r.id}`}
+            aria-expanded="false"
             data-lightbox-trigger={r.id}
           >
             <figure class="m-0">
@@ -136,6 +138,9 @@ const metrics = [
       role="dialog"
       aria-modal="true"
       aria-label={`Anteprima test Lighthouse: ${r.site}`}
+      aria-hidden="true"
+      hidden
+      inert
       class="lh-dialog fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"
       data-lightbox-id={r.id}
     >
@@ -196,11 +201,36 @@ const metrics = [
 
   const FOCUSABLE =
     'a[href], button:not([disabled]), input, textarea, select, [tabindex]:not([tabindex="-1"])';
+  const MANAGED_FOCUSABLE = 'a[href], button, input, textarea, select, [tabindex]';
 
   function getFocusable(el: HTMLElement): HTMLElement[] {
     return Array.from(el.querySelectorAll<HTMLElement>(FOCUSABLE)).filter(
       (e) => !e.closest("[hidden]")
     );
+  }
+
+  function disableDialogFocus(dialog: HTMLElement) {
+    dialog.querySelectorAll<HTMLElement>(MANAGED_FOCUSABLE).forEach((el) => {
+      if (!el.hasAttribute("data-original-tabindex")) {
+        el.dataset.originalTabindex = el.getAttribute("tabindex") ?? "";
+      }
+
+      el.setAttribute("tabindex", "-1");
+    });
+  }
+
+  function restoreDialogFocus(dialog: HTMLElement) {
+    dialog.querySelectorAll<HTMLElement>("[data-original-tabindex]").forEach((el) => {
+      const originalTabindex = el.dataset.originalTabindex;
+
+      if (originalTabindex) {
+        el.setAttribute("tabindex", originalTabindex);
+      } else {
+        el.removeAttribute("tabindex");
+      }
+
+      delete el.dataset.originalTabindex;
+    });
   }
 
   function openDialog(id: string) {
@@ -209,8 +239,20 @@ const metrics = [
     );
     if (!dialog) return;
 
-    dialog.classList.remove("opacity-0", "pointer-events-none");
-    dialog.classList.add("opacity-100");
+    const trigger = document.querySelector<HTMLElement>(
+      `[data-lightbox-trigger="${id}"]`
+    );
+
+    dialog.hidden = false;
+    dialog.removeAttribute("aria-hidden");
+    dialog.removeAttribute("inert");
+    restoreDialogFocus(dialog);
+    trigger?.setAttribute("aria-expanded", "true");
+
+    requestAnimationFrame(() => {
+      dialog.classList.remove("opacity-0", "pointer-events-none");
+      dialog.classList.add("opacity-100");
+    });
 
     // Focus trap: prima element focusable nel dialog
     const focusable = getFocusable(dialog);
@@ -224,17 +266,27 @@ const metrics = [
   }
 
   function closeDialog(dialog: HTMLElement) {
-    dialog.classList.add("opacity-0", "pointer-events-none");
-    dialog.classList.remove("opacity-100");
-    document.body.style.overflow = "";
-    dialog.removeEventListener("keydown", trapFocus);
-
     // Restituisce il focus al trigger che ha aperto il dialog
     const id = dialog.dataset.lightboxId;
     const trigger = document.querySelector<HTMLElement>(
       `[data-lightbox-trigger="${id}"]`
     );
     trigger?.focus();
+    trigger?.setAttribute("aria-expanded", "false");
+
+    dialog.setAttribute("aria-hidden", "true");
+    dialog.setAttribute("inert", "");
+    disableDialogFocus(dialog);
+    dialog.classList.add("opacity-0", "pointer-events-none");
+    dialog.classList.remove("opacity-100");
+    document.body.style.overflow = "";
+    dialog.removeEventListener("keydown", trapFocus);
+
+    window.setTimeout(() => {
+      if (dialog.getAttribute("aria-hidden") === "true") {
+        dialog.hidden = true;
+      }
+    }, 300);
   }
 
   function trapFocus(e: KeyboardEvent) {

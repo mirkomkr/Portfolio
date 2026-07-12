@@ -190,7 +190,7 @@ Non è un audit completo, ma un primo controllo utile per capire se vale la pena
 
 Se vuoi capire anche come lavoro su realizzazione e miglioramento di siti web, trovi una sintesi nella pagina [realizzazione siti web](/realizzazione-siti-web/).
 
-Per richiedere la verifica, puoi scrivermi dalla pagina [contatti](/contatti/).
+Per richiedere la verifica, trovi i dettagli nella pagina [prima verifica gratuita](/verifica-gratuita/).
 
 ---
 

@@ -1,26 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
-import ProgettiPreview from '../components/ProgettiPreview.astro';
+import VerificaHomepage from '../components/VerificaHomepage.astro';
 import ChiSonoPreview from '../components/ChiSonoPreview.astro';
 import PercorsiCommercialiPreview from '../components/PercorsiCommercialiPreview.astro';
-import BlogPreview from '../components/BlogPreview.astro';
-import FAQ from '../components/FAQ.astro';
-import Contatti from '../components/Contatti.astro';
-import { faqs } from '../data/faqs.js';
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": faqs.map((faq) => ({
-    "@type": "Question",
-    "name": faq.q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.a
-    }
-  }))
-};
+import ContattiPreview from '../components/ContattiPreview.astro';
 ---
 
 <BaseLayout
@@ -28,19 +12,13 @@ const faqSchema = {
   description="Realizzazione siti web per attività e professionisti ad Anzio, Nettuno e Roma, anche da remoto in tutta Italia. Progetti su misura, curati in design, performance e accessibilità."
   canonical="https://www.mirkopasseri.it"
 >
-  <Fragment slot="schema">
-    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
-  </Fragment>
-
   <main>
     <Hero />
     <section aria-label="Contenuti principali">
-      <PercorsiCommercialiPreview />
       <ChiSonoPreview />
-      <ProgettiPreview />
-      <BlogPreview />
-      <FAQ />
-      <Contatti />
+      <PercorsiCommercialiPreview />
+      <VerificaHomepage />
+      <ContattiPreview />
     </section>
   </main>
 </BaseLayout>

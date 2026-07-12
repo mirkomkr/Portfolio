@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const situations = [
   'Hai un layout pronto da trasformare in un’interfaccia responsive',
-  'Devi delegare una landing page o alcune sezioni del sito',
+  'Hai una landing page o alcune sezioni del sito da sviluppare',
   'Il team sta gestendo un picco di lavoro',
   'Un progetto esistente richiede restyling o ottimizzazione frontend',
   'Serve supporto su pagine e sezioni e-commerce',
@@ -49,7 +49,7 @@ const process = [
 
 const faqs = [
   {
-    q: 'Posso delegarti solo una parte del progetto?',
+    q: 'Puoi seguire solo una parte del progetto?',
     a: 'Sì. Possiamo definire uno scope circoscritto, come una landing page, alcune sezioni, componenti o un intervento su un’interfaccia esistente.',
   },
   {
@@ -92,14 +92,24 @@ const collaborationSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(collaborationSchema)} />
   </Fragment>
 
-  <main class="min-h-screen max-w-7xl mx-auto px-5 sm:px-8 md:px-24 py-16 md:py-20 overflow-x-hidden">
+  <main class="max-w-7xl mx-auto px-5 sm:px-8 md:px-24 py-16 md:py-20 overflow-x-hidden">
     <header class="mb-16 md:mb-24">
-      <a
-        href="/"
-        class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline mb-8 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
-      >
-        ← Torna alla home
-      </a>
+      <nav aria-label="Breadcrumb" class="mb-8 text-sm text-primary/70">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li>
+            <a
+              href="/"
+              class="font-semibold text-accent transition-colors hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+            >
+              Home
+            </a>
+          </li>
+          <li aria-hidden="true" class="text-primary/40">/</li>
+          <li aria-current="page" class="font-semibold text-primary">
+            Collaborazioni
+          </li>
+        </ol>
+      </nav>
       <h1 class="font-title text-4xl sm:text-5xl md:text-7xl text-primary leading-tight text-balance">
         Supporto frontend per agenzie, designer e piccoli team
       </h1>
@@ -109,9 +119,9 @@ const collaborationSchema = {
       </p>
       <a
         href="/contatti/"
-        class="mt-10 inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-5 sm:px-6 py-3 text-center text-sm font-semibold uppercase tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
+        class="mt-10 inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-5 sm:px-6 py-3 text-center text-sm font-semibold normal-case tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
       >
-        <span>Parliamo del progetto da delegare</span>
+        <span>Parliamo del progetto</span>
         <span aria-hidden="true">→</span>
       </a>
     </header>
@@ -121,8 +131,8 @@ const collaborationSchema = {
         Quando posso essere utile
       </h2>
       <p class="max-w-3xl text-primary/80 leading-relaxed mb-8">
-        Posso entrare nel progetto quando serve una risorsa frontend esterna per completare una fase
-        di lavoro o gestire un’attività specifica.
+        Posso entrare nel progetto quando serve supporto frontend su una fase di lavoro, una pagina
+        o un’attività specifica.
       </p>
       <ul class="space-y-4 max-w-3xl">
         {
@@ -138,7 +148,7 @@ const collaborationSchema = {
 
     <section aria-labelledby="servizi-delegabili" class="mb-20 md:mb-24">
       <h2 id="servizi-delegabili" class="font-title text-4xl md:text-5xl text-primary mb-10">
-        Cosa puoi delegarmi
+        Dove posso supportarti
       </h2>
       <p class="max-w-3xl text-primary/80 leading-relaxed mb-8">
         In ogni intervento verifico comportamento responsive, struttura semantica, leggibilità,
@@ -201,7 +211,7 @@ const collaborationSchema = {
       </p>
       <a
         href="/progetti/"
-        class="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-accent/40 px-5 py-3 text-center text-sm font-semibold uppercase tracking-normal text-accent transition-all hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
+        class="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-accent/40 px-5 py-3 text-center text-sm font-semibold normal-case tracking-normal text-accent transition-all hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
       >
         <span>Guarda i progetti</span>
         <span aria-hidden="true">→</span>
@@ -241,7 +251,7 @@ const collaborationSchema = {
         id="cta-collaborazioni"
         class="font-title text-3xl sm:text-4xl md:text-5xl text-primary mb-6 text-balance"
       >
-        Hai una parte frontend da delegare?
+        Hai bisogno di supporto frontend?
       </h2>
       <p class="max-w-2xl text-lg text-primary/75 leading-relaxed mb-10">
         Raccontami cosa è già pronto, cosa deve essere sviluppato e quali vincoli dobbiamo
@@ -249,7 +259,7 @@ const collaborationSchema = {
       </p>
       <a
         href="/contatti/"
-        class="inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-5 sm:px-6 py-3 text-center text-sm font-semibold uppercase tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
+        class="inline-flex min-h-12 w-full sm:w-auto items-center justify-center gap-2 rounded-md border border-accent bg-accent px-5 sm:px-6 py-3 text-center text-sm font-semibold normal-case tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
       >
         <span>Valutiamo una collaborazione frontend</span>
         <span aria-hidden="true">→</span>

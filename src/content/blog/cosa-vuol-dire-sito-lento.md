@@ -167,7 +167,7 @@ La velocità non è un dettaglio finale. È una conseguenza di come il sito vien
 
 ---
 
-_Se vuoi capire se la homepage del tuo sito ha problemi evidenti di velocità, struttura o percorso di contatto, trovi i dettagli della [prima verifica tecnica gratuita](/realizzazione-siti-web/). Per richiederla puoi scrivermi dalla pagina [contatti](/contatti/)._
+_Se vuoi capire se la homepage del tuo sito ha problemi evidenti di velocità, struttura o percorso di contatto, trovi i dettagli della [prima verifica gratuita del sito](/verifica-gratuita/). Per richiederla puoi scrivermi dalla pagina [contatti](/contatti/)._
 
 ---
 

@@ -137,7 +137,7 @@ Ho conseguito la certificazione **WAI0.1x — Introduction to Web Accessibility*
 
 ---
 
-_Se vuoi capire se la homepage del tuo sito presenta problemi evidenti di accessibilità, la [prima verifica tecnica gratuita](/realizzazione-siti-web/) può essere un buon punto di partenza: controllo automatico, struttura della pagina e percorso di contatto. Per richiederla, scrivimi dalla pagina [contatti](/contatti/)._
+_Se vuoi capire se la homepage del tuo sito presenta problemi evidenti di accessibilità, la [prima verifica gratuita del sito](/verifica-gratuita/) può essere un buon punto di partenza: controllo automatico, struttura della pagina e percorso di contatto. Per richiederla, scrivimi dalla pagina [contatti](/contatti/)._
 
 ---
 

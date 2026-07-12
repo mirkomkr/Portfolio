@@ -1,14 +1,14 @@
 ---
 const percorsi = [
   {
-    title: 'Siti web per attività e professionisti',
-    text: 'Realizzo siti vetrina, landing page, restyling ed e-commerce per presentare servizi e prodotti con chiarezza, anche da mobile.',
+    title: 'Per attività, professionisti e PMI',
+    text: 'Realizzo siti vetrina, landing page, restyling, pagine prodotto e frontend e-commerce per presentare servizi e prodotti con chiarezza, anche da mobile.',
     link: '/realizzazione-siti-web/',
-    linkText: 'Scopri i servizi per siti web',
+    linkText: 'Scopri i servizi',
   },
   {
-    title: 'Supporto frontend per agenzie e designer',
-    text: 'Trasformo layout e specifiche in interfacce responsive, accessibili e performanti, anche white-label o su singole parti di progetto.',
+    title: 'Per agenzie, designer e piccoli team',
+    text: 'Offro supporto frontend su layout, sezioni, landing e parti di progetto con attenzione a responsive, accessibilità, performance e qualità dell’interfaccia.',
     link: '/collaborazioni/',
     linkText: 'Scopri il supporto frontend',
   },
@@ -18,16 +18,16 @@ const percorsi = [
 <section
   id="servizi"
   aria-labelledby="titolo-percorsi-commerciali"
-  class="w-full max-w-7xl mx-auto px-8 md:px-24 py-20 md:py-28"
+  class="w-full max-w-7xl mx-auto px-8 md:px-24 py-16 md:py-20 border-t border-primary/10"
 >
   <h2
     id="titolo-percorsi-commerciali"
-    class="font-title text-center md:text-right text-4xl md:text-6xl text-primary mb-12 md:mb-16"
+    class="font-title text-left text-4xl md:text-5xl text-primary mb-10 md:mb-12"
   >
-    Due modi per lavorare insieme
+    Come posso aiutarti
   </h2>
 
-  <ul class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <ul class="grid grid-cols-1 lg:grid-cols-2 gap-8">
     {
       percorsi.map((percorso) => (
         <li class="flex flex-col items-start rounded-2xl border border-primary/20 p-6 sm:p-8 transition-all duration-300 hover:border-accent/60 hover:bg-primary/[0.03]">
@@ -35,7 +35,7 @@ const percorsi = [
           <p class="text-primary/75 leading-relaxed mb-8">{percorso.text}</p>
           <a
             href={percorso.link}
-            class="mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-accent/40 px-5 py-3 text-center text-sm font-semibold uppercase tracking-normal text-accent transition-all hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:tracking-widest"
+            class="mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-accent/40 px-5 py-3 text-center text-sm font-semibold normal-case tracking-normal text-accent transition-all hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
           >
             <span>{percorso.linkText}</span>
             <span aria-hidden="true">→</span>

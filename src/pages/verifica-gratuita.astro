@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { contact } from '../data/contact.js';
+
+const checkItems = [
+  'chiarezza del messaggio principale',
+  'visualizzazione da mobile',
+  'velocità percepita',
+  'accessibilità di base',
+  'struttura SEO di base',
+  'percorso verso i contatti',
+];
+
+const excludedItems = [
+  'non è un audit tecnico completo',
+  'non include correzioni tecniche',
+  'non include analisi di tutte le pagine del sito',
+  'non sostituisce un report professionale approfondito',
+];
+---
+
+<BaseLayout
+  title="Prima verifica gratuita del sito"
+  description="Una prima verifica gratuita della homepage per capire se ci sono aspetti da migliorare su chiarezza, mobile, performance, accessibilità di base e percorso verso i contatti."
+  canonical="https://www.mirkopasseri.it/verifica-gratuita/"
+>
+  <main class="max-w-7xl mx-auto px-8 md:px-24 py-16 md:py-20">
+    <section aria-labelledby="titolo-verifica-gratuita" class="max-w-6xl">
+      <nav aria-label="Breadcrumb" class="mb-8 text-sm text-primary/70">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li>
+            <a
+              href="/"
+              class="font-semibold text-accent transition-colors hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+            >
+              Home
+            </a>
+          </li>
+          <li aria-hidden="true" class="text-primary/40">/</li>
+          <li aria-current="page" class="font-semibold text-primary">
+            Verifica gratuita
+          </li>
+        </ol>
+      </nav>
+      <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-accent">
+        Verifica gratuita
+      </p>
+      <h1
+        id="titolo-verifica-gratuita"
+        class="font-title text-5xl md:text-6xl xl:text-7xl text-primary leading-tight text-balance"
+      >
+        Prima verifica gratuita del sito
+      </h1>
+      <div class="mt-8 max-w-3xl space-y-5 text-lg md:text-xl text-primary/80 leading-relaxed">
+        <p>
+          Se hai già un sito online, posso fare un primo controllo orientativo della homepage per
+          capire se ci sono aspetti da migliorare.
+        </p>
+        <p>
+          Non è un audit completo: è un primo riscontro utile per capire se vale la pena
+          approfondire.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="titolo-cosa-controllo" class="mt-20 md:mt-24">
+      <div class="max-w-3xl">
+        <h2 id="titolo-cosa-controllo" class="font-title text-4xl md:text-5xl text-primary">
+          Cosa controllo
+        </h2>
+      </div>
+      <ul class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {checkItems.map((item) => (
+          <li class="rounded-lg border border-primary/10 bg-primary/[0.03] p-5 text-base font-semibold leading-relaxed text-primary/85">
+            {item}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section aria-labelledby="titolo-cosa-non-include" class="mt-20 md:mt-24">
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start">
+        <h2 id="titolo-cosa-non-include" class="font-title text-4xl md:text-5xl text-primary">
+          Cosa non include
+        </h2>
+        <ul class="space-y-4 text-lg text-primary/80 leading-relaxed">
+          {excludedItems.map((item) => (
+            <li class="border-l border-accent/40 pl-4">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="titolo-cosa-ricevi" class="mt-20 md:mt-24">
+      <div class="max-w-3xl rounded-lg border border-primary/10 bg-primary/[0.03] p-6 md:p-8">
+        <h2 id="titolo-cosa-ricevi" class="font-title text-4xl md:text-5xl text-primary">
+          Cosa ricevi
+        </h2>
+        <p class="mt-5 text-lg text-primary/80 leading-relaxed">
+          Ricevi un breve riscontro scritto con le prime osservazioni e, se serve, gli aspetti che
+          avrebbe senso approfondire.
+        </p>
+      </div>
+    </section>
+
+    <section
+      aria-labelledby="titolo-richiesta-verifica"
+      class="mt-20 md:mt-24 rounded-2xl border border-accent/30 bg-accent/10 p-6 sm:p-8 md:p-12"
+    >
+      <div class="max-w-3xl">
+        <h2 id="titolo-richiesta-verifica" class="font-title text-4xl md:text-5xl text-primary">
+          Vuoi farmi vedere il tuo sito?
+        </h2>
+        <p class="mt-5 text-lg text-primary/80 leading-relaxed">
+          Mandami il link dalla pagina contatti e indicami, se vuoi, anche cosa non ti convince del
+          sito attuale.
+        </p>
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+          <a
+            href="/contatti/"
+            class="inline-flex min-h-12 items-center justify-center rounded-md border border-accent bg-accent px-6 py-3 text-center text-sm font-semibold normal-case tracking-normal text-master transition-all hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+          >
+            Richiedi una prima verifica
+          </a>
+          <a
+            href={contact.emailHref}
+            class="inline-flex min-h-12 items-center justify-center rounded-md border border-accent/40 px-6 py-3 text-center text-sm font-semibold normal-case tracking-normal text-accent transition-all hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+          >
+            Scrivimi via email
+          </a>
+        </div>
+        <a
+          href="/blog/il-tuo-sito-funziona-davvero/"
+          class="mt-8 inline-block text-sm font-semibold text-accent underline underline-offset-4 transition-opacity hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+        >
+          Prima vuoi fare qualche controllo da solo?<br />
+          Leggi questo articolo
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

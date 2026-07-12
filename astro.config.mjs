@@ -9,7 +9,13 @@ import robotsTxt from "astro-robots-txt";
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.mirkopasseri.it",
-  integrations: [icon(), sitemap(), robotsTxt()],
+  integrations: [
+    icon(),
+    sitemap({
+      filter: (page) => new URL(page).pathname !== "/grazie/",
+    }),
+    robotsTxt(),
+  ],
 
   vite: {
     plugins: [tailwindcss()],

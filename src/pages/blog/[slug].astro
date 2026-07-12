@@ -82,19 +82,40 @@ const faqSchema = post.data.faq && post.data.faq.length > 0 ? {
     )}
   </Fragment>
 
-  <main class="min-h-screen">
-    <div class="max-w-2xl mx-auto px-8 md:px-0 py-20">
-
-      <a href="/blog/" class="inline-block text-xs font-semibold uppercase tracking-widest text-accent hover:underline mb-12 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded">
-        ← Tutti gli articoli
-      </a>
+  <main>
+    <div class="max-w-3xl mx-auto px-8 py-16 md:py-20">
 
       <header class="mb-12">
+        <nav aria-label="Breadcrumb" class="mb-8 text-sm text-primary/70">
+          <ol class="flex flex-wrap items-center gap-2">
+            <li>
+              <a
+                href="/"
+                class="font-semibold text-accent transition-colors hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+              >
+                Home
+              </a>
+            </li>
+            <li aria-hidden="true" class="text-primary/40">/</li>
+            <li>
+              <a
+                href="/blog/"
+                class="font-semibold text-accent transition-colors hover:text-primary focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+              >
+                Blog
+              </a>
+            </li>
+            <li aria-hidden="true" class="text-primary/40">/</li>
+            <li aria-current="page" class="min-w-0 font-semibold text-primary break-words">
+              {post.data.title}
+            </li>
+          </ol>
+        </nav>
         <!-- datetime nascosto per SEO schema, data non mostrata visivamente -->
         <time datetime={post.data.pubDate.toISOString().split('T')[0]} class="sr-only">
           Pubblicato il {post.data.pubDate.toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' })}
         </time>
-        <h1 class="font-title text-4xl md:text-5xl text-primary leading-tight mt-3 mb-6">
+        <h1 class="font-title text-4xl md:text-5xl text-primary leading-tight mb-6 break-words text-balance">
           {post.data.title}
         </h1>
         <p class="text-lg text-primary/75 leading-relaxed border-l-4 border-accent pl-4">
