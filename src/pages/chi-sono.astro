@@ -5,15 +5,15 @@ import Timeline from '../components/Timeline.astro';
 // import ChiSonoPortrait from '../assets/images/profile/mirko-passeri-chi-sono.webp';
 
 const profilePageSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "@id": "https://www.mirkopasseri.it/chi-sono/#profilepage",
-  "url": "https://www.mirkopasseri.it/chi-sono/",
-  "name": "Chi Sono — Mirko Passeri",
-  "inLanguage": "it",
-  "isPartOf": { "@id": "https://www.mirkopasseri.it/#website" },
-  "about": { "@id": "https://www.mirkopasseri.it/#persona" },
-  "mainEntity": { "@id": "https://www.mirkopasseri.it/#persona" }
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': 'https://www.mirkopasseri.it/chi-sono/#profilepage',
+  url: 'https://www.mirkopasseri.it/chi-sono/',
+  name: 'Chi Sono — Mirko Passeri',
+  inLanguage: 'it',
+  isPartOf: { '@id': 'https://www.mirkopasseri.it/#website' },
+  about: { '@id': 'https://www.mirkopasseri.it/#persona' },
+  mainEntity: { '@id': 'https://www.mirkopasseri.it/#persona' },
 };
 ---
 
@@ -23,10 +23,9 @@ const profilePageSchema = {
   canonical="https://www.mirkopasseri.it/chi-sono/"
 >
   <Fragment slot="schema">
-    <script type="application/ld+json" set:html={JSON.stringify(profilePageSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(profilePageSchema)} />
   </Fragment>
   <main class="max-w-7xl mx-auto px-8 md:px-24 py-16 md:py-20">
-
     <header class="mb-10 md:mb-14">
       <nav aria-label="Breadcrumb" class="mb-8 text-sm text-primary/70">
         <ol class="flex flex-wrap items-center gap-2">
@@ -39,14 +38,10 @@ const profilePageSchema = {
             </a>
           </li>
           <li aria-hidden="true" class="text-primary/40">/</li>
-          <li aria-current="page" class="font-semibold text-primary">
-            Chi sono
-          </li>
+          <li aria-current="page" class="font-semibold text-primary">Chi sono</li>
         </ol>
       </nav>
-      <h1 class="font-title text-5xl md:text-7xl text-primary leading-tight">
-        Chi sono
-      </h1>
+      <h1 class="font-title text-5xl md:text-7xl text-primary leading-tight">Chi sono</h1>
     </header>
 
     <div class="max-w-3xl">
@@ -66,31 +61,39 @@ const profilePageSchema = {
         -->
 
         <p class="font-title text-2xl md:text-3xl leading-snug text-primary">
-          Ciao! Sono Mirko Passeri e il mio lavoro parte da una convinzione semplice: un sito fatto bene deve funzionare per tutti — indipendentemente da come esplorano il web, dal dispositivo che usano o dal loro livello di esperienza con la tecnologia.
+          Ciao! Sono <strong class="text-primary font-semibold">Mirko Passeri</strong> e il mio lavoro
+          parte da una convinzione semplice: un sito fatto bene deve funzionare per tutti — indipendentemente
+          da come esplorano il web, dal dispositivo che usano o dal loro livello di esperienza con la
+          tecnologia.
         </p>
         <p>
-          Sono <strong class="text-primary font-semibold">Mirko Passeri</strong>, Frontend Developer con base ad Anzio, Lazio, IT.
+          Frontend Developer & Web Designer
+          con base ad Anzio, Lazio, IT.
         </p>
         <p>
-          Mi occupo di realizzare siti web e interfacce digitali che funzionano bene — per gli utenti, per i motori di ricerca e per chi non ha mai aperto un browser con occhi da developer.
+          Mi occupo di realizzare siti web e interfacce digitali che funzionano bene — per gli
+          utenti, per i motori di ricerca e per chi non ha mai aperto un browser con occhi da
+          developer.
         </p>
         <p>
-          Il mio approccio parte sempre da tre domande: il sito è veloce? È accessibile? Si trova sui motori di ricerca?
-          Se la risposta a una di queste è "non lo so", c'è lavoro da fare.
+          Il mio approccio parte sempre da tre domande: il sito è veloce? È accessibile? Si trova
+          sui motori di ricerca? Se la risposta a una di queste è "non lo so", c'è lavoro da fare.
         </p>
         <p>
-          Scelgo gli strumenti in base al problema — non il contrario — con un'attenzione specifica all'accessibilità web: campo in cui ho una certificazione formale rilasciata da W3C e edX.
+          Scelgo gli strumenti in base al problema — non il contrario — con un'attenzione specifica
+          all'accessibilità web: campo in cui ho una certificazione formale rilasciata da W3C e edX.
         </p>
         <p>
-          Conosco le fondamenta — HTML, CSS, JavaScript — e da lì studio e implemento quello di cui ho bisogno, di volta in volta.
-         <br class="hidden md:block" /> Credo che un buon developer debba saper fare domande giuste più che memorizzare framework.
+          Conosco le fondamenta — HTML, CSS, JavaScript — e da lì studio e implemento quello di cui
+          ho bisogno, di volta in volta.
+          <br class="hidden md:block" /> Credo che un buon developer debba saper fare domande giuste più
+          che memorizzare framework.
         </p>
         <p>
-          Quando non sto costruendo qualcosa, sto probabilmente leggendo della documentazione che nessuno ha letto fino in fondo.
+          Quando non sto costruendo qualcosa, sto probabilmente leggendo della documentazione che
+          nessuno ha letto fino in fondo.
         </p>
-        <p>
-          Sempre e comunque in continuo aggiornamento.
-        </p>
+        <p>Sempre e comunque in continuo aggiornamento.</p>
       </div>
 
       <!-- Foto temporaneamente sospesa in attesa dell'asset definitivo.
@@ -120,7 +123,10 @@ const profilePageSchema = {
       aria-labelledby="cta-chi-sono"
       class="mt-20 md:mt-24 rounded-2xl border border-accent/30 bg-accent/10 p-6 sm:p-8 md:p-12"
     >
-      <h2 id="cta-chi-sono" class="font-title text-3xl sm:text-4xl md:text-5xl text-primary mb-6 text-balance">
+      <h2
+        id="cta-chi-sono"
+        class="font-title text-3xl sm:text-4xl md:text-5xl text-primary mb-6 text-balance"
+      >
         Vuoi parlarmi del tuo progetto?
       </h2>
       <p class="max-w-2xl text-lg text-primary/75 leading-relaxed mb-10">
@@ -135,6 +141,5 @@ const profilePageSchema = {
         <span aria-hidden="true">→</span>
       </a>
     </section>
-
   </main>
 </BaseLayout>
