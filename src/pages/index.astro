@@ -5,20 +5,54 @@ import VerificaHomepage from '../components/VerificaHomepage.astro';
 import ChiSonoPreview from '../components/ChiSonoPreview.astro';
 import PercorsiCommercialiPreview from '../components/PercorsiCommercialiPreview.astro';
 import ContattiPreview from '../components/ContattiPreview.astro';
+
+const homepageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.mirkopasseri.it/#website",
+      "url": "https://www.mirkopasseri.it/",
+      "name": "Mirko Passeri",
+      "inLanguage": "it",
+      "publisher": {
+        "@id": "https://www.mirkopasseri.it/#persona"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.mirkopasseri.it/#webpage",
+      "url": "https://www.mirkopasseri.it/",
+      "name": "Realizzazione siti web ad Anzio e Nettuno | Mirko Passeri",
+      "description": "Realizzo siti web ed e-commerce per attività e professionisti ad Anzio e Nettuno e seguo progetti da remoto in tutta Italia.",
+      "inLanguage": "it",
+      "isPartOf": {
+        "@id": "https://www.mirkopasseri.it/#website"
+      },
+      "about": {
+        "@id": "https://www.mirkopasseri.it/#persona"
+      }
+    }
+  ]
+};
 ---
 
 <BaseLayout
-  title="Siti web chiari, veloci e accessibili | Mirko Passeri"
-  description="Realizzazione siti web per attività e professionisti ad Anzio, Nettuno e Roma, anche da remoto in tutta Italia. Progetti su misura, curati in design, performance e accessibilità."
+  title="Realizzazione siti web ad Anzio e Nettuno | Mirko Passeri"
+  description="Realizzo siti web ed e-commerce per attività e professionisti ad Anzio e Nettuno e seguo progetti da remoto in tutta Italia."
   canonical="https://www.mirkopasseri.it"
 >
+  <Fragment slot="schema">
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(homepageSchema)}
+    ></script>
+  </Fragment>
   <main>
     <Hero />
-    <section aria-label="Contenuti principali">
-      <ChiSonoPreview />
-      <PercorsiCommercialiPreview />
-      <VerificaHomepage />
-      <ContattiPreview />
-    </section>
+    <PercorsiCommercialiPreview />
+    <VerificaHomepage />
+    <ChiSonoPreview />
+    <ContattiPreview />
   </main>
 </BaseLayout>

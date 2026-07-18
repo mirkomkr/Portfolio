@@ -5,7 +5,6 @@ import '@fontsource-variable/playfair-display';
 import { SEO } from 'astro-seo';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { contact } from '../data/contact.js';
 
 interface Props {
   title: string;
@@ -27,79 +26,26 @@ const {
   robots = 'index, follow',
 } = Astro.props;
 
-const serviceArea = [
-  { "@type": "City", "name": "Anzio" },
-  { "@type": "City", "name": "Nettuno" },
-  { "@type": "City", "name": "Aprilia" },
-  { "@type": "City", "name": "Pomezia" },
-  { "@type": "City", "name": "Latina" },
-  { "@type": "City", "name": "Roma" },
-  { "@type": "Country", "name": "Italia" }
-];
-
 const baseSchema = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://www.mirkopasseri.it/#persona",
-      "name": "Mirko Passeri",
-      "jobTitle": "Frontend Developer & Web Designer",
-      "url": "https://www.mirkopasseri.it",
-      "telephone": contact.phoneDisplay,
-      "image": "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
-      "sameAs": [
-        "https://www.linkedin.com/in/mirko-passeri/",
-        "https://github.com/mirkomkr"
-      ],
-      "description": "Mirko Passeri è un Web Designer e Frontend Developer freelance specializzato nella realizzazione di siti web professionali, veloci e accessibili per le imprese e professionisti ad Anzio, Nettuno, Pomezia, Aprilia, Ardea, Latina e Roma. Crea siti web ottimizzati per i motori di ricerca (SEO) e le intelligenze artificiali (AEO).",
-      "knowsAbout": ["Realizzazione siti web ad Anzio", "Sviluppo Web", "HTML", "CSS", "JavaScript", "React", "Vue", "Nuxtjs", "Nextjs", "Astro", "Accessibilità Web", "Local SEO", "Web Design"],
-      "hasOccupation": {
-        "@type": "Occupation",
-        "name": "Frontend Developer",
-        "occupationLocation": {
-          "@type": "City",
-          "name": "Anzio"
-        },
-        "description": "Realizzo di siti web e interfacce digitali con focus su accessibilità, performance e ottimizzazione per i motori di ricerca.",
-        "skills": "HTML, CSS, JavaScript, React, Astro, Next.js, Accessibilità Web, SEO, Web Design, Realizzazione siti web"
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.mirkopasseri.it/#website",
-      "url": "https://www.mirkopasseri.it",
-      "name": "Mirko Passeri — Realizzazione Siti Web ad Anzio",
-      "description": "Cerchi qualcuno che realizzi il tuo sito web? Mirko Passeri è un frontend developer e web designer. Siti web veloci e moderni per aziende ad Anzio, Nettuno, Pomezia e Latina.",
-      "author": { "@id": "https://www.mirkopasseri.it/#persona" },
-      "publisher": { "@id": "https://www.mirkopasseri.it/#persona" },
-      "inLanguage": "it"
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.mirkopasseri.it/#realizzazione-siti-web",
-      "name": "Realizzazione siti web",
-      "serviceType": "Realizzazione siti web",
-      "provider": { "@id": "https://www.mirkopasseri.it/#persona" },
-      "areaServed": serviceArea
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.mirkopasseri.it/#sviluppo-frontend",
-      "name": "Sviluppo frontend",
-      "serviceType": "Sviluppo frontend",
-      "provider": { "@id": "https://www.mirkopasseri.it/#persona" },
-      "areaServed": serviceArea
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.mirkopasseri.it/#performance-seo-accessibilita",
-      "name": "Performance, SEO tecnico base e accessibilità",
-      "serviceType": "Performance web, SEO tecnico base e accessibilità",
-      "provider": { "@id": "https://www.mirkopasseri.it/#persona" },
-      "areaServed": serviceArea
-    }
-  ]
+  "@type": "Person",
+  "@id": "https://www.mirkopasseri.it/#persona",
+  "name": "Mirko Passeri",
+  "url": "https://www.mirkopasseri.it/",
+  "image": "https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp",
+  "jobTitle": "Frontend developer e web designer freelance",
+  "sameAs": [
+    "https://www.linkedin.com/in/mirko-passeri/",
+    "https://github.com/mirkomkr"
+  ],
+  "description": "Mirko Passeri è un web designer e frontend developer freelance. Progetta e sviluppa siti web e interfacce digitali con attenzione a chiarezza, accessibilità e performance.",
+  "knowsAbout": [
+    "Web design",
+    "Sviluppo frontend",
+    "Accessibilità web",
+    "Performance web"
+  ],
+  "telephone": "+393751129348"
 };
 
 ---
@@ -135,7 +81,7 @@ const baseSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(baseSchema)}></script>
     <slot name="schema" />
   </head>
-  <body class="bg-master text-primary antialiased scroll-smooth">
+  <body class="bg-master text-primary antialiased">
     <a
       href="#main-content"
       class="sr-only focus:not-sr-only focus:fixed focus:z-50 focus:top-4 focus:left-4 focus:px-5 focus:py-3 focus:bg-primary focus:text-master focus:rounded-md focus:font-semibold focus:text-sm focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"

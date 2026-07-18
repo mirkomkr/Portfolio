@@ -11,19 +11,19 @@ const interventi = [
     text: 'Una pagina focalizzata su un servizio, una campagna o una richiesta specifica.',
   },
   {
-    title: 'Restyling',
-    text: 'Un intervento su struttura, contenuti e interfaccia per rendere più efficace un sito esistente.',
+    title: 'Siti esistenti e restyling',
+    text: 'Interventi su struttura, contenuti e interfaccia per migliorare un sito esistente, renderlo più chiaro e adattarlo meglio agli obiettivi dell’attività.',
   },
   {
     title: 'E-commerce',
-    text: 'Una soluzione essenziale per vendere un catalogo contenuto senza complicare la gestione.',
+    text: 'Un sito per presentare e vendere prodotti online, organizzato in base al catalogo, alle funzionalità necessarie e agli strumenti di gestione scelti.',
   },
 ];
 
 const destinatari = [
-  'Attività locali che vogliono presentarsi online con chiarezza',
-  'Professionisti che hanno bisogno di spiegare servizi e competenze',
-  'Piccole imprese e attività commerciali che vogliono migliorare il proprio sito',
+  'Attività locali che vogliono presentare servizi e contatti con chiarezza',
+  'Professionisti che devono spiegare competenze, servizi e modalità di lavoro',
+  'Piccole imprese e attività commerciali che vogliono creare o migliorare il proprio sito',
 ];
 
 const metodo = [
@@ -67,20 +67,79 @@ const faqs = [
   },
   {
     q: 'Realizzi anche e-commerce?',
-    a: 'Sì. Posso lavorare su pagine prodotto, categorie, sezioni promozionali, percorsi di acquisto e integrazioni frontend con strumenti esistenti. La complessità del progetto va valutata in base a catalogo, funzionalità, gestione ordini e strumenti già presenti.',
+    a: 'Sì. Posso progettare e sviluppare siti e-commerce, lavorando su catalogo, pagine prodotto, categorie, percorso di acquisto e integrazioni necessarie. Complessità, piattaforma e modalità di gestione vengono valutate in base al progetto.',
+  },
+  {
+    q: 'Possiamo lavorare anche se non siamo nella stessa città?',
+    a: 'Sì. Posso seguire il progetto interamente da remoto, dalla definizione degli obiettivi alla revisione delle pagine e alla pubblicazione, usando call, email e strumenti condivisi.',
   },
   {
     q: 'Mi aiuti anche con testi, struttura e contenuti?',
     a: 'Sì. Posso aiutarti a organizzare le informazioni principali, chiarire le sezioni del sito e rendere i contenuti più comprensibili per chi visita la pagina.',
   },
 ];
+
+const servicePageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.mirkopasseri.it/realizzazione-siti-web/#webpage",
+      "url": "https://www.mirkopasseri.it/realizzazione-siti-web/",
+      "name": "Realizzazione siti web ed e-commerce | Mirko Passeri",
+      "description": "Siti web, e-commerce e restyling per attività e professionisti, con progetti ad Anzio e Nettuno e collaborazioni da remoto in tutta Italia.",
+      "inLanguage": "it",
+      "isPartOf": {
+        "@id": "https://www.mirkopasseri.it/#website"
+      },
+      "mainEntity": {
+        "@id": "https://www.mirkopasseri.it/realizzazione-siti-web/#service"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.mirkopasseri.it/realizzazione-siti-web/#service",
+      "url": "https://www.mirkopasseri.it/realizzazione-siti-web/",
+      "name": "Siti web ed e-commerce per attività e professionisti",
+      "serviceType": "Realizzazione di siti web, e-commerce e restyling",
+      "provider": {
+        "@id": "https://www.mirkopasseri.it/#persona"
+      },
+      "description": "Progettazione e realizzazione di siti web ed e-commerce per attività e professionisti, con interventi anche su struttura, contenuti e interfaccia di siti esistenti.",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Anzio"
+        },
+        {
+          "@type": "City",
+          "name": "Nettuno"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Lazio"
+        },
+        {
+          "@type": "Country",
+          "name": "Italia"
+        }
+      ]
+    }
+  ]
+};
 ---
 
 <BaseLayout
-  title="Realizzazione siti web per attività e professionisti | Mirko Passeri"
-  description="Realizzazione di siti vetrina, landing page, restyling ed e-commerce per attività, professionisti e piccole imprese."
+  title="Realizzazione siti web ed e-commerce | Mirko Passeri"
+  description="Siti web, e-commerce e restyling per attività e professionisti, con progetti ad Anzio e Nettuno e collaborazioni da remoto in tutta Italia."
   canonical="https://www.mirkopasseri.it/realizzazione-siti-web/"
 >
+  <Fragment slot="schema">
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(servicePageSchema)}
+    ></script>
+  </Fragment>
   <main class="max-w-7xl mx-auto px-5 sm:px-8 md:px-24 py-16 md:py-20 overflow-x-hidden">
     <header class="mb-16 md:mb-24">
       <nav aria-label="Breadcrumb" class="mb-8 text-sm text-primary/70">
@@ -95,16 +154,17 @@ const faqs = [
           </li>
           <li aria-hidden="true" class="text-primary/40">/</li>
           <li aria-current="page" class="font-semibold text-primary">
-            Siti web
+            Siti web ed e-commerce
           </li>
         </ol>
       </nav>
       <h1 class="font-title text-4xl sm:text-5xl md:text-7xl text-primary leading-tight text-balance">
-        Siti web pensati per attività e professionisti
+        Siti web ed e-commerce per attività e professionisti
       </h1>
       <p class="mt-6 max-w-3xl text-lg text-primary/80 leading-relaxed">
-        Realizzo siti web chiari e semplici da usare, costruiti intorno ai servizi che offri e alle
-        informazioni di cui hanno bisogno i tuoi clienti.
+        Ogni progetto parte dai servizi, dai prodotti e dalle informazioni di cui hanno bisogno i
+        tuoi clienti, per costruire un sito chiaro, semplice da usare e coerente con gli obiettivi
+        dell’attività.
       </p>
       <a
         href="/contatti/"
@@ -146,7 +206,7 @@ const faqs = [
         }
       </ul>
       <p class="mt-8 max-w-4xl md:max-w-none text-primary/80 leading-relaxed">
-        Lavoro con attività e professionisti ad Anzio, Nettuno, Aprilia, Pomezia, Latina, Roma e da remoto in tutta Italia.
+        Lavoro con attività e professionisti ad Anzio, Nettuno e nel Lazio e seguo progetti da remoto in tutta Italia.
       </p>
     </section>
 
@@ -183,6 +243,16 @@ const faqs = [
         }
       </ul>
     </section>
+
+    <p class="mb-20 max-w-3xl text-sm text-primary/75 leading-relaxed md:mb-28">
+      Vuoi vedere come questi criteri diventano pagine e interfacce concrete?
+      <a
+        href="/progetti/"
+        class="font-semibold text-accent underline underline-offset-4 transition-opacity hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+      >
+        Guarda i progetti
+      </a>.
+    </p>
 
     <section
       aria-labelledby="verifica-tecnica-gratuita"
@@ -243,7 +313,21 @@ const faqs = [
                   </svg>
                 </span>
               </summary>
-              <p class="mt-4 max-w-3xl pb-2 text-primary/75 leading-relaxed">{faq.a}</p>
+              <p class="mt-4 max-w-3xl pb-2 text-primary/75 leading-relaxed">
+                {faq.a}
+                {faq.q === 'Quanto costa realizzare un sito web?' && (
+                  <>
+                    {' '}
+                    Se vuoi capire meglio quali elementi incidono sul preventivo, puoi leggere{' '}
+                    <a
+                      href="/blog/quanto-costa-un-sito-web/"
+                      class="font-semibold text-accent underline underline-offset-4 transition-opacity hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+                    >
+                      da cosa dipende il costo di un sito web
+                    </a>.
+                  </>
+                )}
+              </p>
             </details>
           ))
         }
@@ -258,7 +342,8 @@ const faqs = [
         Hai un sito da realizzare o migliorare?
       </h2>
       <p class="max-w-2xl text-lg text-primary/75 leading-relaxed mb-10">
-        Raccontami cosa deve fare, a chi si rivolge e quali contenuti hai già a disposizione.
+        Raccontami cosa deve fare il sito, a chi si rivolge, quali contenuti hai già e se il
+        progetto può essere seguito interamente da remoto.
       </p>
       <a
         href="/contatti/"
