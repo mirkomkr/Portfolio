@@ -2,12 +2,14 @@
 const percorsi = [
   {
     title: 'Per attività, professionisti e PMI',
+    titleClass: 'text-2xl sm:text-[1.8rem]',
     text: 'Progetto siti web ed e-commerce e intervengo su quelli esistenti per presentare servizi e prodotti con chiarezza e rendere più semplice contattarti, chiedere informazioni o acquistare.',
     link: '/realizzazione-siti-web/',
     linkText: 'Scopri siti web ed e-commerce',
   },
   {
     title: 'Per agenzie, designer e piccoli team',
+    titleClass: 'text-2xl sm:text-[1.8rem]',
     text: 'Offro supporto frontend per trasformare layout e prototipi in pagine responsive, accessibili e curate, oppure per sviluppare singole sezioni e parti di un progetto già avviato.',
     link: '/collaborazioni/',
     linkText: 'Scopri il supporto frontend',
@@ -22,7 +24,7 @@ const percorsi = [
 >
   <h2
     id="titolo-percorsi-commerciali"
-    class="font-title text-left text-4xl md:text-5xl text-primary mb-10 md:mb-12"
+    class="font-title text-left text-4xl md:text-5xl text-primary mb-10 md:mb-12 text-balance"
   >
     Come posso aiutarti
   </h2>
@@ -31,8 +33,10 @@ const percorsi = [
     {
       percorsi.map((percorso) => (
         <li class="flex flex-col items-start rounded-2xl border border-primary/20 p-6 sm:p-8 transition-all duration-300 hover:border-accent/60 hover:bg-primary/[0.03]">
-          <h3 class="font-title text-2xl sm:text-3xl text-primary mb-4">{percorso.title}</h3>
-          <p class="text-primary/75 leading-relaxed mb-8">{percorso.text}</p>
+          <h3 class={`font-title ${percorso.titleClass ?? 'text-2xl sm:text-3xl'} text-primary mb-4 text-balance`}>
+            {percorso.title}
+          </h3>
+          <p class="text-primary/75 leading-relaxed mb-8 text-pretty">{percorso.text}</p>
           <a
             href={percorso.link}
             class="mt-auto inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-accent/40 px-5 py-3 text-center text-sm font-semibold normal-case tracking-normal text-accent transition-all hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"

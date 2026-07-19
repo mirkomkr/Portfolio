@@ -159,9 +159,9 @@ const servicePageSchema = {
         </ol>
       </nav>
       <h1 class="font-title text-4xl sm:text-5xl md:text-7xl text-primary leading-tight text-balance">
-        Siti web ed e-commerce per attività e professionisti
+        Siti web ed <span class="whitespace-nowrap">e-commerce</span> per attività e professionisti
       </h1>
-      <p class="mt-6 max-w-3xl text-lg text-primary/80 leading-relaxed">
+      <p class="mt-6 max-w-3xl text-lg text-primary/80 leading-relaxed text-pretty">
         Ogni progetto parte dai servizi, dai prodotti e dalle informazioni di cui hanno bisogno i
         tuoi clienti, per costruire un sito chiaro, semplice da usare e coerente con gli obiettivi
         dell’attività.
@@ -176,15 +176,15 @@ const servicePageSchema = {
     </header>
 
     <section aria-labelledby="tipologie-intervento" class="mb-20 md:mb-28">
-      <h2 id="tipologie-intervento" class="font-title text-4xl md:text-5xl text-primary mb-10">
+      <h2 id="tipologie-intervento" class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance">
         Cosa posso realizzare
       </h2>
       <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {
           interventi.map((intervento) => (
             <li class="rounded-2xl border border-primary/20 p-6">
-              <h3 class="font-title text-2xl text-primary mb-3">{intervento.title}</h3>
-              <p class="text-primary/75 leading-relaxed">{intervento.text}</p>
+              <h3 class="font-title text-2xl text-primary mb-3 text-balance">{intervento.title}</h3>
+              <p class="text-primary/75 leading-relaxed text-pretty">{intervento.text}</p>
             </li>
           ))
         }
@@ -192,7 +192,7 @@ const servicePageSchema = {
     </section>
 
     <section aria-labelledby="destinatari-siti-web" class="mb-20 md:mb-28">
-      <h2 id="destinatari-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10">
+      <h2 id="destinatari-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance">
         Per chi è utile
       </h2>
       <ul class="space-y-5 max-w-3xl">
@@ -205,13 +205,13 @@ const servicePageSchema = {
           ))
         }
       </ul>
-      <p class="mt-8 max-w-4xl md:max-w-none text-primary/80 leading-relaxed">
+      <p class="mt-8 max-w-4xl md:max-w-none text-primary/80 leading-relaxed text-pretty">
         Lavoro con attività e professionisti ad Anzio, Nettuno e nel Lazio e seguo progetti da remoto in tutta Italia.
       </p>
     </section>
 
     <section aria-labelledby="metodo-siti-web" class="mb-20 md:mb-28">
-      <h2 id="metodo-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10">
+      <h2 id="metodo-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance">
         Come lavoro
       </h2>
       <ol class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -221,7 +221,7 @@ const servicePageSchema = {
               <span class="text-xs font-semibold uppercase tracking-widest text-accent">
                 Passaggio {index + 1}
               </span>
-              <p class="mt-3 text-primary/80 leading-relaxed">{passaggio}</p>
+              <p class="mt-3 text-primary/80 leading-relaxed text-pretty">{passaggio}</p>
             </li>
           ))
         }
@@ -229,22 +229,22 @@ const servicePageSchema = {
     </section>
 
     <section aria-labelledby="qualita-siti-web" class="mb-20 md:mb-28">
-      <h2 id="qualita-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10">
+      <h2 id="qualita-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance">
         Un sito costruito bene
       </h2>
       <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {
           qualita.map((elemento) => (
             <li class="rounded-2xl border border-primary/20 p-6">
-              <h3 class="font-title text-2xl text-primary mb-3">{elemento.title}</h3>
-              <p class="text-primary/75 leading-relaxed">{elemento.text}</p>
+              <h3 class="font-title text-2xl text-primary mb-3 text-balance">{elemento.title}</h3>
+              <p class="text-primary/75 leading-relaxed text-pretty">{elemento.text}</p>
             </li>
           ))
         }
       </ul>
     </section>
 
-    <p class="mb-20 max-w-3xl text-sm text-primary/75 leading-relaxed md:mb-28">
+    <p class="mb-20 max-w-3xl text-sm text-primary/75 leading-relaxed md:mb-28 text-pretty">
       Vuoi vedere come questi criteri diventano pagine e interfacce concrete?
       <a
         href="/progetti/"
@@ -266,12 +266,12 @@ const servicePageSchema = {
           <h2 id="verifica-tecnica-gratuita" class="font-title text-3xl sm:text-4xl text-primary mb-5 text-balance">
             Prima verifica gratuita del sito
           </h2>
-          <p class="text-primary/80 leading-relaxed">
+          <p class="text-primary/80 leading-relaxed text-pretty">
             Hai già un sito online e vuoi capire da dove partire? Posso fare un controllo
             essenziale della homepage su velocità percepita, struttura della pagina, accessibilità
             automatizzata, chiarezza dei contenuti e percorso di contatto.
           </p>
-          <p class="mt-4 text-primary/75 leading-relaxed">
+          <p class="mt-4 text-primary/75 leading-relaxed text-pretty">
             Non è un audit completo, ma un primo controllo utile per capire se ci sono segnali da
             approfondire prima di parlare di restyling o interventi più ampi.
           </p>
@@ -288,15 +288,14 @@ const servicePageSchema = {
             href="/blog/il-tuo-sito-funziona-davvero/"
             class="text-sm font-semibold text-accent underline underline-offset-4 transition-opacity hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
           >
-            Prima vuoi fare qualche controllo da solo?<br />
-            Leggi questo articolo
+            Prima vuoi fare qualche controllo da solo? Leggi questo articolo
           </a>
         </div>
       </div>
     </section>
 
     <section aria-labelledby="faq-siti-web" class="mb-20 md:mb-28">
-      <h2 id="faq-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10">
+      <h2 id="faq-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance">
         Domande frequenti
       </h2>
       <div class="divide-y divide-primary/10">
@@ -313,7 +312,7 @@ const servicePageSchema = {
                   </svg>
                 </span>
               </summary>
-              <p class="mt-4 max-w-3xl pb-2 text-primary/75 leading-relaxed">
+              <p class="mt-4 max-w-3xl pb-2 text-primary/75 leading-relaxed text-pretty">
                 {faq.a}
                 {faq.q === 'Quanto costa realizzare un sito web?' && (
                   <>
@@ -341,7 +340,7 @@ const servicePageSchema = {
       <h2 id="cta-siti-web" class="font-title text-3xl sm:text-4xl md:text-5xl text-primary mb-6 text-balance">
         Hai un sito da realizzare o migliorare?
       </h2>
-      <p class="max-w-2xl text-lg text-primary/75 leading-relaxed mb-10">
+      <p class="max-w-2xl text-lg text-primary/75 leading-relaxed mb-10 text-pretty">
         Raccontami cosa deve fare il sito, a chi si rivolge, quali contenuti hai già e se il
         progetto può essere seguito interamente da remoto.
       </p>

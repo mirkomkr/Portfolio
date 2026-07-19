@@ -105,17 +105,17 @@ const collaborationSchema = {
             </a>
           </li>
           <li aria-hidden="true" class="text-primary/40">/</li>
-          <li aria-current="page" class="font-semibold text-primary">
-            Collaborazioni
-          </li>
+          <li aria-current="page" class="font-semibold text-primary">Collaborazioni</li>
         </ol>
       </nav>
-      <h1 class="font-title text-4xl sm:text-5xl md:text-7xl text-primary leading-tight text-balance">
-        Supporto frontend per agenzie, designer e piccoli team
+      <h1
+        class="font-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary leading-tight text-balance"
+      >
+        Supporto frontend per agenzie e designer
       </h1>
-      <p class="mt-6 max-w-3xl text-lg text-primary/80 leading-relaxed">
-        Affianco professionisti e team creativi nello sviluppo di interfacce già progettate, landing
-        page, sezioni di sito e interventi frontend con uno scope definito.
+      <p class="mt-6 max-w-3xl text-lg text-primary/80 leading-relaxed text-pretty">
+        Affianco professionisti e team creativi nello sviluppo di interfacce già progettate.
+        Realizzo landing page, sezioni di sito e interventi frontend con uno scope definito.
       </p>
       <a
         href="/contatti/"
@@ -127,10 +127,10 @@ const collaborationSchema = {
     </header>
 
     <section aria-labelledby="quando-utile" class="mb-20 md:mb-24">
-      <h2 id="quando-utile" class="font-title text-4xl md:text-5xl text-primary mb-6">
+      <h2 id="quando-utile" class="font-title text-4xl md:text-5xl text-primary mb-6 text-balance">
         Quando posso essere utile
       </h2>
-      <p class="max-w-3xl text-primary/80 leading-relaxed mb-8">
+      <p class="max-w-3xl text-primary/80 leading-relaxed mb-8 text-pretty">
         Posso entrare nel progetto quando serve supporto frontend su una fase di lavoro, una pagina
         o un’attività specifica.
       </p>
@@ -147,10 +147,10 @@ const collaborationSchema = {
     </section>
 
     <section aria-labelledby="servizi-delegabili" class="mb-20 md:mb-24">
-      <h2 id="servizi-delegabili" class="font-title text-4xl md:text-5xl text-primary mb-10">
+      <h2 id="servizi-delegabili" class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance">
         Dove posso supportarti
       </h2>
-      <p class="max-w-3xl text-primary/80 leading-relaxed mb-8">
+      <p class="max-w-3xl text-primary/80 leading-relaxed mb-8 text-pretty">
         In ogni intervento verifico comportamento responsive, struttura semantica, leggibilità,
         performance e principali aspetti di accessibilità.
       </p>
@@ -158,8 +158,8 @@ const collaborationSchema = {
         {
           services.map((service) => (
             <li class="rounded-2xl border border-primary/20 p-6">
-              <h3 class="font-title text-2xl text-primary mb-3">{service.title}</h3>
-              <p class="text-primary/75 leading-relaxed">{service.text}</p>
+              <h3 class="font-title text-2xl text-primary mb-3 text-balance">{service.title}</h3>
+              <p class="text-primary/75 leading-relaxed text-pretty">{service.text}</p>
             </li>
           ))
         }
@@ -167,7 +167,7 @@ const collaborationSchema = {
     </section>
 
     <section aria-labelledby="gestione-collaborazione" class="mb-20 md:mb-24">
-      <h2 id="gestione-collaborazione" class="font-title text-4xl md:text-5xl text-primary mb-10">
+      <h2 id="gestione-collaborazione" class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance">
         Come gestisco la collaborazione
       </h2>
       <ol class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -177,8 +177,8 @@ const collaborationSchema = {
               <span class="text-xs font-semibold uppercase tracking-widest text-accent">
                 Passaggio {index + 1}
               </span>
-              <h3 class="font-title text-2xl text-primary mt-3 mb-3">{step.title}</h3>
-              <p class="text-primary/75 leading-relaxed">{step.text}</p>
+              <h3 class="font-title text-2xl text-primary mt-3 mb-3 text-balance">{step.title}</h3>
+              <p class="text-primary/75 leading-relaxed text-pretty">{step.text}</p>
             </li>
           ))
         }
@@ -186,15 +186,15 @@ const collaborationSchema = {
     </section>
 
     <section aria-labelledby="modalita-collaborazione" class="mb-20 md:mb-24 max-w-3xl">
-      <h2 id="modalita-collaborazione" class="font-title text-4xl md:text-5xl text-primary mb-6">
+      <h2 id="modalita-collaborazione" class="font-title text-4xl md:text-5xl text-primary mb-6 text-balance">
         Una collaborazione adatta al progetto
       </h2>
       <div class="space-y-5 text-primary/80 leading-relaxed">
-        <p>
+        <p class="text-pretty">
           Posso supportarti su una singola attività, su una fase delimitata oppure valutare una
           collaborazione più continuativa.
         </p>
-        <p>
+        <p class="text-pretty">
           Quando necessario posso lavorare dietro le quinte, definendo prima modalità,
           responsabilità e comunicazione.
         </p>
@@ -202,10 +202,10 @@ const collaborationSchema = {
     </section>
 
     <section aria-labelledby="esempi-frontend" class="mb-20 md:mb-24">
-      <h2 id="esempi-frontend" class="font-title text-4xl md:text-5xl text-primary mb-6">
+      <h2 id="esempi-frontend" class="font-title text-4xl md:text-5xl text-primary mb-6 text-balance">
         Esempi di lavoro frontend
       </h2>
-      <p class="max-w-3xl text-primary/80 leading-relaxed mb-8">
+      <p class="max-w-3xl text-primary/80 leading-relaxed mb-8 text-pretty">
         Nel portfolio trovi progetti che mostrano il mio approccio a sviluppo responsive,
         performance, accessibilità e integrazioni frontend.
       </p>
@@ -219,7 +219,7 @@ const collaborationSchema = {
     </section>
 
     <section aria-labelledby="faq-collaborazioni" class="mb-20 md:mb-24">
-      <h2 id="faq-collaborazioni" class="font-title text-4xl md:text-5xl text-primary mb-10">
+      <h2 id="faq-collaborazioni" class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance">
         Domande frequenti
       </h2>
       <div class="divide-y divide-primary/10">
@@ -230,13 +230,22 @@ const collaborationSchema = {
                 <span class="font-semibold text-primary transition-colors duration-200 group-open:text-accent">
                   {faq.q}
                 </span>
-                <span aria-hidden="true" class="shrink-0 text-accent transition-transform duration-300 group-open:rotate-180">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <span
+                  aria-hidden="true"
+                  class="shrink-0 text-accent transition-transform duration-300 group-open:rotate-180"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
                     <path d="M12 15.414l-6.293-6.293-1.414 1.414L12 18.243l7.707-7.708-1.414-1.414z" />
                   </svg>
                 </span>
               </summary>
-              <p class="mt-4 max-w-3xl pb-2 text-primary/75 leading-relaxed">{faq.a}</p>
+              <p class="mt-4 max-w-3xl pb-2 text-primary/75 leading-relaxed text-pretty">{faq.a}</p>
             </details>
           ))
         }
@@ -253,7 +262,7 @@ const collaborationSchema = {
       >
         Hai bisogno di supporto frontend?
       </h2>
-      <p class="max-w-2xl text-lg text-primary/75 leading-relaxed mb-10">
+      <p class="max-w-2xl text-lg text-primary/75 leading-relaxed mb-10 text-pretty">
         Raccontami cosa è già pronto, cosa deve essere sviluppato e quali vincoli dobbiamo
         considerare.
       </p>
