@@ -1,6 +1,7 @@
 export const mainNavigationLinks = [
   { href: '/chi-sono/', label: 'Chi sono' },
   { href: '/realizzazione-siti-web/', label: 'Siti web' },
+  { href: '/verifica-gratuita/', label: 'Verifica il tuo sito' },
   { href: '/collaborazioni/', label: 'Collaborazioni' },
   { href: '/progetti/', label: 'Progetti' },
   { href: '/blog/', label: 'Blog' },
