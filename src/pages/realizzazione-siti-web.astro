@@ -48,7 +48,7 @@ const qualita = [
   },
   {
     title: 'SEO tecnico',
-    text: 'Curo le basi tecniche e la struttura dei contenuti per aiutare motori di ricerca e persone a comprendere il sito.',
+    text: 'Curo le basi tecniche e la struttura dei contenuti per aiutare le persone a trovarti più facilmente online.',
   },
 ];
 
@@ -80,52 +80,54 @@ const faqs = [
 ];
 
 const servicePageSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
+  '@context': 'https://schema.org',
+  '@graph': [
     {
-      "@type": "WebPage",
-      "@id": "https://www.mirkopasseri.it/realizzazione-siti-web/#webpage",
-      "url": "https://www.mirkopasseri.it/realizzazione-siti-web/",
-      "name": "Realizzazione siti web ed e-commerce | Mirko Passeri",
-      "description": "Siti web, e-commerce e restyling per attività e professionisti, con progetti ad Anzio e Nettuno e collaborazioni da remoto in tutta Italia.",
-      "inLanguage": "it",
-      "isPartOf": {
-        "@id": "https://www.mirkopasseri.it/#website"
+      '@type': 'WebPage',
+      '@id': 'https://www.mirkopasseri.it/realizzazione-siti-web/#webpage',
+      url: 'https://www.mirkopasseri.it/realizzazione-siti-web/',
+      name: 'Realizzazione siti web ed e-commerce | Mirko Passeri',
+      description:
+        'Siti web, e-commerce e restyling per attività e professionisti, con progetti ad Anzio e Nettuno e collaborazioni da remoto in tutta Italia.',
+      inLanguage: 'it',
+      isPartOf: {
+        '@id': 'https://www.mirkopasseri.it/#website',
       },
-      "mainEntity": {
-        "@id": "https://www.mirkopasseri.it/realizzazione-siti-web/#service"
-      }
+      mainEntity: {
+        '@id': 'https://www.mirkopasseri.it/realizzazione-siti-web/#service',
+      },
     },
     {
-      "@type": "Service",
-      "@id": "https://www.mirkopasseri.it/realizzazione-siti-web/#service",
-      "url": "https://www.mirkopasseri.it/realizzazione-siti-web/",
-      "name": "Siti web ed e-commerce per attività e professionisti",
-      "serviceType": "Realizzazione di siti web, e-commerce e restyling",
-      "provider": {
-        "@id": "https://www.mirkopasseri.it/#persona"
+      '@type': 'Service',
+      '@id': 'https://www.mirkopasseri.it/realizzazione-siti-web/#service',
+      url: 'https://www.mirkopasseri.it/realizzazione-siti-web/',
+      name: 'Siti web ed e-commerce per attività e professionisti',
+      serviceType: 'Realizzazione di siti web, e-commerce e restyling',
+      provider: {
+        '@id': 'https://www.mirkopasseri.it/#persona',
       },
-      "description": "Progettazione e realizzazione di siti web ed e-commerce per attività e professionisti, con interventi anche su struttura, contenuti e interfaccia di siti esistenti.",
-      "areaServed": [
+      description:
+        'Progettazione e realizzazione di siti web ed e-commerce per attività e professionisti, con interventi anche su struttura, contenuti e interfaccia di siti esistenti.',
+      areaServed: [
         {
-          "@type": "City",
-          "name": "Anzio"
+          '@type': 'City',
+          name: 'Anzio',
         },
         {
-          "@type": "City",
-          "name": "Nettuno"
+          '@type': 'City',
+          name: 'Nettuno',
         },
         {
-          "@type": "AdministrativeArea",
-          "name": "Lazio"
+          '@type': 'AdministrativeArea',
+          name: 'Lazio',
         },
         {
-          "@type": "Country",
-          "name": "Italia"
-        }
-      ]
-    }
-  ]
+          '@type': 'Country',
+          name: 'Italia',
+        },
+      ],
+    },
+  ],
 };
 ---
 
@@ -135,10 +137,7 @@ const servicePageSchema = {
   canonical="https://www.mirkopasseri.it/realizzazione-siti-web/"
 >
   <Fragment slot="schema">
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify(servicePageSchema)}
-    ></script>
+    <script type="application/ld+json" set:html={JSON.stringify(servicePageSchema)} />
   </Fragment>
   <main class="max-w-7xl mx-auto px-5 sm:px-8 md:px-24 py-16 md:py-20 overflow-x-hidden">
     <header class="mb-16 md:mb-24">
@@ -153,12 +152,12 @@ const servicePageSchema = {
             </a>
           </li>
           <li aria-hidden="true" class="text-primary/40">/</li>
-          <li aria-current="page" class="font-semibold text-primary">
-            Siti web ed e-commerce
-          </li>
+          <li aria-current="page" class="font-semibold text-primary">Siti web ed e-commerce</li>
         </ol>
       </nav>
-      <h1 class="font-title text-4xl sm:text-5xl md:text-7xl text-primary leading-tight text-balance">
+      <h1
+        class="font-title text-4xl sm:text-5xl md:text-7xl text-primary leading-tight text-balance"
+      >
         Siti web ed <span class="whitespace-nowrap">e-commerce</span> per attività e professionisti
       </h1>
       <p class="mt-6 max-w-3xl text-lg text-primary/80 leading-relaxed text-pretty">
@@ -176,7 +175,10 @@ const servicePageSchema = {
     </header>
 
     <section aria-labelledby="tipologie-intervento" class="mb-20 md:mb-28">
-      <h2 id="tipologie-intervento" class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance">
+      <h2
+        id="tipologie-intervento"
+        class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance"
+      >
         Cosa posso realizzare
       </h2>
       <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -192,7 +194,10 @@ const servicePageSchema = {
     </section>
 
     <section aria-labelledby="destinatari-siti-web" class="mb-20 md:mb-28">
-      <h2 id="destinatari-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance">
+      <h2
+        id="destinatari-siti-web"
+        class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance"
+      >
         Per chi è utile
       </h2>
       <ul class="space-y-5 max-w-3xl">
@@ -206,12 +211,16 @@ const servicePageSchema = {
         }
       </ul>
       <p class="mt-8 max-w-4xl md:max-w-none text-primary/80 leading-relaxed text-pretty">
-        Lavoro con attività e professionisti ad Anzio, Nettuno e nel Lazio e seguo progetti da remoto in tutta Italia.
+        Lavoro con attività e professionisti ad Anzio, Nettuno e nel Lazio e seguo progetti da
+        remoto in tutta Italia.
       </p>
     </section>
 
     <section aria-labelledby="metodo-siti-web" class="mb-20 md:mb-28">
-      <h2 id="metodo-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance">
+      <h2
+        id="metodo-siti-web"
+        class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance"
+      >
         Come lavoro
       </h2>
       <ol class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -229,7 +238,10 @@ const servicePageSchema = {
     </section>
 
     <section aria-labelledby="qualita-siti-web" class="mb-20 md:mb-28">
-      <h2 id="qualita-siti-web" class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance">
+      <h2
+        id="qualita-siti-web"
+        class="font-title text-4xl md:text-5xl text-primary mb-10 text-balance"
+      >
         Un sito costruito bene
       </h2>
       <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -263,12 +275,15 @@ const servicePageSchema = {
       </p>
       <div class="grid gap-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-start">
         <div class="max-w-3xl">
-          <h2 id="verifica-tecnica-gratuita" class="font-title text-3xl sm:text-4xl text-primary mb-5 text-balance">
+          <h2
+            id="verifica-tecnica-gratuita"
+            class="font-title text-3xl sm:text-4xl text-primary mb-5 text-balance"
+          >
             Prima verifica gratuita del sito
           </h2>
           <p class="text-primary/80 leading-relaxed text-pretty">
-            Hai già un sito online e vuoi capire da dove partire? Posso fare un controllo
-            essenziale della homepage su velocità percepita, struttura della pagina, accessibilità
+            Hai già un sito online e vuoi capire da dove partire? Posso fare un controllo essenziale
+            della homepage su velocità percepita, struttura della pagina, accessibilità
             automatizzata, chiarezza dei contenuti e percorso di contatto.
           </p>
           <p class="mt-4 text-primary/75 leading-relaxed text-pretty">
@@ -288,7 +303,8 @@ const servicePageSchema = {
             href="/blog/il-tuo-sito-funziona-davvero/"
             class="text-sm font-semibold text-accent underline underline-offset-4 transition-opacity hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
           >
-            Prima vuoi fare qualche controllo da solo? Leggi questo articolo
+            Prima vuoi fare qualche controllo da solo?<br />
+            Leggi questo articolo
           </a>
         </div>
       </div>
@@ -306,25 +322,35 @@ const servicePageSchema = {
                 <span class="font-semibold text-primary transition-colors duration-200 group-open:text-accent">
                   {faq.q}
                 </span>
-                <span aria-hidden="true" class="shrink-0 text-accent transition-transform duration-300 group-open:rotate-180">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <span
+                  aria-hidden="true"
+                  class="shrink-0 text-accent transition-transform duration-300 group-open:rotate-180"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
                     <path d="M12 15.414l-6.293-6.293-1.414 1.414L12 18.243l7.707-7.708-1.414-1.414z" />
                   </svg>
                 </span>
               </summary>
               <p class="mt-4 max-w-3xl pb-2 text-primary/75 leading-relaxed text-pretty">
-                {faq.a}
-                {faq.q === 'Quanto costa realizzare un sito web?' && (
+                {faq.q === 'Quanto costa realizzare un sito web?' ? (
                   <>
-                    {' '}
-                    Se vuoi capire meglio quali elementi incidono sul preventivo, puoi leggere{' '}
+                    {faq.a} Se vuoi capire meglio quali elementi incidono sul preventivo, puoi
+                    leggere{' '}
                     <a
                       href="/blog/quanto-costa-un-sito-web/"
                       class="font-semibold text-accent underline underline-offset-4 transition-opacity hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
                     >
                       da cosa dipende il costo di un sito web
-                    </a>.
+                    </a>{'.'}
                   </>
+                ) : (
+                  faq.a
                 )}
               </p>
             </details>
@@ -337,7 +363,10 @@ const servicePageSchema = {
       aria-labelledby="cta-siti-web"
       class="rounded-2xl border border-accent/30 bg-accent/10 p-6 sm:p-8 md:p-12"
     >
-      <h2 id="cta-siti-web" class="font-title text-3xl sm:text-4xl md:text-5xl text-primary mb-6 text-balance">
+      <h2
+        id="cta-siti-web"
+        class="font-title text-3xl sm:text-4xl md:text-5xl text-primary mb-6 text-balance"
+      >
         Hai un sito da realizzare o migliorare?
       </h2>
       <p class="max-w-2xl text-lg text-primary/75 leading-relaxed mb-10 text-pretty">
