@@ -3,8 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Cookie Policy — Mirko Passeri"
-  description="Informativa estesa sull'utilizzo dei cookie su questo sito web."
+  title="Cookie e strumenti di tracciamento — Mirko Passeri"
+  description="Informativa sull'utilizzo di cookie, storage locale e strumenti analytics su questo sito web."
   canonical="https://www.mirkopasseri.it/cookie-policy/"
 >
   <main class="max-w-7xl mx-auto px-8 md:px-24 py-16 md:py-20">
@@ -22,19 +22,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </li>
           <li aria-hidden="true" class="text-primary/40">/</li>
           <li aria-current="page" class="font-semibold text-primary">
-            Cookie Policy
+            Cookie e strumenti di tracciamento
           </li>
         </ol>
       </nav>
       <h1 class="font-title text-4xl md:text-6xl text-primary leading-tight">
-        Cookie Policy
+        Cookie e strumenti di tracciamento
       </h1>
-      <p class="mt-4 text-sm text-primary/80">Ultimo aggiornamento: Maggio 2026</p>
+      <p class="mt-4 text-sm text-primary/80">Ultimo aggiornamento: Settembre 2026</p>
     </header>
 
     <div class="max-w-3xl mb-24 space-y-6 text-lg text-primary/80 leading-relaxed prose prose-p:text-primary/80 prose-headings:text-primary prose-a:text-accent hover:prose-a:underline focus:prose-a:outline-none focus:prose-a:ring-2 focus:prose-a:ring-accent focus:prose-a:ring-offset-2 focus:prose-a:ring-offset-master focus:prose-a:rounded">
       <p>
-        La presente Cookie Policy descrive l'utilizzo dei cookie da parte di questo sito web in ottemperanza alla Direttiva ePrivacy e alle Linee Guida del Garante Privacy italiano in materia di cookie e altri strumenti di tracciamento.
+        La presente policy descrive i cookie, lo storage locale e gli strumenti di tracciamento effettivamente utilizzati dal sito, compreso il servizio di web analytics Umami Cloud.
       </p>
 
       <h2 class="text-2xl font-title mt-8 mb-4">Cos'è un cookie?</h2>
@@ -42,23 +42,47 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         I cookie sono piccoli file di testo che i siti visitati dall'utente inviano al suo terminale, dove vengono memorizzati, per poi essere ritrasmessi agli stessi siti alla visita successiva.
       </p>
 
-      <h2 class="text-2xl font-title mt-8 mb-4">Quali cookie utilizza questo sito?</h2>
+      <h2 class="text-2xl font-title mt-8 mb-4">Cookie tecnici</h2>
       <p>
-        Questo sito web è stato progettato con la massima attenzione alla tutela della privacy (Privacy by Design). Pertanto, <strong>questo sito non utilizza in alcun modo cookie di profilazione o strumenti di tracciamento di terze parti</strong> (come ad esempio Google Analytics, Meta Pixel, o simili) volti a monitorare il comportamento degli utenti o a creare profili a scopo pubblicitario.
+        Il sito non installa intenzionalmente cookie di profilazione o pubblicitari. La piattaforma di hosting e i sistemi di sicurezza possono trattare richieste e dati tecnici necessari a erogare e proteggere il servizio; eventuali cookie strettamente necessari restano limitati a tali finalità.
+      </p>
+
+      <h2 class="text-2xl font-title mt-8 mb-4">Umami Cloud</h2>
+      <p>
+        Il sito utilizza <strong>Umami Cloud</strong>, fornito da Umami Software, Inc., per misurare visite, pagine consultate, provenienza del traffico, referrer, campagne riconosciute tramite parametri UTM presenti negli URL in ingresso, percorsi di navigazione, utilizzo delle principali CTA commerciali e invii riusciti del form. Queste informazioni aiutano a migliorare struttura, contenuti e percorsi di contatto.
       </p>
       <p>
-        A causa di questa scelta progettuale, navigando su questo sito <strong>non sei soggetto all'installazione di cookie che richiedono il consenso preventivo</strong>. Per questo motivo non visualizzi alcun "Cookie Banner" all'ingresso del sito, in conformità con quanto prescritto dalle Linee Guida del Garante Privacy (Provvedimento n. 231 del 10 giugno 2021).
+        Secondo la documentazione ufficiale, il tracker Umami non usa cookie. Questo non significa che non vengano trattati dati tecnici: dopo l'accettazione possono essere inviati pagina e parametri dell'URL, hostname, titolo, referrer, lingua, dimensioni dello schermo, informazioni su browser, sistema operativo e dispositivo, localizzazione derivata, parametri UTM ed eventi personalizzati. L'indirizzo IP può essere utilizzato dal servizio per ricavare metriche e generare un identificatore di sessione insieme ad altri elementi tecnici, pur non essendo memorizzato come indirizzo IP.
       </p>
       <p>
-        Potrebbero essere utilizzati esclusivamente <strong>cookie tecnici o di sessione</strong> strettamente necessari per il corretto funzionamento tecnico della piattaforma di hosting o per ragioni di sicurezza server. Tali cookie non vengono in alcun modo utilizzati per scopi ulteriori e non richiedono l'acquisizione del consenso.
+        L'implementazione non usa Umami per advertising comportamentale, remarketing, identificazione nominativa volontaria o tracciamento intenzionale tra siti. Non vengono configurati Distinct ID o proprietà evento contenenti dati personali. Per il form viene trasmesso esclusivamente il nome evento <code>contact_form_submit</code> dopo la conferma di invio: nome, email, telefono, messaggio, URL e altri campi non vengono inviati a Umami.
+      </p>
+
+      <h2 class="text-2xl font-title mt-8 mb-4">Scelta e storage delle preferenze</h2>
+      <p>
+        Umami viene caricato soltanto dopo aver selezionato <strong>Accetta analytics</strong>. Se scegli <strong>Continua senza analytics</strong>, lo script non viene caricato e il sito resta pienamente utilizzabile. La scelta viene salvata nel <code>localStorage</code> del browser con la sola finalità di ricordare la preferenza; non contiene un identificativo personale e non viene inviata a Umami.
+      </p>
+      <p>
+        Puoi modificare o revocare la scelta in qualsiasi momento usando il pulsante <button id="analytics-preferences-policy" type="button" class="font-semibold text-accent underline underline-offset-4 transition-opacity hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded">Preferenze analytics</button>. In caso di revoca, la pagina viene ricaricata per interrompere il tracker nella sessione corrente.
+      </p>
+
+      <h2 class="text-2xl font-title mt-8 mb-4">Conservazione e regione dati</h2>
+      <p>
+        Il periodo effettivo di conservazione dei dati analytics dipende dal piano e dalla configurazione dell'account Umami Cloud e deve essere confermato nella dashboard; non viene indicata una durata numerica non verificata. Umami offre regioni dati US ed EU. Per questo sito è richiesta la regione EU, ma l'effettiva associazione del Website ID alla regione deve essere confermata nella dashboard e non è deducibile dal codice.
       </p>
 
       <h2 class="text-2xl font-title mt-8 mb-4">Gestione dei cookie dal browser</h2>
       <p>
-        Se desideri disabilitare completamente anche l'installazione dei cookie tecnici, puoi modificare le impostazioni del tuo browser web. Tieni presente che disabilitare i cookie tecnici potrebbe compromettere alcune funzionalità essenziali del sito o della piattaforma di sicurezza.
+        Puoi eliminare cookie e dati salvati nel localStorage dalle impostazioni del browser. La cancellazione della preferenza farà ricomparire la richiesta di scelta alla visita successiva. Il blocco di risorse analytics tramite browser o estensioni non impedisce l'uso delle altre funzioni del sito.
       </p>
-      <p>Per ulteriori informazioni sul trattamento dei tuoi dati personali (quali i dati conferiti nel form di contatto), ti invitiamo a leggere la nostra <a href="/privacy-policy/">Privacy Policy</a>.</p>
+      <p>Per ulteriori informazioni sui dati trattati, sui provider, sulle basi giuridiche e sui diritti, leggi la <a href="/privacy-policy/">Privacy Policy</a>.</p>
     </div>
+
+    <script>
+      document.getElementById('analytics-preferences-policy')?.addEventListener('click', () => {
+        document.getElementById('analytics-preferences')?.click();
+      });
+    </script>
 
   </main>
 </BaseLayout>

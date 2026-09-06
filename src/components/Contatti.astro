@@ -25,6 +25,7 @@ const KEY = import.meta.env.WEB3FORMS_ACCESS_KEY;
             href={contact.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event="whatsapp_click"
             class="mt-4 inline-flex min-h-11 w-full items-center justify-center rounded-md border border-accent/40 px-5 py-2.5 text-center text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:w-auto"
           >
             Scrivimi su WhatsApp
@@ -56,6 +57,7 @@ const KEY = import.meta.env.WEB3FORMS_ACCESS_KEY;
           </p>
           <a
             href={contact.emailHref}
+            data-umami-event="email_contact"
             class="mt-4 inline-flex min-h-11 w-full items-center justify-center rounded-md border border-accent/40 px-5 py-2.5 text-center text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:w-auto"
           >
             Scrivimi via email
@@ -83,6 +85,7 @@ const KEY = import.meta.env.WEB3FORMS_ACCESS_KEY;
     </div>
 
     <form
+      id="contact-form"
       action="https://api.web3forms.com/submit"
       method="POST"
       class="rounded-lg border border-primary/10 bg-primary/[0.03] p-5 md:p-6"
@@ -166,34 +169,27 @@ const KEY = import.meta.env.WEB3FORMS_ACCESS_KEY;
           ></textarea>
         </div>
 
-        <div class="flex items-start gap-3">
-          <input
-            required
-            type="checkbox"
-            id="privacy-consent"
-            name="privacy-consent"
-            class="mt-1 h-4 w-4 cursor-pointer rounded border-primary/30 bg-master text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
-          />
-          <label for="privacy-consent" class="text-sm leading-relaxed text-primary/80">
-            Dichiaro di aver letto e accettato la
-            <a
-              href="/privacy-policy/"
-              class="font-semibold text-accent hover:underline focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Privacy Policy
-            </a>
-            per il trattamento dei dati personali.*
-          </label>
-        </div>
+        <p class="text-sm leading-relaxed text-primary/80">
+          I dati inviati saranno usati per gestire la richiesta. Trovi tutte le informazioni sul
+          trattamento nella
+          <a
+            href="/privacy-policy/"
+            class="font-semibold text-accent hover:underline focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Privacy Policy
+          </a>.
+        </p>
 
         <button
+          id="contact-submit"
           type="submit"
           class="inline-flex min-h-12 w-full items-center justify-center rounded-md border border-accent bg-accent px-6 py-3 text-sm font-semibold text-master transition-colors hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master sm:w-auto"
         >
           Invia messaggio
         </button>
+        <p id="contact-form-status" class="text-sm text-primary/80" role="status" aria-live="polite"></p>
       </div>
     </form>
   </div>
@@ -203,6 +199,16 @@ const KEY = import.meta.env.WEB3FORMS_ACCESS_KEY;
   const copyBtn = document.getElementById('copy-btn');
   const emailText = document.getElementById('email-text');
   const copyStatus = document.getElementById('copy-status');
+  const contactForm = document.getElementById('contact-form');
+  const contactSubmit = document.getElementById('contact-submit');
+  const contactFormStatus = document.getElementById('contact-form-status');
+
+  const trackEvent = (eventName: string) => {
+    const analyticsWindow = window as Window & {
+      umami?: { track?: (name: string) => void };
+    };
+    analyticsWindow.umami?.track?.(eventName);
+  };
 
   if (emailText) {
     const user = emailText.getAttribute('data-user');
@@ -218,6 +224,7 @@ const KEY = import.meta.env.WEB3FORMS_ACCESS_KEY;
 
     try {
       await navigator.clipboard.writeText(emailText.innerText);
+      trackEvent('email_contact');
       copyBtn.innerText = 'Copiato!';
       copyStatus?.replaceChildren('Indirizzo email copiato negli appunti.');
 
@@ -229,6 +236,43 @@ const KEY = import.meta.env.WEB3FORMS_ACCESS_KEY;
       copyStatus?.replaceChildren(
         'Non è stato possibile copiare automaticamente l’indirizzo email.'
       );
+    }
+  });
+
+  contactForm?.addEventListener('submit', async (event) => {
+    if (!(contactForm instanceof HTMLFormElement) || !contactForm.checkValidity()) return;
+
+    event.preventDefault();
+
+    if (contactSubmit instanceof HTMLButtonElement) {
+      contactSubmit.disabled = true;
+      contactSubmit.setAttribute('aria-disabled', 'true');
+    }
+    contactFormStatus?.replaceChildren('Invio in corso…');
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(contactForm),
+      });
+      const result = await response.json();
+
+      if (!response.ok || result?.success !== true) {
+        throw new Error('Web3Forms did not confirm the submission.');
+      }
+
+      trackEvent('contact_form_submit');
+      window.location.assign('/grazie/');
+    } catch {
+      contactFormStatus?.replaceChildren(
+        'Non è stato possibile inviare il messaggio. Riprova oppure usa email o WhatsApp.'
+      );
+
+      if (contactSubmit instanceof HTMLButtonElement) {
+        contactSubmit.disabled = false;
+        contactSubmit.removeAttribute('aria-disabled');
+      }
     }
   });
 </script>

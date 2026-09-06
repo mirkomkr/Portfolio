@@ -29,7 +29,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h1 class="font-title text-4xl md:text-6xl text-primary leading-tight">
         Privacy Policy
       </h1>
-      <p class="mt-4 text-sm text-primary/80">Ultimo aggiornamento: Maggio 2026</p>
+      <p class="mt-4 text-sm text-primary/80">Ultimo aggiornamento: Settembre 2026</p>
     </header>
 
     <div class="max-w-3xl mb-24 space-y-6 text-lg text-primary/80 leading-relaxed prose prose-p:text-primary/80 prose-headings:text-primary prose-a:text-accent hover:prose-a:underline focus:prose-a:outline-none focus:prose-a:ring-2 focus:prose-a:ring-accent focus:prose-a:ring-offset-2 focus:prose-a:ring-offset-master focus:prose-a:rounded">
@@ -52,23 +52,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <strong>Dati forniti tramite contatto diretto:</strong> Se scegli di contattarmi telefonicamente o tramite WhatsApp, i dati che comunichi volontariamente saranno utilizzati esclusivamente per rispondere alla tua richiesta.
         </li>
         <li>
-          <strong>Dati di navigazione:</strong> I sistemi informatici preposti al funzionamento del sito acquisiscono, nel normale esercizio, alcuni dati (es. indirizzi IP) la cui trasmissione è implicita nei protocolli di comunicazione di Internet. Tali dati vengono raccolti dalla piattaforma di hosting (Vercel) al solo scopo di ricavare informazioni statistiche anonime e controllare il corretto funzionamento del sito e la sicurezza.
+          <strong>Dati di navigazione e log tecnici:</strong> I sistemi informatici preposti al funzionamento del sito acquisiscono, nel normale esercizio, dati tecnici (ad esempio indirizzi IP e informazioni sulle richieste) la cui trasmissione è implicita nei protocolli di Internet. La piattaforma di hosting Vercel li tratta per erogare il sito, garantirne sicurezza e disponibilità e svolgere attività diagnostiche.
+        </li>
+        <li>
+          <strong>Dati analytics:</strong> Solo dopo la tua accettazione, Umami Cloud può trattare il percorso e gli eventuali parametri dell'URL visitato, hostname, titolo della pagina, referrer, lingua del browser, dimensioni dello schermo, browser, sistema operativo, tipo di dispositivo, informazioni geografiche derivate in forma non nominativa, parametri UTM presenti negli URL in ingresso e gli eventi personalizzati descritti di seguito. Secondo la documentazione tecnica di Umami, l'indirizzo IP viene utilizzato per ricavare alcune metriche e può contribuire, insieme a elementi come user agent e Website ID, alla generazione di un identificatore di sessione, ma non viene memorizzato come indirizzo IP. Il sito non configura un identificativo nominativo dell'utente.
+        </li>
+        <li>
+          <strong>Finalità analytics:</strong> I dati sono usati per misurare visite e visualizzazioni di pagina, capire quali pagine vengono visitate e da quali fonti arriva il traffico, analizzare referrer e campagne riconosciute tramite parametri UTM, comprendere i percorsi di navigazione, misurare l'utilizzo delle principali CTA commerciali e conversioni come l'invio riuscito del form, e migliorare struttura, contenuti e percorsi commerciali del sito. Umami non viene configurato per advertising comportamentale, remarketing, profilazione commerciale individuale, identificazione nominativa volontaria o tracciamento intenzionale tra siti diversi.
+        </li>
+        <li>
+          <strong>Eventi commerciali:</strong> L'implementazione invia a Umami esclusivamente i nomi astratti degli eventi relativi a invio riuscito del form, contatto WhatsApp, contatto email e CTA per verifica gratuita, realizzazione siti e collaborazioni. Non invia come proprietà analytics nome, email, telefono, messaggio, URL inseriti nel form, brief, azienda, dati cliente o altri campi compilati. Per il form viene registrato soltanto l'evento <code>contact_form_submit</code> dopo la conferma positiva del provider.
         </li>
       </ul>
 
       <h2 class="text-2xl font-title mt-8 mb-4">3. Base giuridica del trattamento</h2>
       <p>
-        I dati forniti volontariamente tramite il modulo di contatto vengono trattati sulla base del <strong>consenso</strong> esplicito prestato dall'utente prima dell'invio (Art. 6, par. 1, lett. a del GDPR), e per l'esecuzione di misure precontrattuali adottate su richiesta dello stesso (Art. 6, par. 1, lett. b).<br>
-        I dati di navigazione vengono trattati sulla base del <strong>legittimo interesse</strong> del Titolare a garantire la sicurezza e la funzionalità del sito (Art. 6, par. 1, lett. f).
+        I dati forniti volontariamente tramite il modulo o i canali di contatto sono trattati per dare seguito alla richiesta e adottare misure precontrattuali richieste dall'interessato (Art. 6, par. 1, lett. b del GDPR) oppure, per i referenti di organizzazioni, sulla base del legittimo interesse alla gestione della relazione professionale (Art. 6, par. 1, lett. f). La presa visione dell'informativa non costituisce un consenso separato.<br>
+        I dati di navigazione necessari a sicurezza, disponibilità e diagnostica del sito sono trattati sulla base del <strong>legittimo interesse</strong> del Titolare (Art. 6, par. 1, lett. f). Umami Cloud viene invece attivato sulla base del <strong>consenso</strong> espresso tramite le preferenze analytics (Art. 6, par. 1, lett. a); il rifiuto non limita l'uso del sito e la scelta è modificabile in ogni momento.
       </p>
 
       <h2 class="text-2xl font-title mt-8 mb-4">4. Destinatari dei dati</h2>
       <p>
-        I dati raccolti non verranno diffusi, venduti o ceduti a terzi per scopi di marketing. I dati potranno essere trattati da soggetti terzi che forniscono servizi strettamente necessari al funzionamento del sito, designati come Responsabili del Trattamento:
+        I dati raccolti non verranno diffusi, venduti o ceduti a terzi per scopi di marketing. In relazione alla funzione svolta e agli accordi applicabili, possono essere trattati dai seguenti fornitori o servizi esterni:
       </p>
       <ul class="list-disc pl-6 space-y-2">
         <li><strong>Web3Forms</strong>: Servizio utilizzato per la gestione e l'inoltro delle email generate dal form di contatto. <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy di Web3Forms</a>.</li>
         <li><strong>Vercel Inc.</strong>: Provider di hosting del sito, che processa i dati di navigazione (es. IP) per l'erogazione sicura del servizio. <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy di Vercel</a>.</li>
+        <li><strong>Umami Software, Inc. — Umami Cloud</strong>: Provider statunitense del servizio di web analytics, attivato solo dopo consenso. Riceve i dati analytics tecnici e di navigazione descritti in questa informativa per elaborarli per conto del Titolare secondo il servizio e gli accordi applicabili. <a href="https://umami.is/umami-dpa.pdf" target="_blank" rel="noopener noreferrer">Data Processing Agreement di Umami</a> e <a href="https://docs.umami.is/docs/metric-definitions" target="_blank" rel="noopener noreferrer">documentazione delle metriche</a>.</li>
         <li><strong>WhatsApp / Meta Platforms</strong>: Se utilizzi il link WhatsApp, la comunicazione avverrà tramite un servizio esterno a questo sito. <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener noreferrer">Privacy Policy di WhatsApp</a>.</li>
       </ul>
 
@@ -76,8 +86,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <p>
         I dati inviati tramite il modulo di contatto saranno conservati per il tempo strettamente necessario a evadere la richiesta, dopodiché verranno cancellati in modo sicuro, salvo qualora si instauri un successivo rapporto professionale, nel qual caso saranno conservati per i tempi stabiliti dalla normativa fiscale e civile.
       </p>
+      <p>
+        I dati analytics sono conservati per il periodo configurato nel piano Umami Cloud effettivamente attivo e solo finché necessari alle finalità statistiche indicate. Il valore applicato deve essere verificato nella dashboard e mantenuto coerente con la policy interna di limitazione della conservazione; non viene qui indicato un numero non verificabile dal repository. Eventuali dati realmente aggregati e non identificabili possono essere conservati più a lungo per confronti statistici.
+      </p>
 
-      <h2 class="text-2xl font-title mt-8 mb-4">6. Diritti dell'interessato</h2>
+      <h2 class="text-2xl font-title mt-8 mb-4">6. Localizzazione e trasferimenti</h2>
+      <p>
+        Umami Cloud rende disponibili regioni dati negli Stati Uniti e nell'Unione europea. Per questo sito la configurazione richiesta è la regione <strong>EU</strong>; l'associazione effettiva della proprietà Umami alla regione deve essere confermata nella dashboard e non è verificabile dal codice del sito. Umami Software, Inc. ha sede negli Stati Uniti e la scelta della regione EU non esclude, da sola, ogni possibile trattamento o trasferimento internazionale connesso a contratto, supporto o subfornitori. Tali aspetti sono disciplinati dalla documentazione e dal DPA del provider e devono essere verificati rispetto all'account effettivamente utilizzato.
+      </p>
+
+      <h2 class="text-2xl font-title mt-8 mb-4">7. Diritti dell'interessato</h2>
       <p>
         Ai sensi degli artt. 15-22 del GDPR, l'utente ha il diritto di chiedere al Titolare: l'accesso ai propri dati personali, la rettifica, la cancellazione degli stessi (diritto all'oblio), la limitazione del trattamento. Ha inoltre il diritto di opporsi al trattamento e il diritto alla portabilità dei dati. Tali diritti possono essere esercitati scrivendo a <a href="mailto:contatti@mirkopasseri.it">contatti@mirkopasseri.it</a>. L'interessato ha sempre il diritto di proporre reclamo all'Autorità Garante per la Protezione dei Dati Personali.
       </p>
