@@ -123,15 +123,21 @@ const baseSchema = {
           const rejectButton = document.getElementById('analytics-consent-reject');
           const preferencesButton = document.getElementById('analytics-preferences');
           const heading = document.getElementById('analytics-consent-title');
+          const mainContent = document.getElementById('main-content');
+          let preferencesOpener = null;
 
-          const openPreferences = () => {
+          const openPreferences = (opener = null) => {
             if (!banner) return;
+            preferencesOpener = opener;
             banner.hidden = false;
             heading?.focus();
           };
 
           const closePreferences = () => {
             if (banner) banner.hidden = true;
+            const focusTarget = preferencesOpener ?? mainContent;
+            focusTarget?.focus({ preventScroll: true });
+            preferencesOpener = null;
           };
 
           if (readConsent() === null) {
@@ -142,7 +148,6 @@ const baseSchema = {
             writeConsent('granted');
             loadUmami();
             closePreferences();
-            preferencesButton?.focus();
           });
 
           rejectButton?.addEventListener('click', () => {
@@ -154,11 +159,9 @@ const baseSchema = {
               window.location.reload();
               return;
             }
-
-            preferencesButton?.focus();
           });
 
-          preferencesButton?.addEventListener('click', openPreferences);
+          preferencesButton?.addEventListener('click', () => openPreferences(preferencesButton));
         });
       })();
     </script>
