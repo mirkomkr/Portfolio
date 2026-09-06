@@ -63,7 +63,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         Umami viene caricato soltanto dopo aver selezionato <strong>Accetta analytics</strong>. Se scegli <strong>Continua senza analytics</strong>, lo script non viene caricato e il sito resta pienamente utilizzabile. La scelta viene salvata nel <code>localStorage</code> del browser con la sola finalità di ricordare la preferenza; non contiene un identificativo personale e non viene inviata a Umami.
       </p>
       <p>
-        Puoi modificare o revocare la scelta in qualsiasi momento usando il pulsante <button id="analytics-preferences-policy" type="button" class="font-semibold text-accent underline underline-offset-4 transition-opacity hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded">Preferenze analytics</button>. In caso di revoca, la pagina viene ricaricata per interrompere il tracker nella sessione corrente.
+        Puoi modificare o revocare la scelta in qualsiasi momento usando il pulsante <button id="analytics-preferences-policy" type="button" aria-controls="analytics-consent" data-analytics-preferences class="font-semibold text-accent underline underline-offset-4 transition-opacity hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded">Preferenze analytics</button>. In caso di revoca, la pagina viene ricaricata per interrompere il tracker nella sessione corrente.
       </p>
 
       <h2 class="text-2xl font-title mt-8 mb-4">Conservazione e regione dati</h2>
@@ -77,12 +77,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
       <p>Per ulteriori informazioni sui dati trattati, sui provider, sulle basi giuridiche e sui diritti, leggi la <a href="/privacy-policy/">Privacy Policy</a>.</p>
     </div>
-
-    <script>
-      document.getElementById('analytics-preferences-policy')?.addEventListener('click', () => {
-        document.getElementById('analytics-preferences')?.click();
-      });
-    </script>
 
   </main>
 </BaseLayout>

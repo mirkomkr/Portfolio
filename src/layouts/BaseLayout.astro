@@ -121,7 +121,7 @@ const baseSchema = {
           const banner = document.getElementById('analytics-consent');
           const acceptButton = document.getElementById('analytics-consent-accept');
           const rejectButton = document.getElementById('analytics-consent-reject');
-          const preferencesButton = document.getElementById('analytics-preferences');
+          const preferencesButtons = document.querySelectorAll('[data-analytics-preferences]');
           const heading = document.getElementById('analytics-consent-title');
           const mainContent = document.getElementById('main-content');
           let preferencesOpener = null;
@@ -130,13 +130,18 @@ const baseSchema = {
             if (!banner) return;
             preferencesOpener = opener;
             banner.hidden = false;
-            heading?.focus();
+            if (opener) heading?.focus();
           };
 
           const closePreferences = () => {
             if (banner) banner.hidden = true;
-            const focusTarget = preferencesOpener ?? mainContent;
-            focusTarget?.focus({ preventScroll: true });
+
+            if (preferencesOpener instanceof HTMLElement) {
+              preferencesOpener.focus();
+            } else {
+              mainContent?.focus();
+            }
+
             preferencesOpener = null;
           };
 
@@ -161,7 +166,9 @@ const baseSchema = {
             }
           });
 
-          preferencesButton?.addEventListener('click', () => openPreferences(preferencesButton));
+          preferencesButtons.forEach((button) => {
+            button.addEventListener('click', () => openPreferences(button));
+          });
         });
       })();
     </script>
@@ -174,6 +181,44 @@ const baseSchema = {
       Vai al contenuto principale
     </a>
     <Header />
+
+    <section
+      id="analytics-consent"
+      aria-labelledby="analytics-consent-title"
+      aria-describedby="analytics-consent-description"
+      class="mx-auto mt-4 w-[calc(100%-2rem)] max-w-3xl rounded-lg border border-primary/20 bg-master p-5 shadow-lg md:mt-6 md:p-6"
+      hidden
+    >
+      <h2 id="analytics-consent-title" tabindex="-1" class="font-title text-2xl text-primary outline-none">
+        Preferenze analytics
+      </h2>
+      <p id="analytics-consent-description" class="mt-3 text-base leading-relaxed text-primary/80">
+        Vorrei usare Umami Cloud per capire, in forma statistica, come viene utilizzato il sito e
+        quali percorsi di contatto sono più utili. Umami viene caricato solo se accetti. Puoi
+        cambiare scelta in qualsiasi momento dalla
+        <a
+          href="/cookie-policy/"
+          class="font-semibold text-accent underline underline-offset-4 transition-opacity hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master focus:rounded"
+        >Cookie Policy</a>.
+      </p>
+      <div class="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-end">
+        <button
+          id="analytics-consent-reject"
+          type="button"
+          class="inline-flex min-h-12 items-center justify-center rounded-md border border-accent px-5 py-3 text-base font-semibold text-accent transition-colors hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+        >
+          Continua senza analytics
+        </button>
+        <button
+          id="analytics-consent-accept"
+          type="button"
+          class="inline-flex min-h-12 items-center justify-center rounded-md border border-accent bg-accent px-5 py-3 text-base font-semibold text-master transition-colors hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
+        >
+          Accetta analytics
+        </button>
+      </div>
+    </section>
+
     <div id="main-content" tabindex="-1">
       <slot />
     </div>
@@ -191,38 +236,6 @@ const baseSchema = {
         <path d="M12 8.586l-6.293 6.293-1.414-1.414L12 5.757l7.707 7.708-1.414 1.414z"/>
       </svg>
     </button>
-
-    <section
-      id="analytics-consent"
-      aria-labelledby="analytics-consent-title"
-      class="fixed inset-x-4 bottom-4 z-[60] mx-auto max-w-3xl rounded-lg border border-primary/20 bg-master p-5 shadow-2xl md:bottom-8 md:p-6"
-      hidden
-    >
-      <h2 id="analytics-consent-title" tabindex="-1" class="font-title text-2xl text-primary outline-none">
-        Preferenze analytics
-      </h2>
-      <p class="mt-3 text-sm leading-relaxed text-primary/80">
-        Vorrei usare Umami Cloud per capire, in forma statistica, come viene utilizzato il sito e
-        quali percorsi di contatto sono più utili. Umami viene caricato solo se accetti. Puoi
-        cambiare scelta in qualsiasi momento dalla Cookie Policy.
-      </p>
-      <div class="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
-        <button
-          id="analytics-consent-reject"
-          type="button"
-          class="inline-flex min-h-11 items-center justify-center rounded-md border border-accent/40 px-5 py-2.5 text-sm font-semibold text-accent transition-colors hover:bg-accent hover:text-master focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
-        >
-          Continua senza analytics
-        </button>
-        <button
-          id="analytics-consent-accept"
-          type="button"
-          class="inline-flex min-h-11 items-center justify-center rounded-md border border-accent bg-accent px-5 py-2.5 text-sm font-semibold text-master transition-colors hover:bg-transparent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-master"
-        >
-          Accetta analytics
-        </button>
-      </div>
-    </section>
 
     <script is:inline>
       const btn = document.getElementById('torna-su');
