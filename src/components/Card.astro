@@ -1,9 +1,10 @@
 ---
 import { Image } from 'astro:assets';
-const {title, description, image, altimage, link, lighthouseScore} = Astro.props;
+const { title, description, image, altimage, link, classificationLabel, caseStudyLink } = Astro.props;
+const descriptionId = `desc-${title.split(" ").join("-").toLowerCase()}`;
 ---
 
-<li itemscope itemtype="https://schema.org/CreativeWork" class="hover:border-accent/70 border border-primary/30 focus-within:ring-2 focus-within:ring-accent focus-within:ring-offset-2 focus-within:ring-offset-master relative group rounded-2xl flex flex-col transition-all duration-500 overflow-hidden hover:bg-primary/[0.03] hover:-translate-y-1">
+<li itemscope itemtype="https://schema.org/CreativeWork" class="hover:border-accent/70 border border-primary/30 relative group rounded-2xl flex flex-col transition-all duration-500 overflow-hidden hover:bg-primary/[0.03] hover:-translate-y-1">
     
     <div class="relative">
       <Image
@@ -30,19 +31,54 @@ const {title, description, image, altimage, link, lighthouseScore} = Astro.props
 
     </div>
     
-    <div class="text-primary p-6">
+    <div class="text-primary p-6 flex flex-1 flex-col">
       <h3 itemprop="name" class="group-hover:text-accent transition-colors duration-300 text-2xl font-bold mb-2 font-title">
         {title}
       </h3>
-      <p itemprop="description" id={`desc-${title.split(" ").join("-").toLowerCase()}`} class="leading-relaxed text-sm opacity-70">
+      <p class="mb-4">
+        <span class="inline-flex rounded-full border border-primary/20 px-3 py-1 text-xs font-semibold text-primary/75">
+          {classificationLabel}
+        </span>
+      </p>
+      <p itemprop="description" id={descriptionId} class="leading-relaxed text-sm opacity-70">
         {description}
       </p>
-    </div>
 
-    <a aria-describedby={`desc-${title.split(" ").join("-").toLowerCase()}`} itemprop="url" href={link} 
-       class="after:content-[''] after:absolute after:inset-0 focus:rounded-2xl" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       aria-label={`Scopri di più su ${title}`}>
-    </a>
+      <div class="mt-auto flex flex-col gap-3 pt-6 sm:flex-row sm:flex-wrap">
+        {caseStudyLink ? (
+          <>
+            <a
+              href={caseStudyLink}
+              aria-describedby={descriptionId}
+              class="inline-flex min-h-12 w-full items-center justify-center rounded-md border border-accent bg-accent px-4 py-3 text-center text-sm font-semibold text-master transition-colors hover:bg-transparent hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-master sm:w-auto"
+            >
+              Leggi il caso studio
+            </a>
+            <a
+              itemprop="url"
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-describedby={descriptionId}
+              class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md border border-primary/30 px-4 py-3 text-center text-sm font-semibold text-primary transition-colors hover:border-accent hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-master sm:w-auto"
+            >
+              Apri la demo
+              <span aria-hidden="true">↗</span>
+            </a>
+          </>
+        ) : (
+          <a
+            itemprop="url"
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-describedby={descriptionId}
+            class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md border border-accent bg-accent px-4 py-3 text-center text-sm font-semibold text-master transition-colors hover:bg-transparent hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-master sm:w-auto"
+          >
+            Apri il progetto
+            <span aria-hidden="true">↗</span>
+          </a>
+        )}
+      </div>
+    </div>
 </li>
