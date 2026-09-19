@@ -338,6 +338,8 @@ Molte attività locali hanno bisogno di siti più chiari, più veloci e più aff
 
 Questo caso studio è un esempio di come affronto un progetto: non partendo solo dall’estetica, ma da obiettivi concreti, qualità tecnica e cura dell’esperienza utente.
 
+Se stai valutando un progetto simile per la tua attività, nella pagina dedicata alla [realizzazione di siti web ed e-commerce](/realizzazione-siti-web/) trovi il percorso e le tipologie di intervento.
+
 Puoi vedere il progetto qui: [Azzurro di Mare](https://azzurro-di-mare.mirkopasseri.it/).
 
 ---
