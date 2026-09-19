@@ -1,10 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import { getPublishedBlogPosts } from '../../utils/blog';
 
-const allPosts = await getCollection('blog');
-const sortedPosts = allPosts
-  .filter((p) => !p.data.draft)
+const sortedPosts = (await getPublishedBlogPosts())
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const itemListSchema = {

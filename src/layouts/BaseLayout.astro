@@ -19,12 +19,16 @@ interface Props {
 const {
   title,
   description,
-  canonical = 'https://www.mirkopasseri.it',
+  canonical,
   ogImage = 'https://www.mirkopasseri.it/mirko-passeri-frontend-developer.webp',
   ogImageAlt = 'Mirko Passeri — Frontend Developer & Web Designer',
   ogType = 'website',
   robots = 'index, follow',
 } = Astro.props;
+
+const canonicalUrl = canonical
+  ? new URL(canonical, Astro.site ?? Astro.url.origin).href
+  : new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).href;
 
 const baseSchema = {
   "@context": "https://schema.org",
@@ -63,7 +67,7 @@ const baseSchema = {
     <SEO
       title={title}
       description={description}
-      canonical={canonical}
+      canonical={canonicalUrl}
       openGraph={{
         basic: { title, type: ogType, image: ogImage },
         optional: { description, locale: 'it_IT', siteName: 'Mirko Passeri' },
@@ -77,7 +81,7 @@ const baseSchema = {
         imageAlt: ogImageAlt,
       }}
     />
-    <link rel="alternate" hreflang="it" href={canonical} />
+    <link rel="alternate" hreflang="it" href={canonicalUrl} />
     <script type="application/ld+json" set:html={JSON.stringify(baseSchema)}></script>
     <slot name="schema" />
     <script is:inline>

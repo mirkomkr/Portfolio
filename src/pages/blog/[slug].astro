@@ -2,12 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
+import { getPublishedBlogPosts } from '../../utils/blog';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  const isDev = import.meta.env.DEV;
-  // In produzione non genera la pagina per i post con draft: true
-  const visiblePosts = isDev ? posts : posts.filter((p) => !p.data.draft);
+  const visiblePosts = import.meta.env.DEV
+    ? await getCollection('blog')
+    : await getPublishedBlogPosts();
   return visiblePosts.map((post) => ({
     params: { slug: post.id },
     props: { post },
@@ -19,11 +19,12 @@ const { Content } = await render(post);
 
 const canonicalUrl = `https://www.mirkopasseri.it/blog/${post.id}/`;
 
-// Articoli correlati: fetcha tutti, filtra per gli slug definiti in related[]
-const allPosts = await getCollection('blog');
-const relatedPosts = post.data.related
-  ? allPosts.filter((p) => post.data.related!.includes(p.id))
-  : [];
+const publishedPosts = await getPublishedBlogPosts();
+const publishedPostsById = new Map(publishedPosts.map((publishedPost) => [publishedPost.id, publishedPost]));
+const relatedPosts = (post.data.related ?? []).flatMap((relatedId) => {
+  const relatedPost = publishedPostsById.get(relatedId);
+  return relatedPost ? [relatedPost] : [];
+});
 
 const blogPostingSchema = {
   "@context": "https://schema.org",
