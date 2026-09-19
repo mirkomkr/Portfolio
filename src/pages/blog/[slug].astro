@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
-import { Image } from 'astro:assets';
+import { getImage, Image } from 'astro:assets';
 import { getPublishedBlogPosts } from '../../utils/blog';
 
 export async function getStaticPaths() {
@@ -18,6 +18,12 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 
 const canonicalUrl = `https://www.mirkopasseri.it/blog/${post.id}/`;
+const socialImage = post.data.image
+  ? await getImage({ src: post.data.image, format: 'jpg' })
+  : undefined;
+const socialImageUrl = socialImage
+  ? new URL(socialImage.src, Astro.site ?? Astro.url.origin).href
+  : undefined;
 
 const publishedPosts = await getPublishedBlogPosts();
 const publishedPostsById = new Map(publishedPosts.map((publishedPost) => [publishedPost.id, publishedPost]));
@@ -72,8 +78,10 @@ const faqSchema = post.data.faq && post.data.faq.length > 0 ? {
   description={post.data.description}
   canonical={canonicalUrl}
   ogType="article"
-  ogImage={post.data.image ? `https://www.mirkopasseri.it${post.data.image.src}` : undefined}
+  ogImage={socialImageUrl}
   ogImageAlt={post.data.imageAlt}
+  ogImageWidth={socialImage?.attributes.width}
+  ogImageHeight={socialImage?.attributes.height}
 >
   <Fragment slot="schema">
     <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)}></script>
